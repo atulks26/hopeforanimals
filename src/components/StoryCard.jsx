@@ -1,4 +1,3 @@
-// Cards.jsx
 import React from "react";
 import Marquee from "react-fast-marquee";
 
@@ -41,39 +40,30 @@ const cards = [
     },
 ];
 
-const bgColors = [
-    "bg-red-100",
-    "bg-blue-100",
-    "bg-green-100",
-    "bg-yellow-100",
-    "bg-purple-100",
-    "bg-pink-100",
-];
-
 export default function Cards() {
     const track = [...cards, ...cards, ...cards];
 
     return (
-        <div className="w-[80%] mx-auto my-10 overflow-hidden">
+        <div className="w-[100%] mx-auto my-10 overflow-hidden">
             <Marquee speed={20} gradient={false} pauseOnHover={true}>
                 {track.map((card, i) => (
                     <div
                         key={i}
                         className={`
-                    flex-none w-64 mx-4 p-4 h-[24rem] rounded-[2rem]
-                    ${bgColors[i % bgColors.length]}
-            `}
+                            flex-none w-80 h-[24rem] mx-4 rounded-[0.8rem] 
+                            relative overflow-hidden shadow-md text-white
+                        `}
+                        style={{
+                            backgroundImage: `url(${card.img})`,
+                            backgroundSize: "cover",
+                            backgroundPosition: "center",
+                        }}
                     >
-                        <div className="h-48 rounded-[1rem] overflow-hidden shadow-md">
-                            <img
-                                src={card.img}
-                                alt={`Card ${card.id}`}
-                                className="w-full h-full object-cover"
-                            />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+
+                        <div className="absolute bottom-0 p-4 z-10">
+                            <p className="text-sm">{card.content}</p>
                         </div>
-                        <p className="mt-2 text-sm whitespace-normal break-words overflow-hidden">
-                            {card.content}
-                        </p>
                     </div>
                 ))}
             </Marquee>
