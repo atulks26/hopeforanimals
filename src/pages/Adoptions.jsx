@@ -19,7 +19,6 @@ export default function Adoptions() {
                 console.error(err);
             }
         }
-
         fetchAdoptions();
     }, []);
 
@@ -41,26 +40,8 @@ export default function Adoptions() {
         "border-amber-300",
     ];
 
-    function shuffleArray(arr) {
-        const a = [...arr];
-        for (let i = a.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [a[i], a[j]] = [a[j], a[i]];
-        }
-        return a;
-    }
-
-    const shuffledColors = shuffleArray(borderColors);
-
-    const getBorderColor = (str) => {
-        let hash = 0;
-        for (let i = 0; i < str.length; i++) {
-            hash = (hash << 5) - hash + str.charCodeAt(i);
-            hash |= 0;
-        }
-        return shuffledColors[Math.abs(hash) % borderColors.length];
-    };
-
+    // Instead of hashing, pick color by index cycling through borderColors
+    // Pass index from map and do modulo on borderColors.length
     return (
         <div className="w-full flex flex-col">
             <div className="my-8 flex items-center justify-center">
@@ -105,12 +86,13 @@ export default function Adoptions() {
             )}
 
             <div className="m-auto w-[80%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-6">
-                {adoptions.map((adoption, key) => {
-                    const borderColorClass = getBorderColor(adoption.url);
+                {adoptions.map((adoption, index) => {
+                    const borderColorClass =
+                        borderColors[index % borderColors.length];
 
                     return (
                         <div
-                            key={key}
+                            key={index}
                             className={`bg-white shadow-md overflow-hidden flex flex-col cursor-pointer border-4 ${borderColorClass}`}
                             onClick={() =>
                                 setSelectedAdoption({
