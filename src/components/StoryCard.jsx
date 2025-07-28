@@ -51,7 +51,7 @@ export default function Cards() {
                         key={i}
                         className={`
                             flex-none w-80 h-[24rem] mx-4 rounded-[0.8rem] 
-                            relative overflow-hidden shadow-md text-white
+                            relative overflow-hidden text-white
                         `}
                         style={{
                             backgroundImage: `url(${card.img})`,

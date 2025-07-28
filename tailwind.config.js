@@ -15,6 +15,10 @@ const config = {
             fontFamily: {
                 sourgummy: ['"Sour Gummy"', "cursive"],
                 smooch: ['"Smooch Sans"', "sans-serif"],
+                cherry: ['"Cherry Bomb One"', "system-ui"],
+                rampart: ['"Rampart One"', "sans-serif"],
+                outfit: ["Outfit", "sans-serif"],
+                schoolbell: ["Schoolbell", "cursive"],
             },
         },
     },
