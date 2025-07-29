@@ -27,8 +27,20 @@ export default function Gallery() {
         return <div className="text-red-600 text-center mt-10">{error}</div>;
 
     return (
-        <div className="p-6 max-w-[90%] mx-auto">
-            <h1 className="text-3xl font-semibold mb-6 text-center">Gallery</h1>
+        <div className="p-6 max-w-[90%] mx-auto min-h-[100vh] ">
+            <div className="flex items-center justify-center gap-4 mb-6">
+                <img
+                    src="images/flower.png"
+                    alt="flower1"
+                    className="w-12 h-12 object-contain"
+                />
+                <h1 className="text-5xl font-semibold font-rampart">Gallery</h1>
+                <img
+                    src="images/flower.png"
+                    alt="flower2"
+                    className="w-12 h-12 object-contain"
+                />
+            </div>
 
             <div className="columns-2 md:columns-4 lg:columns-6 xl:columns-8 gap-4 space-y-4">
                 {images.map((img, index) => (
@@ -47,7 +59,6 @@ export default function Gallery() {
                 ))}
             </div>
 
-            {/* Fullscreen Preview */}
             {selectedImage && (
                 <div
                     className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"

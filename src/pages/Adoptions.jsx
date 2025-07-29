@@ -75,9 +75,21 @@ export default function Adoptions() {
     ];
 
     return (
-        <div className="w-full flex flex-col">
-            <div className="my-8 flex items-center justify-center">
-                <p className="text-4xl">Adoptions</p>
+        <div className="pt-6 w-full mx-auto min-h-[100vh]">
+            <div className="flex items-center justify-center gap-4 mb-6">
+                <img
+                    src="images/flower.png"
+                    alt="flower1"
+                    className="w-12 h-12 object-contain"
+                />
+                <h1 className="text-5xl font-semibold font-rampart">
+                    Adoptions
+                </h1>
+                <img
+                    src="images/flower.png"
+                    alt="flower2"
+                    className="w-12 h-12 object-contain"
+                />
             </div>
 
             <div className="flex flex-wrap gap-4 mx-6 justify-center">
@@ -145,9 +157,7 @@ export default function Adoptions() {
                                         <p className="font-outfit">
                                             About:{" "}
                                             <span className="font-schoolbell text-xl ml-1 line-clamp-2">
-                                                A really long description about
-                                                the dog to test the text wrap of
-                                                the adoption card
+                                                {adoption.desc}
                                             </span>
                                         </p>
                                     </div>
@@ -168,9 +178,7 @@ export default function Adoptions() {
                         className="w-[40rem] bg-white rounded-lg border-4 p-4 shadow-xl flex flex-col"
                     >
                         <div className="flex justify-between items-center border-b pb-2 mb-4">
-                            <h2 className="text-2xl font-bold">
-                                Adoption Details
-                            </h2>
+                            <h2 className="text-2xl font-bold">Pet Info</h2>
                             <button
                                 className="text-xl font-bold text-red-600"
                                 onClick={() => setSelectedAdoption(null)}
@@ -179,12 +187,14 @@ export default function Adoptions() {
                             </button>
                         </div>
                         <div className="flex">
-                            <img
-                                src="images/dog-sit.jpg"
-                                className="h-60 w-60 object-cover border mr-4"
-                                alt="dog"
-                            />
-                            <div className="flex flex-col gap-2">
+                            <div className="w-[30%] flex justify-center">
+                                <img
+                                    src="images/dog-sit.jpg"
+                                    className="w-[10rem] h-[14rem] aspect-3/2 object-cover"
+                                    alt="dog"
+                                />
+                            </div>
+                            <div className="w-[70%] flex flex-col gap-2">
                                 <p>
                                     <strong className="text-green-600">
                                         Name:
@@ -209,9 +219,7 @@ export default function Adoptions() {
                                         About:
                                     </strong>{" "}
                                     <span className="font-schoolbell text-xl ml-1">
-                                        Full description goes here for the
-                                        selected dog. You can extend this
-                                        content as needed.
+                                        {selectedAdoption.desc}
                                     </span>
                                 </p>
                             </div>

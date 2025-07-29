@@ -9,7 +9,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className="w-full flex justify-around">
+        <div className="w-full flex justify-around border-b-2 fixed top-0 left-0 z-50 bg-white">
             <div className="flex flex-col justify-center items-center relative w-full h-[6rem]">
                 <div className="flex w-full justify-center items-center bg-green-400">
                     <div className="flex gap-4 w-[70%] h-[2rem] text-black text-sm justify-between">
@@ -74,22 +74,52 @@ const Navbar = () => {
                                 />
                             </a>
 
-                            <div className="h-full w-[8rem] bg-orange-400 flex justify-center items-center text-[1rem] text-white hover:text-black cursor-pointer delay-50">
+                            <HashLink
+                                smooth
+                                to="/#footer-section"
+                                className="h-full w-[8rem] bg-orange-400 flex justify-center items-center text-[1rem] text-white hover:text-black cursor-pointer delay-50"
+                            >
                                 Donate Now
-                            </div>
+                            </HashLink>
                         </div>
                     </div>
                 </div>
-                <div className="w-[70%] h-[4rem]">
+                <div className="relative w-[70%] h-[4rem] flex justify-between">
+                    <div className="h-full w-[10%] overflow-hidden flex justify-center items-center p-1">
+                        <img
+                            src="images/logo2.jpeg"
+                            className="w-full h-full object-contain cursor-pointer"
+                            onClick={handleHome}
+                        />
+                    </div>
+
                     <div className="flex gap-10 h-full items-center text-lg justify-end mr-4">
-                        <HashLink smooth to="/#about-us-section">
+                        <HashLink
+                            smooth
+                            to="/#about-us-section"
+                            className="hover:bg-orange-400 hover:text-white delay-50 transition-all px-4 h-full flex items-center"
+                        >
                             About Us
                         </HashLink>
-                        <HashLink smooth to="/#sponsor-meal-section">
+                        <HashLink
+                            smooth
+                            to="/#sponsor-meal-section"
+                            className="hover:bg-orange-400 hover:text-white delay-50 transition-all px-4 h-full flex items-center"
+                        >
                             Sponsor a meal
                         </HashLink>
-                        <HashLink to="/gallery">Gallery</HashLink>
-                        <HashLink to="/adoptions">Adoptions</HashLink>
+                        <HashLink
+                            to="/gallery"
+                            className="hover:bg-orange-400 hover:text-white delay-50 transition-all px-4 h-full flex items-center"
+                        >
+                            Gallery
+                        </HashLink>
+                        <HashLink
+                            to="/adoptions"
+                            className="hover:bg-orange-400 hover:text-white delay-50 transition-all px-4 h-full flex items-center"
+                        >
+                            Adoptions
+                        </HashLink>
                     </div>
                     {/* <div></div> Dog pic in nav */}
                 </div>

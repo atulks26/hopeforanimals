@@ -48,9 +48,17 @@ const GalleryPreview = () => {
 
     return (
         <div className="w-full mx-auto my-10 overflow-hidden flex flex-col items-center">
-            <div className="h-16 text-4xl flex justify-start items-center font-bold text-emerald-500 w-[70%] mb-4">
-                <div className="w-[50%] flex justify-center">
-                    <p className="w-[80%]">Photo Gallery</p>
+            <div className="h-16 text-4xl flex items-center font-bold text-emerald-500 w-[70%] mb-10">
+                <div className="w-[50%]">
+                    <p className="w-[36rem] border-l-4 border-orange-400 px-4 py-3">
+                        Photo Gallery
+                        <a
+                            href="/gallery"
+                            className="text-xl text-orange-400 m-10"
+                        >
+                            View Full Gallery &rarr;
+                        </a>
+                    </p>
                 </div>
             </div>
 
@@ -77,12 +85,12 @@ const GalleryPreview = () => {
                     pauseOnHover={false}
                     direction="left"
                 >
-                    {images1.map((image, i) => (
+                    {images.map((image, i) => (
                         <img
                             key={i}
                             src={image.url}
                             alt={`Gallery image ${i + 1}`}
-                            className="h-[16rem] mx-1 object-cover flex-shrink-0"
+                            className="h-[28rem] mx-1 object-cover flex-shrink-0"
                         />
                     ))}
                 </Marquee>
@@ -104,7 +112,7 @@ const GalleryPreview = () => {
                 </Marquee>
             </div>
 
-            <div className="bg-black">
+            {/* <div className="bg-black">
                 <Marquee
                     speed={60}
                     gradient={false}
@@ -152,7 +160,7 @@ const GalleryPreview = () => {
                         />
                     ))}
                 </Marquee>
-            </div>
+            </div> */}
         </div>
     );
 };
