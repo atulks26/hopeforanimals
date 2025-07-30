@@ -6,7 +6,7 @@ export default function Gallery() {
     const [selectedImage, setSelectedImage] = useState(null);
 
     const GITHUB_JSON_URL =
-        "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-images.json";
+        "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-images.jso";
 
     useEffect(() => {
         async function fetchImages() {

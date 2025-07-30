@@ -2,8 +2,19 @@ import React from "react";
 
 const Hero = () => {
     return (
-        <div className="flex w-full h-auto justify-center items-center">
-            <img src="images/hero.png" className="object-cover" />
+        <div className="w-screen overflow-hidden">
+            {/* Desktop banner */}
+            <img
+                src="images/banner.png"
+                alt="Banner desktop"
+                className="hidden md:block w-full h-auto object-cover"
+            />
+            {/* Mobile banner */}
+            <img
+                src="images/banner-mobile.png"
+                alt="Banner mobile"
+                className="block md:hidden w-full h-auto object-cover"
+            />
         </div>
     );
 };

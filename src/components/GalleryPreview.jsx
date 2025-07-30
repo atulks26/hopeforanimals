@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 const GITHUB_JSON_URL =
-    "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-images.json";
+    "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-images.jso";
 
 const GalleryPreview = () => {
     const [images, setImages] = useState([]);

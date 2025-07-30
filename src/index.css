@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Schoolbell&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Modak&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 
 body {
     margin: 0;
@@ -23,18 +23,47 @@ code {
         monospace;
 }
 
-.my-masonry-grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: -1rem;
-    width: auto;
-}
-.my-masonry-grid_column {
-    padding-left: 1rem;
-    background-clip: padding-box;
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-.my-masonry-grid_column > img {
-    margin-bottom: 1rem;
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 770px) {
+    .location-visible {
+        display: none !important;
+    }
+}
+
+/* Hide social icons below 1024px */
+@media (max-width: 1023px) {
+    .social-icons {
+        display: none !important;
+    }
+}
+
+/* Hide full location below 768px */
+@media (max-width: 767px) {
+    .location-full {
+        display: none !important;
+    }
+    .location-short {
+        display: flex !important;
+    }
+}
+
+/* Hide short location below 560px */
+@media (max-width: 559px) {
+    .location-short {
+        display: none !important;
+    }
 }
