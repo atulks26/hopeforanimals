@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
 
 const GITHUB_JSON_URL =
     "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-images.json";
@@ -48,7 +49,7 @@ const GalleryPreview = () => {
 
     return (
         <div className="w-full mx-auto my-10 overflow-hidden flex flex-col items-center">
-            <div className="flex flex-col md:flex-row md:items-center md:gap-8 text-5xl md:text-6xl font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 mb-8 py-2">
+            <div className="flex flex-col sm:flex-row md:items-center md:gap-8 text-5xl md:text-6xl font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 mb-8 py-2">
                 <p className="w-fit">
                     <span className="text-[#4A4A4A]">P</span>
                     <span className="text-[#2F3E5C]">h</span>
@@ -63,12 +64,14 @@ const GalleryPreview = () => {
                     <span className="text-[#2F3E5C]">y</span>
                 </p>
 
-                <a
-                    href="/gallery"
-                    className="font-semibold md:px-1 font-sans text-lg md:text-xl text-[#5E4B56]"
+                <Link
+                    to="/gallery"
+                    className="flex items-start sm:pl-2 pt-2 sm:pt-0 w-fit"
                 >
-                    Check out full gallery &rarr;
-                </a>
+                    <button className="button-cute2 text-sm">
+                        Check out full gallery &rarr;
+                    </button>
+                </Link>
             </div>
 
             <div className="bg-black mb-2">

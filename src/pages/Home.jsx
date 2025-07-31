@@ -104,7 +104,7 @@ const Home = () => {
                             {/* Top Image: smaller, flat */}
                             <div className="w-full max-h-[240px]  rounded-md">
                                 <img
-                                    src="images/whatwedo-3.jpg"
+                                    src="images/whatwedo.jpg"
                                     className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
                                     alt=""
                                 />
@@ -170,7 +170,7 @@ const Home = () => {
                                 </div>
                                 <div className="w-full h-1/2">
                                     <img
-                                        src="images/howitstarted-2.jpg"
+                                        src="images/howitstarted.jpg"
                                         className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
                                     />
                                 </div>

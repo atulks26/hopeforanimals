@@ -52,7 +52,7 @@ const cards = [
         imageSrcs: [
             "images/water-bowl/1.jpg",
             "images/water-bowl/2.jpg",
-            "images/water-bowl/3-1.jpg",
+            "images/water-bowl/3.jpg",
             "images/water-bowl/4.jpg",
         ],
         desc1: "Our volunteers painted custom bowls and placed them throughout the town, ensuring that no animal goes thirsty in our community. Multiple bowls were painted, installed and filled",
