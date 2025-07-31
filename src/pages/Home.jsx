@@ -42,7 +42,7 @@ const Home = () => {
                 className="flex flex-col items-center justify-center w-full py-16"
                 id="about-us-section"
             >
-                <div className="font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 text-5xl md:text-6xl text-green-500 mb-8 py-2">
+                <div className="font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-2 text-5xl md:text-6xl text-green-500 mb-2 py-2">
                     <p className="w-fit">
                         <span className="text-[#F2EF61]">A</span>
                         <span className="text-[#ECAD5B]">bo</span>
@@ -54,7 +54,7 @@ const Home = () => {
                 </div>
 
                 {/* WHO ARE WE */}
-                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-20 items-center">
+                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-center">
                     <div className="w-full md:w-1/2 flex order-2 md:order-1 xl:justify-start justify-center">
                         <div className="flex px-2">
                             {/* Left Image: smaller, tilted left */}
@@ -99,7 +99,7 @@ const Home = () => {
                 </div>
 
                 {/* WHAT WE DO */}
-                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-20 items-center">
+                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-center">
                     <div className="w-full md:w-1/2 flex order-2 md:order-2 xl:justify-start justify-center">
                         <div className="flex flex-col px-2 gap-4">
                             {/* Top Image: smaller, flat */}
@@ -146,7 +146,7 @@ const Home = () => {
                 </div>
 
                 {/* HOW IT STARTED */}
-                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-20 items-center">
+                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-center">
                     <div className="w-full md:w-1/2 flex order-2 md:order-1 xl:justify-start justify-center">
                         <div className="flex px-2">
                             <div className="w-[60%] h-full flex justify-center items-center">
@@ -231,9 +231,18 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="w-full flex flex-col items-center bg-gray-100 py-20">
-                <div className="font-modak text-3xl md:text-6xl mb-12">
-                    OUR IMPACT
+            <div className="w-full flex flex-col items-center ">
+                <div className="font-lucky text-5xl md:text-6xl mb-12">
+                    <p className="w-fit">
+                        <span className="text-[#F2EF61]">O</span>
+                        <span className="text-[#ECAD5B]">u</span>
+                        <span className="text-[#BEB66D]">r </span>
+                        <span className="text-[#F2EF61]">I</span>
+                        <span className="text-[#ECAD5B]">mp</span>
+                        <span className="text-[#BEB66D]">a</span>
+                        <span className="text-[#ECAD5B]">c</span>
+                        <span className="text-[#BEB66D]">t</span>
+                    </p>
                 </div>
                 <div className="w-full flex flex-wrap justify-center gap-6 px-4">
                     {[
@@ -241,7 +250,7 @@ const Home = () => {
                             img: "paws.png",
                             count: "850",
                             label: "RESCUES",
-                            desc: "Helping those in need",
+                            desc: "Providing a safe new beginning",
                         },
                         {
                             img: "adoption.png",
@@ -250,28 +259,28 @@ const Home = () => {
                             desc: "Furry friends who found homes",
                         },
                         {
-                            img: "dog-running.png",
-                            count: "200",
-                            label: "RELEASES",
-                            desc: "Minor setbacks couldn't stop them",
+                            img: "dog-in-front-of-a-man.png",
+                            count: "100",
+                            label: "VET VISITS",
+                            desc: "Because every paw matters",
                         },
                         {
-                            img: "dog-in-front-of-a-man.png",
-                            count: "50",
-                            label: "ADOPTION CAMPS",
-                            desc: "Meeting new hoomans",
+                            img: "dog-running.png",
+                            count: "300",
+                            label: "RELEASES",
+                            desc: "Harder, Better, Faster, Stronger",
                         },
                     ].map(({ img, count, label, desc }) => (
                         <div
                             key={label}
-                            className="flex flex-col items-center bg-white rounded-2xl shadow-md w-[80%] sm:w-[45%] md:w-[22%] h-auto p-6"
+                            className="flex flex-col items-center bg-white rounded-2xl shadow-md p-6 border-4 border-[#F2EF61] w-full sm:w-[48%] md:w-[22%]"
                         >
                             <img
                                 src={`images/${img}`}
                                 className="w-16 h-16 mb-4"
                                 alt={label}
                             />
-                            <div className="text-green-500 text-6xl font-bold relative">
+                            <div className="text-[#012F50] text-6xl font-bold relative">
                                 {count}
                                 <span className="absolute text-3xl font-bold top-2 right-[-20px]">
                                     +
@@ -286,34 +295,35 @@ const Home = () => {
                 </div>
             </div>
 
-            <GalleryPreview />
+            {/* <GalleryPreview /> */}
 
-            <div className="w-full flex flex-col items-center my-10 px-4">
-                <div className="text-3xl md:text-4xl font-bold text-emerald-500 w-full max-w-[90%] mb-8 border-l-4 border-orange-400 pl-4">
-                    Adoptions
+            <div className="h-[36rem] w-full"></div>
+
+            <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] xl:max-w-[70%] gap-8 items-center my-10">
+                <div className="w-full md:w-1/2 flex flex-col justify-center md:items-start">
+                    <h3 className="text-[#EB492A] font-bold text-lg uppercase tracking-wide mb-2">
+                        Adoptions
+                    </h3>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-5 leading-snug text-white">
+                        Find your new Furrever Furry Friend.
+                    </h2>
+                    <p className="text-md md:text-lg font-normal mb-6 text-gray-300">
+                        Maybe you'll find the love of your life here instead of
+                        a club...
+                    </p>
+                    <Link to="/adoptions">
+                        <div className="inline-block py-4 px-6 bg-orange-400 text-center text-lg font-semibold text-white rounded-md cursor-pointer hover:bg-orange-500 transition">
+                            Explore Adoptions
+                        </div>
+                    </Link>
                 </div>
-                <div className="flex flex-col md:flex-row justify-between w-full max-w-[90%] items-center gap-8">
-                    <div className="w-full md:w-1/2">
-                        <p className="text-3xl md:text-5xl font-bold">
-                            Find your new Furrever Furry Friend.
-                        </p>
-                        <p className="text-md md:text-lg font-normal mt-4">
-                            Maybe you'll find the love of your life here instead
-                            of a club...
-                        </p>
-                        <Link to="/adoptions">
-                            <div className="mt-6 py-4 bg-orange-400 text-center text-lg font-semibold text-white">
-                                Explore Adoptions
-                            </div>
-                        </Link>
-                    </div>
-                    <div className="w-full md:w-1/2">
-                        <img
-                            src="images/unnamed.jpg"
-                            className="w-full h-auto object-cover"
-                            alt="Adoptions"
-                        />
-                    </div>
+
+                <div className="w-full md:w-1/2">
+                    <img
+                        src="images/unnamed.jpg"
+                        alt="Adoptions"
+                        className="w-full h-auto object-cover rounded-md border-4 border-[#ECAD5B]"
+                    />
                 </div>
             </div>
 
