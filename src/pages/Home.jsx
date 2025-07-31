@@ -1,10 +1,15 @@
-import Cards from "../components/StoryCard";
+import CardsCarousel from "../components/StoryCard";
 import GalleryPreview from "../components/GalleryPreview";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import Hero from "../components/Hero";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import GuptKashi from "../components/cards/GuptKashi";
+import AdoptionCamp from "../components/cards/AdoptionCamp";
+import TreePlantation from "../components/cards/TreePlantation";
+import WaterBowl from "../components/cards/WaterBowl";
+import CardCarousel from "../components/StoryCard";
 
 const Home = () => {
     const location = useLocation();
@@ -37,7 +42,7 @@ const Home = () => {
                 className="flex flex-col items-center justify-center w-full py-16"
                 id="about-us-section"
             >
-                <div className="font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 text-3xl md:text-6xl text-green-500 mb-8 py-2">
+                <div className="font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 text-5xl md:text-6xl text-green-500 mb-8 py-2">
                     <p className="w-fit">
                         <span className="text-[#F2EF61]">A</span>
                         <span className="text-[#ECAD5B]">bo</span>
@@ -188,20 +193,36 @@ const Home = () => {
             </section>
 
             <div className="w-full flex flex-col items-center mb-10">
-                <div className="w-[100vw] bg-transparent">
+                <div className="w-[100vw] bg-transparent -mb-1">
                     <img
                         src="images/paper.png"
                         className="w-full h-full object-cover"
                     />
                 </div>
-                <div className="bg-[#FDFDFD] font-lucky text-3xl md:text-6xl text-green-500 w-full flex justify-center">
-                    <div className="w-full max-w-[90%] xl:max-w-[70%] border-l-4 border-orange-400 pl-4 py-2">
-                        Success Stories
+                <div className="w-full flex justify-center items-center bg-[#FDFDFD]">
+                    <div className="font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 text-5xl md:text-6xl text-green-500 mb-8 py-2">
+                        <p className="w-fit">
+                            <span className="text-[#7A9EBA]">S</span>
+                            <span className="text-[#8CAAC9]">u</span>
+                            <span className="text-[#7A9EBA]">c</span>
+                            <span className="text-[#A4BFD6]">c</span>
+                            <span className="text-[#8CAAC9]">es</span>
+                            <span className="text-[#A4BFD6]">s </span>
+
+                            <span className="text-[#8CAAC9] ml-1">S</span>
+                            <span className="text-[#7A9EBA]">t</span>
+                            <span className="text-[#A4BFD6]">o</span>
+                            <span className="text-[#8CAAC9]">ri</span>
+                            <span className="text-[#A4BFD6]">e</span>
+                            <span className="text-[#7A9EBA]">s</span>
+                        </p>
                     </div>
                 </div>
-                <div className="bg-[#FDFDFD] w-full -m-1">
-                    <Cards />
+
+                <div className="bg-[#FDFDFD] w-full min-h-[66vh] h-full -m-1">
+                    <CardCarousel />
                 </div>
+
                 <div className="w-[100vw] bg-transparent">
                     <img
                         src="images/paper.png"
