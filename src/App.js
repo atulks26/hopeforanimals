@@ -9,7 +9,15 @@ import HashReset from "./components/HashReset";
 
 function App() {
     return (
-        <Router>
+        <Router className="relative">
+            <div className="fixed inset-0 -z-10 w-screen h-screen">
+                <img
+                    src="images/bg.png"
+                    alt="background"
+                    className="w-full h-full object-cover"
+                />
+            </div>
+
             <ScrollToTop />
             <HashReset />
             <Navbar />

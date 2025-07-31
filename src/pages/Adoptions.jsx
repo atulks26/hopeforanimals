@@ -1,224 +1,227 @@
 import React, { useEffect, useState, useRef } from "react";
 
+// The URL for the adoption data
 const GITHUB_JSON_URL =
     "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-adoptions.json";
 
 export default function Adoptions() {
+    // State for storing adoption data, errors, and the selected pet for the modal
     const [adoptions, setAdoptions] = useState([]);
     const [error, setError] = useState("");
     const [selectedAdoption, setSelectedAdoption] = useState(null);
-    const cardRef = useRef();
+    const cardRef = useRef(); // Ref for the modal card to detect outside clicks
 
+    // useEffect hook to fetch adoption data when the component mounts
     useEffect(() => {
         async function fetchAdoptions() {
             try {
                 const res = await fetch(GITHUB_JSON_URL);
+                if (!res.ok) {
+                    // Check if the response is successful
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
                 const data = await res.json();
-                setAdoptions(data);
+                const data2 = [...data, ...data];
+                setAdoptions(data2);
             } catch (err) {
-                setError("Failed to load adoptions.");
+                setError("Failed to load adoptions. Please try again later.");
                 console.error(err);
             }
         }
         fetchAdoptions();
-    }, []);
+    }, []); // Empty dependency array ensures this runs only once on mount
 
+    // useEffect hook to handle clicks outside the modal to close it
     useEffect(() => {
         function handleClickOutside(event) {
             if (cardRef.current && !cardRef.current.contains(event.target)) {
-                setSelectedAdoption(null);
+                setSelectedAdoption(null); // Close the modal
             }
         }
 
+        // Add event listener only when the modal is open
         if (selectedAdoption) {
             document.addEventListener("mousedown", handleClickOutside);
-        } else {
-            document.removeEventListener("mousedown", handleClickOutside);
         }
 
+        // Cleanup function to remove the event listener
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [selectedAdoption]);
+    }, [selectedAdoption]); // Rerun this effect when selectedAdoption changes
 
+    // Display an error message if the data fetch fails
     if (error)
         return <div className="text-red-600 text-center mt-10">{error}</div>;
 
-    const borderColors = [
-        "border-pink-300",
-        "border-purple-300",
-        "border-blue-300",
-        "border-teal-300",
-        "border-green-300",
-        "border-yellow-300",
-        "border-rose-300",
-        "border-cyan-300",
-        "border-lime-300",
-        "border-fuchsia-300",
-        "border-violet-300",
-        "border-amber-300",
-    ];
-
-    const bgColors = [
-        "bg-pink-100",
-        "bg-purple-100",
-        "bg-blue-100",
-        "bg-teal-100",
-        "bg-green-100",
-        "bg-yellow-100",
-        "bg-rose-100",
-        "bg-cyan-100",
-        "bg-lime-100",
-        "bg-fuchsia-100",
-        "bg-violet-100",
-        "bg-amber-100",
-    ];
-
     return (
         <div className="pt-6 w-full mx-auto min-h-[100vh]">
-            <div className="flex items-center justify-center gap-4 mb-6">
+            {/* Header section */}
+            <div className="flex items-center justify-center gap-4 mb-8">
                 <img
-                    src="images/flower.png"
+                    src="images/paw-print.png"
                     alt="flower1"
                     className="w-12 h-12 object-contain"
                 />
-                <h1 className="text-5xl font-semibold font-rampart">
+                <h1 className="text-5xl font-semibold font-rampart text-gray-700">
                     Adoptions
                 </h1>
                 <img
-                    src="images/flower.png"
+                    src="images/paw-print.png"
                     alt="flower2"
                     className="w-12 h-12 object-contain"
                 />
             </div>
 
-            <div className="flex flex-wrap gap-4 mx-6 justify-center">
+            {/* Grid for adoption cards */}
+            <div className="flex flex-wrap gap-8 mx-6 justify-center">
                 {adoptions.map((adoption, index) => {
-                    const border = borderColors[index % borderColors.length];
-                    const bg = bgColors[index % bgColors.length];
+                    // Determine styles based on gender
+                    const borderColor =
+                        adoption.gender.toLowerCase() === "male"
+                            ? "border-blue-400"
+                            : "border-pink-400";
+                    const genderEmoji =
+                        adoption.gender.toLowerCase() === "male" ? "♂️" : "♀️";
+                    const ageUnit =
+                        adoption.age > 1
+                            ? "Years"
+                            : adoption.age < 1
+                            ? "Months"
+                            : "Year";
 
                     return (
                         <div
                             key={index}
                             onClick={() => setSelectedAdoption(adoption)}
-                            className={`cursor-pointer w-[19%] h-[16rem] ${border} border-4 rounded-2xl flex flex-col overflow-hidden transition-transform duration-300 hover:scale-[1.02]`}
+                            // Main card container with dynamic border color
+                            className={`relative cursor-pointer w-96 bg-white ${borderColor} border-4 rounded-2xl flex flex-col overflow-hidden transition-transform duration-300 hover:scale-[1.03] shadow-lg`}
                         >
-                            <div
-                                className={`w-full h-[16%] ${bg} flex justify-center items-center gap-2 ${border} border-b-2 border-dashed`}
-                            >
-                                <img
-                                    src="images/paw-print.png"
-                                    alt="paw1"
-                                    className="h-[86%]"
-                                />
-                                <p className="font-rampart text-2xl">PET ID</p>
-                                <img
-                                    src="images/paw-print.png"
-                                    alt="paw2"
-                                    className="h-[86%]"
-                                />
+                            {/* Watermark Image */}
+                            <img
+                                src="images/watermark.png"
+                                className="absolute inset-0 w-full h-full object-contain opacity-5 -z-0"
+                                alt="watermark"
+                            />
+
+                            {/* Gender Emoji */}
+                            <div className="absolute top-1 left-0 text-3xl bg-white bg-opacity-70 rounded-full px-1">
+                                {genderEmoji}
                             </div>
-                            <div className="relative w-full h-[76%] flex items-center bg-orange-100">
-                                <img
-                                    src="images/watermark.png"
-                                    className="absolute left-[36%] opacity-10"
-                                />
-                                <div className="flex w-[40%] h-full justify-center items-center">
+
+                            {/* Card content container */}
+                            <div className="p-4 z-10 flex flex-col flex-grow">
+                                {/* Top Section: Image and Basic Info */}
+                                <div className="flex items-center gap-4 mb-4">
+                                    {/* Circular Image */}
                                     <div
-                                        className={`w-full mx-[1rem] h-[80%] ${border} border-2 overflow-hidden`}
+                                        className={`w-24 h-24 rounded-full overflow-hidden border-2 ${borderColor} flex-shrink-0`}
                                     >
                                         <img
-                                            src="images/dog-sit.jpg"
+                                            src={adoption.url} // Using a static image as per original code
+                                            alt={adoption.name}
                                             className="h-full w-full object-cover"
                                         />
                                     </div>
-                                </div>
-                                <div className="w-[60%] h-[80%] mr-[1rem] font-outfit font-light">
-                                    <div className="w-full h-[20%]">
-                                        <p className="font-outfit">
-                                            Name:{" "}
-                                            <span className="font-schoolbell text-xl ml-1">
+                                    {/* Name, Age, and Note */}
+                                    <div className="font-outfit">
+                                        <p className="font-bold text-gray-500">
+                                            Name:
+                                            <span className="font-schoolbell text-3xl ml-2 text-gray-800 capitalize">
                                                 {adoption.name}
                                             </span>
                                         </p>
-                                    </div>
-                                    <div className="w-full h-[20%]">
-                                        <p className="">
-                                            Age:{" "}
-                                            <span className="font-schoolbell text-xl ml-1">
-                                                {adoption.age}{" "}
-                                                {adoption.age >= 1
-                                                    ? "yo"
-                                                    : "mo"}
+                                        <p className="font-bold text-gray-500 mt-1">
+                                            Age:
+                                            <span className="font-schoolbell text-2xl ml-2 text-gray-800">
+                                                {adoption.age} {ageUnit}
                                             </span>
                                         </p>
-                                    </div>
-                                    <div className="w-full h-[60%] flex">
-                                        <p className="font-outfit">
-                                            About:{" "}
-                                            <span className="font-schoolbell text-xl ml-1 line-clamp-2">
-                                                {adoption.desc}
+                                        <p className="font-bold text-gray-500 mt-1">
+                                            Note:
+                                            <span className="font-schoolbell text-xl ml-2 text-gray-800">
+                                                {adoption.note
+                                                    ? adoption.note
+                                                    : "Waiting for a new home"}
                                             </span>
                                         </p>
                                     </div>
                                 </div>
+
+                                {/* Bottom Section: Description */}
+                                <div className="flex-grow">
+                                    <p className="font-outfit font-bold text-gray-500">
+                                        About:
+                                        <span className="font-schoolbell text-lg ml-2 text-gray-700 font-normal block mt-1">
+                                            {adoption.desc}
+                                        </span>
+                                    </p>
+                                </div>
                             </div>
-                            <div
-                                className={`w-full h-[8%] ${bg} flex justify-center items-center gap-2 ${border} border-t-2 border-dashed`}
-                            ></div>
                         </div>
                     );
                 })}
             </div>
 
+            {/* Modal for displaying detailed pet info */}
             {selectedAdoption && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4">
                     <div
                         ref={cardRef}
-                        className="w-[40rem] bg-white rounded-lg border-4 p-4 shadow-xl flex flex-col"
+                        className="w-full max-w-2xl bg-white rounded-lg border-4 p-6 shadow-xl flex flex-col"
                     >
                         <div className="flex justify-between items-center border-b pb-2 mb-4">
-                            <h2 className="text-2xl font-bold">Pet Info</h2>
+                            <h2 className="text-3xl font-bold font-rampart">
+                                Pet Info
+                            </h2>
                             <button
-                                className="text-xl font-bold text-red-600"
+                                className="text-2xl font-bold text-red-600 hover:text-red-800"
                                 onClick={() => setSelectedAdoption(null)}
                             >
                                 ✕
                             </button>
                         </div>
-                        <div className="flex">
-                            <div className="w-[30%] flex justify-center">
+                        <div className="flex flex-col sm:flex-row gap-6">
+                            <div className="sm:w-[35%] flex justify-center items-start">
                                 <img
                                     src="images/dog-sit.jpg"
-                                    className="w-[10rem] h-[14rem] aspect-3/2 object-cover"
+                                    className="w-full h-auto rounded-lg shadow-md border-2"
                                     alt="dog"
                                 />
                             </div>
-                            <div className="w-[70%] flex flex-col gap-2">
+                            <div className="sm:w-[65%] flex flex-col gap-4">
                                 <p>
-                                    <strong className="text-green-600">
+                                    <strong className="text-green-700 font-outfit text-lg">
                                         Name:
-                                    </strong>{" "}
-                                    <span className="font-schoolbell text-xl ml-1">
+                                    </strong>
+                                    <span className="font-schoolbell text-2xl ml-2 text-gray-800">
                                         {selectedAdoption.name}
                                     </span>
                                 </p>
                                 <p>
-                                    <strong className="text-green-600">
+                                    <strong className="text-green-700 font-outfit text-lg">
                                         Age:
-                                    </strong>{" "}
-                                    <span className="font-schoolbell text-xl ml-1">
+                                    </strong>
+                                    <span className="font-schoolbell text-2xl ml-2 text-gray-800">
                                         {selectedAdoption.age}{" "}
-                                        {selectedAdoption.age >= 1
-                                            ? "yo"
-                                            : "mo"}
+                                        {selectedAdoption.age > 1
+                                            ? "Years"
+                                            : "Year"}
                                     </span>
                                 </p>
                                 <p>
-                                    <strong className="text-green-600">
+                                    <strong className="text-green-700 font-outfit text-lg">
+                                        Gender:
+                                    </strong>
+                                    <span className="font-schoolbell text-2xl ml-2 text-gray-800 capitalize">
+                                        {selectedAdoption.gender}
+                                    </span>
+                                </p>
+                                <p>
+                                    <strong className="text-green-700 font-outfit text-lg">
                                         About:
-                                    </strong>{" "}
-                                    <span className="font-schoolbell text-xl ml-1">
+                                    </strong>
+                                    <span className="font-schoolbell text-xl ml-1 block mt-1 text-gray-700">
                                         {selectedAdoption.desc}
                                     </span>
                                 </p>

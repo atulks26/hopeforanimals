@@ -4,9 +4,10 @@ export default function Gallery() {
     const [images, setImages] = useState([]);
     const [error, setError] = useState("");
     const [selectedImage, setSelectedImage] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const GITHUB_JSON_URL =
-        "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-images.jso";
+        "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-images.json";
 
     useEffect(() => {
         async function fetchImages() {
@@ -17,6 +18,8 @@ export default function Gallery() {
             } catch (err) {
                 setError("Failed to load gallery.");
                 console.error(err);
+            } finally {
+                setLoading(false);
             }
         }
 
@@ -26,19 +29,29 @@ export default function Gallery() {
     if (error)
         return <div className="text-red-600 text-center mt-10">{error}</div>;
 
+    if (loading) {
+        return (
+            <div className="flex justify-center items-center min-h-[100vh]">
+                <div className="w-16 h-16 border-4 border-t-4 border-gray-300 border-t-cyan-600 rounded-full animate-spin"></div>
+            </div>
+        );
+    }
+
     return (
         <div className="p-6 max-w-[90%] mx-auto min-h-[100vh] ">
             <div className="flex items-center justify-center gap-4 mb-6">
                 <img
-                    src="images/flower.png"
+                    src="images/paw-print.png"
                     alt="flower1"
-                    className="w-12 h-12 object-contain"
+                    className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
-                <h1 className="text-5xl font-semibold font-rampart">Gallery</h1>
+                <p className="text-4xl text-center md:text-5xl font-semibold font-rampart">
+                    Pawfect Photos
+                </p>
                 <img
-                    src="images/flower.png"
+                    src="images/paw-print.png"
                     alt="flower2"
-                    className="w-12 h-12 object-contain"
+                    className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
             </div>
 
@@ -52,7 +65,7 @@ export default function Gallery() {
                         <img
                             src={img.url}
                             alt={`Image ${index}`}
-                            className="w-full h-auto object-contain transition-transform duration-300 hover:scale-105"
+                            className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105 border-4 border-white"
                             loading="lazy"
                         />
                     </div>

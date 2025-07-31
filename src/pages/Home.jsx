@@ -1,15 +1,10 @@
-import CardsCarousel from "../components/StoryCard";
 import GalleryPreview from "../components/GalleryPreview";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 import Hero from "../components/Hero";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import GuptKashi from "../components/cards/GuptKashi";
-import AdoptionCamp from "../components/cards/AdoptionCamp";
-import TreePlantation from "../components/cards/TreePlantation";
-import WaterBowl from "../components/cards/WaterBowl";
 import CardCarousel from "../components/StoryCard";
+import Preloader from "../components/Preloader";
 
 const Home = () => {
     const location = useLocation();
@@ -35,40 +30,41 @@ const Home = () => {
     }, [location]);
 
     return (
-        <section className="w-full flex flex-col justify-center items-center bg-[#012F50]">
+        <section className="w-full flex flex-col justify-center items-center">
             <Hero />
+            <Preloader />
 
             <section
-                className="flex flex-col items-center justify-center w-full py-16"
+                className="flex flex-col items-center justify-center w-full pt-8 sm:pt-16 pb-0 md:pb-16"
                 id="about-us-section"
             >
-                <div className="font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-2 text-5xl md:text-6xl text-green-500 mb-2 py-2">
+                <div className="font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-2 text-5xl md:text-6xl mb-2 py-2 flex justify-center">
                     <p className="w-fit">
-                        <span className="text-[#F2EF61]">A</span>
-                        <span className="text-[#ECAD5B]">bo</span>
-                        <span className="text-[#BEB66D]">u</span>
-                        <span className="text-[#ECAD5B]">t </span>
-                        <span className="text-[#F2EF61]">U</span>
-                        <span className="text-[#BEB66D]">s</span>
+                        <span className="text-[#5E4B56]">A</span>
+                        <span className="text-[#2F3E5C]">bo</span>
+                        <span className="text-[#4A4A4A]">u</span>
+                        <span className="text-[#2F3E5C]">t </span>
+                        <span className="text-[#5E4B56]">U</span>
+                        <span className="text-[#4A4A4A]">s</span>
                     </p>
                 </div>
 
                 {/* WHO ARE WE */}
-                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-center">
+                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] md:my-10 mb-10 items-center sm:px-10">
                     <div className="w-full md:w-1/2 flex order-2 md:order-1 xl:justify-start justify-center">
-                        <div className="flex px-2">
+                        <div className="flex px-6">
                             {/* Left Image: smaller, tilted left */}
                             <div className="w-[40%] h-full flex flex-col">
                                 <div className="w-full h-1/2">
                                     <img
                                         src="images/whoarewe-3.jpg"
-                                        className="w-full h-full object-cover border-4 border-[#BEB66D]"
+                                        className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
                                     />
                                 </div>
                                 <div className="w-full h-1/2">
                                     <img
                                         src="images/whoarewe-2.jpg"
-                                        className="w-full h-full object-cover -rotate-12 border-4 border-[#F2EF61]"
+                                        className="w-full h-full object-cover -rotate-12 border-[0.6rem] shadow-2xl border-white"
                                     />
                                 </div>
                             </div>
@@ -76,37 +72,40 @@ const Home = () => {
                             <div className="w-[60%] h-full">
                                 <img
                                     src="images/whoarewe-1.jpg"
-                                    className="w-full h-full object-cover rotate-6 border-4 border-[#ECAD5B]"
+                                    className="w-full h-full object-cover rotate-6 border-[0.6rem] shadow-2xl border-white"
                                 />
                             </div>
                         </div>
                     </div>
 
-                    <div className="sm:max-w-lg md:max-w-[40%] flex flex-col justify-center md:items-end ml-4 mt-8 md:mt-0 order-1 md:order-2">
-                        <h3 className="text-[#EB492A] font-bold w-full text-lg uppercase tracking-wide">
+                    <div className=" md:max-w-[40%] flex flex-col justify-center md:items-end ml-4 mt-8 md:mt-0 order-1 md:order-2">
+                        <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
                             Who are we
                         </h3>
-                        <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-white">
-                            Transforming lives through compassion and action.
+                        <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
+                            An ever-growing family bound by the love for
+                            animals.
                         </h2>
-                        <p className="text-sm md:text-md w-full mb-4 text-gray-300">
+                        <p className="text-sm md:text-md w-full mb-4 text-[#4A4A4A]">
                             Hope For Animals is a registered NGO based in
-                            Dehradun, Uttarakhad. Our NGO started in 2022 and
-                            since then we have been dedicated to rescuing and
-                            caring for animals.
+                            Dehradun, Uttarakhand, established in 2022.
+                            Dedicated to animal welfare, the organization works
+                            to rescue, treat, and protect animals in need, while
+                            promoting a culture of compassion and coexistence
+                            throughout the region.
                         </p>
                     </div>
                 </div>
 
                 {/* WHAT WE DO */}
-                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-center">
+                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-cente sm:px-10r">
                     <div className="w-full md:w-1/2 flex order-2 md:order-2 xl:justify-start justify-center">
                         <div className="flex flex-col px-2 gap-4">
                             {/* Top Image: smaller, flat */}
                             <div className="w-full max-h-[240px]  rounded-md">
                                 <img
                                     src="images/whatwedo-3.jpg"
-                                    className="w-full h-full object-cover border-4 border-[#BEB66D]"
+                                    className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
                                     alt=""
                                 />
                             </div>
@@ -115,45 +114,49 @@ const Home = () => {
                                 <div className="aspect-[4/3] w-1/3 rounded-md">
                                     <img
                                         src="images/whatwedo-1.jpg"
-                                        className="w-full h-full object-cover -rotate-12 border-4 border-[#F2EF61]"
+                                        className="w-full h-full object-cover -rotate-12 border-[0.6rem] shadow-2xl border-white"
                                         alt=""
                                     />
                                 </div>
                                 <div className="aspect-[4/3] w-2/3 rounded-md">
                                     <img
                                         src="images/whatwedo-2.jpg"
-                                        className="w-full h-full object-cover rotate-6 border-4 border-[#ECAD5B] cursor-zoom-in"
+                                        className="w-full h-full object-cover rotate-6 border-[0.6rem] shadow-2xl border-white"
                                     />
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="sm:max-w-lg md:max-w-[40%] flex flex-col justify-center md:items-end ml-4 mt-8 md:mt-0 order-1 md:order-1">
-                        <h3 className="text-[#EB492A] font-bold w-full text-lg uppercase tracking-wide">
+                    <div className="md:max-w-[40%] flex flex-col justify-center md:items-end ml-4 mt-8 md:mt-0 order-1 md:order-1">
+                        <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
                             What we do
                         </h3>
-                        <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-white">
-                            Transforming lives through compassion and action.
+                        <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
+                            Protecting the vulnerable, healing the hurt, and
+                            standing up for the silent.
                         </h2>
-                        <p className="text-sm md:text-md w-full mb-4 text-gray-300">
-                            We are a dedicated group of volunteers and animal
-                            lovers committed to rescuing, rehabilitating, and
-                            rehoming animals in need. Our mission is to create a
-                            safer, more compassionate world for all creatures.
+                        <p className="text-sm md:text-md w-full mb-4 text-[#4A4A4A]">
+                            We are dedicated to rescuing injured animals,
+                            offering them the medical care and compassion they
+                            need to recover, and safely releasing them back to
+                            their natural habitats — where they truly belong.
+                            Our shelter is currently home to over 90 dogs, 9
+                            cats, and a calf, all undergoing treatment and
+                            healing.
                         </p>
                     </div>
                 </div>
 
                 {/* HOW IT STARTED */}
-                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-center">
+                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-center sm:px-10">
                     <div className="w-full md:w-1/2 flex order-2 md:order-1 xl:justify-start justify-center">
                         <div className="flex px-2">
                             <div className="w-[60%] h-full flex justify-center items-center">
                                 <div className="w-full h-1/2">
                                     <img
                                         src="images/howitstarted-1.jpg"
-                                        className="w-full h-full object-cover -rotate-6 border-4 border-[#ECAD5B]"
+                                        className="w-full h-full object-cover -rotate-6 border-[0.6rem] shadow-2xl border-white"
                                     />
                                 </div>
                             </div>
@@ -162,31 +165,35 @@ const Home = () => {
                                 <div className="w-full h-1/2">
                                     <img
                                         src="images/howitstarted-3.jpg"
-                                        className="w-full h-full object-cover rotate-12 border-4 border-[#BEB66D]"
+                                        className="w-full h-full object-cover rotate-12 border-[0.6rem] shadow-2xl border-white"
                                     />
                                 </div>
                                 <div className="w-full h-1/2">
                                     <img
                                         src="images/howitstarted-2.jpg"
-                                        className="w-full h-full object-cover  border-4 border-[#F2EF61]"
+                                        className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
                                     />
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="sm:max-w-lg md:max-w-[40%] flex flex-col justify-center md:items-end ml-4 mt-8 md:mt-0 order-1 md:order-2">
-                        <h3 className="text-[#EB492A] font-bold w-full text-lg uppercase tracking-wide">
+                    <div className="md:max-w-[40%] flex flex-col justify-center md:items-end ml-4 mt-8 md:mt-0 order-1 md:order-2 mb-4">
+                        <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
                             How it started
                         </h3>
-                        <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-white">
-                            Transforming lives through compassion and action.
+                        <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
+                            A lifelong passion turned into a mission.
                         </h2>
-                        <p className="text-sm md:text-md w-full mb-4 text-gray-300">
-                            We are a dedicated group of volunteers and animal
-                            lovers committed to rescuing, rehabilitating, and
-                            rehoming animals in need. Our mission is to create a
-                            safer, more compassionate world for all creatures.
+                        <p className="text-sm md:text-md w-full mb-4 text-[#4A4A4A]">
+                            Manish Rawat, Founder and Managing Trustee of Hope
+                            For Animals, has been helping animals since
+                            childhood. In 2019, his dedication grew as he
+                            volunteered with an NGO, working closely with
+                            animals in need. By 2022, the vision for his own
+                            shelter took shape, and in 2023, Hope For Animals
+                            was officially registered as an NGO committed to
+                            rescuing and caring for vulnerable animals.
                         </p>
                     </div>
                 </div>
@@ -200,21 +207,20 @@ const Home = () => {
                     />
                 </div>
                 <div className="w-full flex justify-center items-center bg-[#FDFDFD]">
-                    <div className="font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 text-5xl md:text-6xl text-green-500 mb-8 py-2">
+                    <div className="font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 text-5xl md:text-6xl mb-8 py-2">
                         <p className="w-fit">
-                            <span className="text-[#7A9EBA]">S</span>
-                            <span className="text-[#8CAAC9]">u</span>
-                            <span className="text-[#7A9EBA]">c</span>
-                            <span className="text-[#A4BFD6]">c</span>
-                            <span className="text-[#8CAAC9]">es</span>
-                            <span className="text-[#A4BFD6]">s </span>
-
-                            <span className="text-[#8CAAC9] ml-1">S</span>
-                            <span className="text-[#7A9EBA]">t</span>
-                            <span className="text-[#A4BFD6]">o</span>
-                            <span className="text-[#8CAAC9]">ri</span>
-                            <span className="text-[#A4BFD6]">e</span>
-                            <span className="text-[#7A9EBA]">s</span>
+                            <span className="text-[#2F3E5C]">S</span>
+                            <span className="text-[#4A4A4A]">u</span>
+                            <span className="text-[#2F3E5C]">c</span>
+                            <span className="text-[#5E4B56]">c</span>
+                            <span className="text-[#4A4A4A]">es</span>
+                            <span className="text-[#5E4B56]">s </span>
+                            <span className="text-[#4A4A4A] ml-1">S</span>
+                            <span className="text-[#2F3E5C]">t</span>
+                            <span className="text-[#5E4B56]">o</span>
+                            <span className="text-[#4A4A4A]">ri</span>
+                            <span className="text-[#5E4B56]">e</span>
+                            <span className="text-[#2F3E5C]">s</span>
                         </p>
                     </div>
                 </div>
@@ -234,14 +240,15 @@ const Home = () => {
             <div className="w-full flex flex-col items-center ">
                 <div className="font-lucky text-5xl md:text-6xl mb-12">
                     <p className="w-fit">
-                        <span className="text-[#F2EF61]">O</span>
-                        <span className="text-[#ECAD5B]">u</span>
-                        <span className="text-[#BEB66D]">r </span>
-                        <span className="text-[#F2EF61]">I</span>
-                        <span className="text-[#ECAD5B]">mp</span>
-                        <span className="text-[#BEB66D]">a</span>
-                        <span className="text-[#ECAD5B]">c</span>
-                        <span className="text-[#BEB66D]">t</span>
+                        <span className="text-[#4A4A4A]">O</span>
+                        <span className="text-[#2F3E5C]">u</span>
+                        <span className="text-[#5E4B56]">r </span>
+
+                        <span className="text-[#4A4A4A]">I</span>
+                        <span className="text-[#2F3E5C]">mp</span>
+                        <span className="text-[#5E4B56]">a</span>
+                        <span className="text-[#2F3E5C]">c</span>
+                        <span className="text-[#5E4B56]">t</span>
                     </p>
                 </div>
                 <div className="w-full flex flex-wrap justify-center gap-6 px-4">
@@ -273,7 +280,7 @@ const Home = () => {
                     ].map(({ img, count, label, desc }) => (
                         <div
                             key={label}
-                            className="flex flex-col items-center bg-white rounded-2xl shadow-md p-6 border-4 border-[#F2EF61] w-full sm:w-[48%] md:w-[22%]"
+                            className="flex flex-col items-center bg-white rounded-2xl shadow-xl p-4 border-4 w-[70%] justify-center aspect-square sm:w-[36%] lg:w-[22%]"
                         >
                             <img
                                 src={`images/${img}`}
@@ -282,7 +289,7 @@ const Home = () => {
                             />
                             <div className="text-[#012F50] text-6xl font-bold relative">
                                 {count}
-                                <span className="absolute text-3xl font-bold top-2 right-[-20px]">
+                                <span className="absolute text-3xl font-bold top-3 right-[-20px]">
                                     +
                                 </span>
                             </div>
@@ -295,85 +302,199 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* <GalleryPreview /> */}
+            <GalleryPreview />
 
-            <div className="h-[36rem] w-full"></div>
+            <div className="w-full flex flex-col items-center mb-10">
+                <div className="w-[100vw] bg-transparent -mb-1">
+                    <img
+                        src="images/paper.png"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
 
-            <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] xl:max-w-[70%] gap-8 items-center my-10">
-                <div className="w-full md:w-1/2 flex flex-col justify-center md:items-start">
-                    <h3 className="text-[#EB492A] font-bold text-lg uppercase tracking-wide mb-2">
-                        Adoptions
-                    </h3>
-                    <h2 className="text-3xl md:text-5xl font-bold mb-5 leading-snug text-white">
-                        Find your new Furrever Furry Friend.
-                    </h2>
-                    <p className="text-md md:text-lg font-normal mb-6 text-gray-300">
-                        Maybe you'll find the love of your life here instead of
-                        a club...
-                    </p>
-                    <Link to="/adoptions">
-                        <div className="inline-block py-4 px-6 bg-orange-400 text-center text-lg font-semibold text-white rounded-md cursor-pointer hover:bg-orange-500 transition">
-                            Explore Adoptions
+                <div className="w-full h-full bg-[#FDFDFD] flex flex-col items-center">
+                    <div className="text-5xl md:text-6xl font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 mb-8 py-2">
+                        <p className="w-fit">
+                            <span className="text-[#2F3E5C]">A</span>
+                            <span className="text-[#4A4A4A]">d</span>
+                            <span className="text-[#5E4B56]">o</span>
+                            <span className="text-[#2F3E5C]">p</span>
+                            <span className="text-[#5E4B56]">t</span>
+                            <span className="text-[#5E4B56]">i</span>
+                            <span className="text-[#4A4A4A]">o</span>
+                            <span className="text-[#5E4B56]">n</span>
+                            <span className="text-[#2F3E5C]">s</span>
+                        </p>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-center">
+                        <div className="w-full md:w-[45%] flex flex-row justify-center items-center gap-4 md:gap-4 mr-2">
+                            <div className="w-[42%] h-auto">
+                                <img
+                                    src="images/adoptions/a-1.jpg"
+                                    className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-3 border-[#efefef]"
+                                />
+                            </div>
+                            <div className="w-[42%] h-auto">
+                                <img
+                                    src="images/adoptions/a-2.jpg"
+                                    className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-6 border-[#efefef]"
+                                />
+                            </div>
                         </div>
+
+                        {/* TEXT SECTION */}
+                        <div className="sm:max-w-lg md:max-w-[40%] flex flex-col justify-center md:items-start ml-4 mt-8 md:mt-0">
+                            <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
+                                Physical Adoption
+                            </h3>
+                            <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
+                                Give a rescued puppy a forever home.
+                            </h2>
+                            <p className="text-md md:text-lg w-full mb-4 text-[#4A4A4A]">
+                                Meet our playful puppies at the shelter or an
+                                adoption camp and take one home. Physical
+                                adoptions help our little ones find loving
+                                families to grow up with.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-20 items-center">
+                        {/* TEXT CONTENT */}
+                        <div className="sm:max-w-lg md:max-w-[40%] flex flex-col justify-center md:items-end ml-4 mt-8 md:mt-0 md:order-1 order-2">
+                            <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
+                                Virtual Adoption
+                            </h3>
+                            <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
+                                Support a special dog from afar.
+                            </h2>
+                            <p className="text-md md:text-lg w-full mb-4 text-[#4A4A4A]">
+                                Virtually adopt a paralyzed dog by contributing
+                                ₹2500/month, covering food, medicine, and
+                                diapers. You can visit your furry friend at the
+                                shelter anytime and be a part of their healing
+                                journey.
+                            </p>
+                        </div>
+
+                        <div className="w-full md:w-[45%] flex flex-row justify-center items-center gap-4 md:gap-4 ml-2 md:order-2 order-1">
+                            <div className="w-[42%] h-auto">
+                                <img
+                                    src="images/adoptions/va-1.jpg"
+                                    className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-3 border-[#efefef]"
+                                />
+                            </div>
+                            <div className="w-[42%] h-auto">
+                                <img
+                                    src="images/adoptions/va-2.jpg"
+                                    className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-6 border-[#efefef]"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <Link
+                        to="/adoptions"
+                        className="flex justify-center mb-20 w-[80%] md:w-[50%] lg:w-[40%] xl:w-[30%]"
+                    >
+                        <button className="button-cute px-10 py-4 w-full bg-orange-400 md:text-lg">
+                            Explore Adoptions
+                        </button>
                     </Link>
                 </div>
 
-                <div className="w-full md:w-1/2">
+                <div className="w-[100vw] bg-transparent -mt-1">
                     <img
-                        src="images/unnamed.jpg"
-                        alt="Adoptions"
-                        className="w-full h-auto object-cover rounded-md border-4 border-[#ECAD5B]"
+                        src="images/paper.png"
+                        className="w-full h-full object-cover rotate-180"
                     />
                 </div>
             </div>
 
             <div
+                className="w-full h-full flex flex-col items-center"
                 id="sponsor-meal-section"
-                className="w-full bg-orange-100 py-10 px-4"
             >
-                <div className="text-3xl md:text-4xl font-bold text-emerald-500 w-full max-w-[90%] mb-8 border-l-4 border-orange-400 pl-4">
-                    Sponsor A Meal
+                <div className="text-5xl md:text-6xl font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 mb-8 py-2">
+                    <p className="w-fit">
+                        <span className="text-[#5E4B56]">S</span>
+                        <span className="text-[#2F3E5C]">p</span>
+                        <span className="text-[#4A4A4A]">o</span>
+                        <span className="text-[#5E4B56]">ns</span>
+                        <span className="text-[#4A4A4A]">o</span>
+                        <span className="text-[#4A4A4A]">r </span>
+                        <span className="text-[#2F3E5C]">A </span>
+                        <span className="text-[#4A4A4A]">M</span>
+                        <span className="text-[#5E4B56]">e</span>
+                        <span className="text-[#4A4A4A]">a</span>
+                        <span className="text-[#2F3E5C]">l</span>
+                    </p>
                 </div>
-                <div className="flex flex-col md:flex-row justify-between w-full max-w-[90%] items-center gap-8">
-                    <div className="w-full md:w-1/2">
-                        <img
-                            src="images/unnamed.jpg"
-                            className="w-full h-auto object-cover"
-                            alt="Sponsor a meal"
-                        />
+
+                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-center">
+                    <div className="w-full md:w-[45%] flex flex-row justify-center items-center gap-4 md:gap-4 mr-2">
+                        <div className="w-[42%] h-auto">
+                            <img
+                                src="images/meal/meal-1.png"
+                                className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-3 border-[#efefef]"
+                            />
+                        </div>
+                        <div className="w-[42%] h-auto">
+                            <img
+                                src="images/meal/meal-2.jpg"
+                                className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-6 border-[#efefef]"
+                            />
+                        </div>
                     </div>
-                    <div className="w-full md:w-1/2 flex flex-col justify-between">
-                        <p className="text-3xl md:text-5xl font-bold">
-                            Feed the shelter babies!
-                        </p>
-                        <p className="text-md md:text-lg font-normal mt-4">
-                            <span className="font-semibold">Option 1:</span>{" "}
-                            ₹1500 for 2 meals (Breakfast + Dinner)
-                        </p>
-                        <p className="text-md md:text-lg font-normal">
-                            <span className="font-semibold">Option 2:</span>{" "}
-                            ₹2000 for 2 meals + Snacks
-                        </p>
-                        <p className="text-sm mt-4">
+
+                    <div className="sm:max-w-lg md:max-w-[40%] flex flex-col justify-center md:items-start ml-4 mt-8 md:mt-0">
+                        <h2 className="text-3xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
+                            Sponsor a day's meal for everyone at the shelter.
+                        </h2>
+                        <p className="text-md md:text-lg w-full mb-4 text-[#4A4A4A]">
                             By sponsoring a day's meal, you'll be providing
-                            essential nutrition... choose a date that suits you.
-                        </p>
-                        <HashLink
-                            to="/#footer-section"
-                            scroll={(el) =>
-                                el.scrollIntoView({ behavior: "smooth" })
-                            }
-                        >
-                            <div className="mt-6 py-4 bg-orange-400 text-center text-lg font-semibold text-white">
-                                Donate
-                            </div>
-                        </HashLink>
-                        <p className="text-sm mt-2">
-                            *Contact us for scheduling your sponsorship and
-                            visit.
+                            essential nutrition to our furry friends. Plus,
+                            you'll have the opportunity to visit during feeding
+                            time and see the impact of your generosity
+                            firsthand! You can choose a date that suits you to
+                            sponsor a meal.
                         </p>
                     </div>
                 </div>
+
+                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] mb-10 items-center">
+                    {/* TEXT CONTENT */}
+                    <div className="sm:max-w-lg w-[90%] md:max-w-[40%] flex flex-col justify-center md:items-end md:order-1 order-2">
+                        <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
+                            Option 1
+                        </h3>
+                        <p className="text-md md:text-lg w-full mb-4 text-[#4A4A4A]">
+                            ₹1500 for 2 meals (Breakfast and Dinner)
+                        </p>
+                    </div>
+
+                    <div className="sm:max-w-lg w-[90%] md:max-w-[40%] flex flex-col justify-center md:items-end md:order-1 order-2">
+                        <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
+                            Option 2
+                        </h3>
+                        <p className="text-md md:text-lg w-full mb-4 text-[#4A4A4A]">
+                            ₹2000 for 2 meals (Breakfast and Dinner) + Snacks
+                        </p>
+                    </div>
+                </div>
+
+                <Link
+                    to="/#footer-section"
+                    className="flex flex-col justify-center item-center mb-20 w-[80%] md:w-[50%] lg:w-[40%] xl:w-[30%]"
+                >
+                    <button className="button-cute md:text-lg px-10 py-4 w-full bg-orange-400">
+                        Donate meals
+                    </button>
+                    <p className="text-sm md:text-md text-[#4A4A4A]">
+                        *Contact us to schedule your sponsorship and visit
+                    </p>
+                </Link>
             </div>
         </section>
     );

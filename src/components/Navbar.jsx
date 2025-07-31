@@ -20,7 +20,7 @@ const Navbar = () => {
     return (
         <div className="w-full fixed top-0 left-0 z-50 bg-white border-b-2">
             {/* Top bar */}
-            <div className="w-full bg-[#012F50] overflow-x-auto">
+            <div className="w-full bg-[#2F3E5C] overflow-x-auto">
                 <div className="flex flex-nowrap justify-between items-center gap-4 w-full max-w-[1440px] px-2 mx-auto text-sm text-white">
                     {/* Contact info */}
                     <div className="flex flex-nowrap items-center gap-4 sm:gap-6 min-w-0 overflow-hidden">
@@ -33,7 +33,7 @@ const Navbar = () => {
                             <p className="whitespace-nowrap">+91 7818037628</p>
                         </div>
                         {/* Email */}
-                        <div className="flex items-center shrink-0 whitespace-nowrap min-w-0">
+                        <div className="flex items-center shrink-0 whitespace-nowrap min-w-0 max-[520px]:hidden">
                             <img
                                 src="images/mail.png"
                                 className="h-4 mr-1 shrink-0"
@@ -153,32 +153,24 @@ const Navbar = () => {
 
                 {/* Desktop menu */}
                 <nav className="hidden md:flex flex-wrap justify-end items-center gap-4 md:gap-6 text-base md:text-lg flex-grow overflow-hidden">
-                    <HashLink
-                        smooth
-                        to="/#about-us-section"
-                        className="hover:bg-orange-400 hover:text-white px-3 py-2 transition-all rounded whitespace-nowrap"
-                    >
-                        About Us
-                    </HashLink>
-                    <HashLink
-                        smooth
-                        to="/#sponsor-meal-section"
-                        className="hover:bg-orange-400 hover:text-white px-3 py-2 transition-all rounded whitespace-nowrap"
-                    >
-                        Sponsor a meal
-                    </HashLink>
-                    <HashLink
-                        to="/gallery"
-                        className="hover:bg-orange-400 hover:text-white px-3 py-2 transition-all rounded whitespace-nowrap"
-                    >
-                        Gallery
-                    </HashLink>
-                    <HashLink
-                        to="/adoptions"
-                        className="hover:bg-orange-400 hover:text-white px-3 py-2 transition-all rounded whitespace-nowrap"
-                    >
-                        Adoptions
-                    </HashLink>
+                    {[
+                        { label: "About Us", to: "/#about-us-section" },
+                        {
+                            label: "Sponsor a meal",
+                            to: "/#sponsor-meal-section",
+                        },
+                        { label: "Gallery", to: "/gallery" },
+                        { label: "Adoptions", to: "/adoptions" },
+                    ].map(({ label, to }) => (
+                        <HashLink
+                            key={label}
+                            smooth
+                            to={to}
+                            className="relative px-3 py-2 transition-all duration-200 rounded-sm text-zinc-800 hover:text-white hover:bg-[#B0D0E8] hover:shadow-md active:scale-95 whitespace-nowrap"
+                        >
+                            {label}
+                        </HashLink>
+                    ))}
                 </nav>
             </div>
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Marquee from "react-fast-marquee";
 
 const GITHUB_JSON_URL =
-    "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-images.jso";
+    "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-images.json";
 
 const GalleryPreview = () => {
     const [images, setImages] = useState([]);
@@ -48,18 +48,27 @@ const GalleryPreview = () => {
 
     return (
         <div className="w-full mx-auto my-10 overflow-hidden flex flex-col items-center">
-            <div className="h-16 text-4xl flex items-center font-bold text-emerald-500 w-[70%] mb-10">
-                <div className="w-[50%]">
-                    <p className="w-[36rem] border-l-4 border-orange-400 px-4 py-3">
-                        Photo Gallery
-                        <a
-                            href="/gallery"
-                            className="text-xl text-orange-400 m-10"
-                        >
-                            View Full Gallery &rarr;
-                        </a>
-                    </p>
-                </div>
+            <div className="flex flex-col md:flex-row md:items-center md:gap-8 text-5xl md:text-6xl font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 mb-8 py-2">
+                <p className="w-fit">
+                    <span className="text-[#4A4A4A]">P</span>
+                    <span className="text-[#2F3E5C]">h</span>
+                    <span className="text-[#5E4B56]">o</span>
+                    <span className="text-[#2F3E5C]">to </span>
+                    <span className="text-[#4A4A4A]">G</span>
+                    <span className="text-[#2F3E5C]">a</span>
+                    <span className="text-[#2F3E5C]">l</span>
+                    <span className="text-[#5E4B56]">l</span>
+                    <span className="text-[#4A4A4A]">e</span>
+                    <span className="text-[#5E4B56]">r</span>
+                    <span className="text-[#2F3E5C]">y</span>
+                </p>
+
+                <a
+                    href="/gallery"
+                    className="font-semibold md:px-1 font-sans text-lg md:text-xl text-[#5E4B56]"
+                >
+                    Check out full gallery &rarr;
+                </a>
             </div>
 
             <div className="bg-black mb-2">
@@ -74,7 +83,7 @@ const GalleryPreview = () => {
                             key={"top-" + i}
                             src="images/film.png"
                             alt="Film roll strip top"
-                            className="h-8 w-auto object-cover flex-shrink-0"
+                            className="h-4 w-auto object-cover flex-shrink-0"
                         />
                     ))}
                 </Marquee>
@@ -90,7 +99,7 @@ const GalleryPreview = () => {
                             key={i}
                             src={image.url}
                             alt={`Gallery image ${i + 1}`}
-                            className="h-[28rem] mx-1 object-cover flex-shrink-0"
+                            className="h-[12rem] sm:h-[16rem] md:h-[28rem] mx-1 object-cover flex-shrink-0"
                         />
                     ))}
                 </Marquee>
@@ -106,7 +115,7 @@ const GalleryPreview = () => {
                             key={"bottom-" + i}
                             src="images/film.png"
                             alt="Film roll strip bottom"
-                            className="h-8 w-auto object-cover flex-shrink-0"
+                            className="h-4 w-auto object-cover flex-shrink-0"
                         />
                     ))}
                 </Marquee>
