@@ -165,7 +165,7 @@ export default function Adoptions() {
                         <div className="flex flex-col sm:flex-row gap-6">
                             <div className="sm:w-[35%] flex justify-center items-start">
                                 <img
-                                    src={adoption.url}
+                                    src={selectedAdoption.url}
                                     className="w-full h-auto rounded-lg shadow-md border-2"
                                     alt="pet-photo"
                                 />
