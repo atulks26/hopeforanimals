@@ -30,7 +30,7 @@ export default function Adoptions() {
     useEffect(() => {
         function handleClickOutside(event) {
             if (cardRef.current && !cardRef.current.contains(event.target)) {
-                setSelectedAdoption(null); // Close the modal
+                setSelectedAdoption(null);
             }
         }
 
@@ -74,12 +74,7 @@ export default function Adoptions() {
                             : "border-pink-400";
                     const genderEmoji =
                         adoption.gender.toLowerCase() === "male" ? "♂️" : "♀️";
-                    const ageUnit =
-                        adoption.age > 1
-                            ? "Years"
-                            : adoption.age < 1
-                            ? "Months"
-                            : "Year";
+                    const ageUnit = adoption.age > 1 ? "Years" : "Year";
 
                     return (
                         <div
