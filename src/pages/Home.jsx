@@ -398,7 +398,7 @@ const Home = () => {
                         to="/adoptions"
                         className="flex justify-center mb-20 w-[80%] md:w-[50%] lg:w-[40%] xl:w-[30%]"
                     >
-                        <button className="button-cute px-10 py-4 w-full bg-orange-400 md:text-lg">
+                        <button className="button-cute px-10 py-4 w-full font-semibold bg-orange-400 md:text-lg">
                             Explore Adoptions
                         </button>
                     </Link>
@@ -488,7 +488,7 @@ const Home = () => {
                     to="/#footer-section"
                     className="flex flex-col justify-center item-center mb-20 w-[80%] md:w-[50%] lg:w-[40%] xl:w-[30%]"
                 >
-                    <button className="button-cute md:text-lg px-10 py-4 w-full bg-orange-400">
+                    <button className="button-cute md:text-lg px-10 py-4 w-full font-semibold bg-orange-400">
                         Donate meals
                     </button>
                     <p className="text-sm md:text-md text-[#4A4A4A]">

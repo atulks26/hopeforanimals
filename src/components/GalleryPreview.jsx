@@ -68,7 +68,7 @@ const GalleryPreview = () => {
                     to="/gallery"
                     className="flex items-start sm:pl-2 pt-2 sm:pt-0 w-fit"
                 >
-                    <button className="button-cute2 text-sm">
+                    <button className="button-cute2 font-sans font-semibold text-[0.9rem]">
                         Check out full gallery &rarr;
                     </button>
                 </Link>
