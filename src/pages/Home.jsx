@@ -469,7 +469,7 @@ const Home = () => {
                         <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
                             Option 1
                         </h3>
-                        <p className="text-md md:text-lg w-full mb-4 text-[#4A4A4A]">
+                        <p className="text-md md:text-lg w-full md:mb-4 text-[#4A4A4A]">
                             ₹1500 for 2 meals (Breakfast and Dinner)
                         </p>
                     </div>
@@ -478,7 +478,7 @@ const Home = () => {
                         <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
                             Option 2
                         </h3>
-                        <p className="text-md md:text-lg w-full mb-4 text-[#4A4A4A]">
+                        <p className="text-md md:text-lg w-full md:mb-4 text-[#4A4A4A]">
                             ₹2000 for 2 meals (Breakfast and Dinner) + Snacks
                         </p>
                     </div>
@@ -488,7 +488,7 @@ const Home = () => {
                     to="/#footer-section"
                     className="flex flex-col justify-center item-center mb-20 w-[80%] md:w-[50%] lg:w-[40%] xl:w-[30%]"
                 >
-                    <button className="button-cute md:text-lg px-10 py-4 w-full font-semibold bg-orange-400">
+                    <button className="button-cute md:text-lg px-10 py-4 w-full font-semibold bg-orange-400 mb-1">
                         Donate meals
                     </button>
                     <p className="text-sm md:text-md text-[#4A4A4A]">
