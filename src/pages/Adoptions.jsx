@@ -165,9 +165,9 @@ export default function Adoptions() {
                         <div className="flex flex-col sm:flex-row gap-6">
                             <div className="sm:w-[35%] flex justify-center items-start">
                                 <img
-                                    src="images/dog-sit.jpg"
+                                    src={adoption.url}
                                     className="w-full h-auto rounded-lg shadow-md border-2"
-                                    alt="dog"
+                                    alt="pet-photo"
                                 />
                             </div>
                             <div className="sm:w-[65%] flex flex-col gap-4">
@@ -204,6 +204,14 @@ export default function Adoptions() {
                                     </strong>
                                     <span className="font-schoolbell text-xl ml-1 block mt-1 text-gray-700">
                                         {selectedAdoption.desc}
+                                    </span>
+                                </p>
+                                <p>
+                                    <strong className="text-green-700 font-outfit text-lg">
+                                        Note:
+                                    </strong>
+                                    <span className="font-schoolbell text-xl ml-1 block mt-1 text-gray-700">
+                                        {selectedAdoption.note}
                                     </span>
                                 </p>
                             </div>

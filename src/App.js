@@ -6,10 +6,12 @@ import Adoptions from "./pages/Adoptions";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/Scoller";
 import HashReset from "./components/HashReset";
+import Preloader from "./components/Preloader";
 
 function App() {
     return (
         <Router className="relative">
+            <Preloader />
             <div className="fixed inset-0 -z-10 w-screen h-screen">
                 <img
                     src="images/bg.png"

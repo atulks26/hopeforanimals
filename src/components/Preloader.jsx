@@ -1,28 +1,30 @@
-// import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-// export default function Preloader() {
-//     const [images, setImages] = useState([]);
+const GITHUB_JSON_URL =
+    "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-adoptions.json";
 
-//     useEffect(() => {
-//         let current = 0;
-//         const interval = setInterval(() => {
-//             if (current >= images.length) {
-//                 clearInterval(interval);
-//                 return;
-//             }
-//             const img = new Image();
-//             img.src = images[current].url;
-//             current++;
-//         }, 200);
+export default function Preloader() {
+    const [images, setImages] = useState([]);
 
-//         return () => clearInterval(interval);
-//     }, [images]);
+    useEffect(() => {
+        async function fetchAdoptionImages() {
+            try {
+                const res = await fetch(GITHUB_JSON_URL);
+                if (!res.ok) throw new Error("Failed to fetch adoption data");
 
-//     return (
-//         <div style={{ display: "none" }} aria-hidden="true">
-//             {images.map((img, i) => (
-//                 <img key={i} src={img.url} alt="" />
-//             ))}
-//         </div>
-//     );
-// }
+                const data = await res.json();
+                const urls = data.map((pet) => pet.url).filter(Boolean);
+                setImages(urls);
+
+                urls.forEach((url) => {
+                    const img = new Image();
+                    img.src = url;
+                });
+            } catch (err) {
+                console.error("Image preloading failed:", err);
+            }
+        }
+
+        fetchAdoptionImages();
+    }, []);
+}
