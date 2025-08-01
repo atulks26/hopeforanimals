@@ -376,25 +376,42 @@ export default function CardCarousel() {
             </AnimatePresence>
 
             {/* Mobile swipe arrows */}
-            <div className="md:hidden absolute top-1/2 left-2 -translate-y-1/2 text-gray-400 text-2xl select-none pointer-events-none animate-slide-left-right">
-                ⬅
+            <div className="md:hidden absolute top-1/2 left-2 -translate-y-1/2 select-none pointer-events-none animate-slide-left-right">
+                <img
+                    src="/images/left.png"
+                    alt="left arrow"
+                    className="h-6 w-6 opacity-50"
+                />
             </div>
-            <div className="md:hidden absolute top-1/2 right-2 -translate-y-1/2 text-gray-400 text-2xl select-none pointer-events-none animate-slide-right-left">
-                ➡
+            <div className="md:hidden absolute top-1/2 right-2 -translate-y-1/2 select-none pointer-events-none animate-slide-right-left">
+                <img
+                    src="/images/right.png"
+                    alt="right arrow"
+                    className="h-6 w-6 opacity-50"
+                />
             </div>
 
             {/* Desktop Buttons */}
             <button
                 onClick={handlePrev}
-                className="text-2xl md:text-4xl hidden md:block absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-25 text-white px-2 py-1 w-[4%] hover:opacity-90 opacity-60 active:opacity-60 rounded h-[70%]"
+                className="hidden md:flex absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-25 text-white w-8 h-[60%] hover:opacity-90 opacity-60 active:opacity-60 rounded items-center justify-center"
             >
-                ⬅
+                <img
+                    src="/images/left.png"
+                    alt="left arrow"
+                    className="max-h-6 w-auto object-contain"
+                />
             </button>
+
             <button
                 onClick={handleNext}
-                className="text-2xl md:text-4xl hidden md:block absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-25 text-white px-2 py-1 w-[4%] hover:opacity-90 opacity-60 active:opacity-60 rounded h-[70%]"
+                className="hidden md:flex absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-25 text-white w-8 h-[60%] hover:opacity-90 opacity-60 active:opacity-60 rounded items-center justify-center"
             >
-                ➡
+                <img
+                    src="/images/right.png"
+                    alt="right arrow"
+                    className="max-h-6 w-auto object-contain"
+                />
             </button>
         </div>
     );

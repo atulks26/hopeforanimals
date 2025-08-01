@@ -1,27 +1,23 @@
 import React, { useEffect, useState, useRef } from "react";
 
-// The URL for the adoption data
 const GITHUB_JSON_URL =
     "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-adoptions.json";
 
 export default function Adoptions() {
-    // State for storing adoption data, errors, and the selected pet for the modal
     const [adoptions, setAdoptions] = useState([]);
     const [error, setError] = useState("");
     const [selectedAdoption, setSelectedAdoption] = useState(null);
-    const cardRef = useRef(); // Ref for the modal card to detect outside clicks
+    const cardRef = useRef();
 
-    // useEffect hook to fetch adoption data when the component mounts
     useEffect(() => {
         async function fetchAdoptions() {
             try {
                 const res = await fetch(GITHUB_JSON_URL);
                 if (!res.ok) {
-                    // Check if the response is successful
                     throw new Error(`HTTP error! status: ${res.status}`);
                 }
                 const data = await res.json();
-                const data2 = [...data, ...data];
+                const data2 = [...data];
                 setAdoptions(data2);
             } catch (err) {
                 setError("Failed to load adoptions. Please try again later.");
@@ -29,9 +25,8 @@ export default function Adoptions() {
             }
         }
         fetchAdoptions();
-    }, []); // Empty dependency array ensures this runs only once on mount
+    }, []);
 
-    // useEffect hook to handle clicks outside the modal to close it
     useEffect(() => {
         function handleClickOutside(event) {
             if (cardRef.current && !cardRef.current.contains(event.target)) {
@@ -39,18 +34,15 @@ export default function Adoptions() {
             }
         }
 
-        // Add event listener only when the modal is open
         if (selectedAdoption) {
             document.addEventListener("mousedown", handleClickOutside);
         }
 
-        // Cleanup function to remove the event listener
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
-    }, [selectedAdoption]); // Rerun this effect when selectedAdoption changes
+    }, [selectedAdoption]);
 
-    // Display an error message if the data fetch fails
     if (error)
         return <div className="text-red-600 text-center mt-10">{error}</div>;
 
@@ -60,23 +52,22 @@ export default function Adoptions() {
             <div className="flex items-center justify-center gap-4 mb-8">
                 <img
                     src="images/paw-print.png"
-                    alt="flower1"
-                    className="w-12 h-12 object-contain"
+                    alt="paw1"
+                    className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
-                <h1 className="text-5xl font-semibold font-rampart text-gray-700">
+                <h1 className="text-4xl md:text-5xl font-semibold font-rampart text-gray-700">
                     Adoptions
                 </h1>
                 <img
                     src="images/paw-print.png"
-                    alt="flower2"
-                    className="w-12 h-12 object-contain"
+                    alt="paw2"
+                    className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
             </div>
 
             {/* Grid for adoption cards */}
-            <div className="flex flex-wrap gap-8 mx-6 justify-center">
+            <div className="flex flex-wrap gap-8 mx-6 justify-center mb-8">
                 {adoptions.map((adoption, index) => {
-                    // Determine styles based on gender
                     const borderColor =
                         adoption.gender.toLowerCase() === "male"
                             ? "border-blue-400"
@@ -94,35 +85,30 @@ export default function Adoptions() {
                         <div
                             key={index}
                             onClick={() => setSelectedAdoption(adoption)}
-                            // Main card container with dynamic border color
                             className={`relative cursor-pointer w-96 bg-white ${borderColor} border-4 rounded-2xl flex flex-col overflow-hidden transition-transform duration-300 hover:scale-[1.03] shadow-lg`}
                         >
-                            {/* Watermark Image */}
                             <img
                                 src="images/watermark.png"
                                 className="absolute inset-0 w-full h-full object-contain opacity-5 -z-0"
                                 alt="watermark"
                             />
 
-                            {/* Gender Emoji */}
                             <div className="absolute top-1 left-0 text-3xl bg-white bg-opacity-70 rounded-full px-1">
                                 {genderEmoji}
                             </div>
 
-                            {/* Card content container */}
                             <div className="p-4 z-10 flex flex-col flex-grow">
-                                {/* Top Section: Image and Basic Info */}
                                 <div className="flex items-center gap-4 mb-4">
-                                    {/* Circular Image */}
                                     <div
                                         className={`w-24 h-24 rounded-full overflow-hidden border-2 ${borderColor} flex-shrink-0`}
                                     >
                                         <img
-                                            src={adoption.url} // Using a static image as per original code
+                                            src={adoption.url}
                                             alt={adoption.name}
                                             className="h-full w-full object-cover"
                                         />
                                     </div>
+
                                     {/* Name, Age, and Note */}
                                     <div className="font-outfit">
                                         <p className="font-bold text-gray-500">

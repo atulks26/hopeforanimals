@@ -124,18 +124,33 @@ export default function Footer() {
                 </div>
 
                 {/* Location */}
+                {/* Location */}
                 <div className="w-full lg:w-[58%]">
                     <h2 className="text-xl font-semibold mb-4 text-[#F8E9AE]">
                         Location
                     </h2>
-                    <div className="w-full h-[18rem] overflow-hidden shadow-lg">
+
+                    <div className="relative w-full h-[18rem] overflow-hidden shadow-lg">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110155.99004721819!2d77.93332023332378!3d30.368716548962983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d50c76f1d587%3A0x1ba3c8b6dde2ea1!2sHope%20For%20Animals%20Rescue%20Shelter!5e0!3m2!1sen!2sin!4v1753774925567!5m2!1sen!2sin"
-                            className="w-full h-full border-none"
+                            className="absolute top-0 left-0 w-full h-full border-none"
                             allowFullScreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
+                            onError={(e) => {
+                                e.target.style.display = "none";
+                                const fallback = e.target.nextElementSibling;
+                                if (fallback) fallback.style.display = "flex";
+                            }}
                         ></iframe>
+
+                        {/* Fallback message */}
+                        <div className="hidden absolute top-0 left-0 w-full h-full bg-[#f8e9ae] text-black flex-col justify-center items-center text-center px-4">
+                            <p className="font-semibold mb-2">
+                                Failed to load map.
+                            </p>
+                            <p>Please refresh the page.</p>
+                        </div>
                     </div>
                 </div>
             </div>
