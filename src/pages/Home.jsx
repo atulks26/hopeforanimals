@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import CardCarousel from "../components/StoryCard";
-import Preloader from "../components/Preloader";
+// import Preloader from "../components/Preloader";
 
 const Home = () => {
     const location = useLocation();
@@ -32,7 +32,7 @@ const Home = () => {
     return (
         <section className="w-full flex flex-col justify-center items-center">
             <Hero />
-            <Preloader />
+            {/* <Preloader /> */}
 
             <section
                 className="flex flex-col items-center justify-center w-full pt-8 sm:pt-16 pb-0 md:pb-16"
