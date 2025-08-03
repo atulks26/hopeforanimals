@@ -42,7 +42,7 @@ export default function Footer() {
                         <strong>Hope for Animals</strong>
                         <strong>IDFC Bank</strong>
                         <p>
-                            Acc no.: <strong>10090218133</strong>
+                            Current Acc no.: <strong>10090218133</strong>
                         </p>
                         <p>
                             IFSC: <strong>IDFB0021233</strong>

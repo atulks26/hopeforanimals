@@ -259,19 +259,19 @@ const Home = () => {
                         },
                         {
                             img: "adoption.png",
-                            count: "350",
+                            count: "425",
                             label: "ADOPTIONS",
                             desc: "Furry friends who found homes",
                         },
                         {
                             img: "dog-in-front-of-a-man.png",
-                            count: "100",
+                            count: "650",
                             label: "VET VISITS",
                             desc: "Because every paw matters",
                         },
                         {
                             img: "dog-running.png",
-                            count: "300",
+                            count: "490",
                             label: "RELEASES",
                             desc: "Harder, Better, Faster, Stronger",
                         },
@@ -468,7 +468,7 @@ const Home = () => {
                             Option 1
                         </h3>
                         <p className="text-md md:text-lg w-full md:mb-4 text-[#4A4A4A]">
-                            ₹1500 for 2 meals (Breakfast and Dinner)
+                            ₹1500 for 2 meals
                         </p>
                     </div>
 
@@ -477,7 +477,7 @@ const Home = () => {
                             Option 2
                         </h3>
                         <p className="text-md md:text-lg w-full md:mb-4 text-[#4A4A4A]">
-                            ₹2000 for 2 meals (Breakfast and Dinner) + Snacks
+                            ₹2000 for 2 meals + Snacks
                         </p>
                     </div>
                 </div>
