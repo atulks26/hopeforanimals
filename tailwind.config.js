@@ -13,12 +13,11 @@ const config = {
                 customRed: "#d90429",
             },
             fontFamily: {
-                cherry: ['"Cherry Bomb One"', "system-ui"],
                 rampart: ['"Rampart One"', "sans-serif"],
                 outfit: ["Outfit", "sans-serif"],
                 schoolbell: ["Schoolbell", "cursive"],
-                modak: ["Modak", "system-ui"],
                 lucky: ["Luckiest Guy", "cursive"],
+                audiowide: ["Audiowide", "sans-serif"],
             },
         },
     },

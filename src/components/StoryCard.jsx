@@ -122,7 +122,7 @@ export default function CardCarousel() {
                         <div className="w-[90%] lg:w-[70%] h-full flex items-center">
                             <div className="w-full h-full flex flex-col">
                                 {/* Title based on id or you can add title in cards */}
-                                <p className="text-2xl md:text-3xl font-semibold mb-10 text-[#2F3E5C] uppercase">
+                                <p className="font-audiowide text-2xl md:text-3xl font-semibold mb-10 text-[#2F3E5C] uppercase">
                                     {card.id === "adoption"
                                         ? "Adoption Camps"
                                         : card.id === "tree"
@@ -376,18 +376,18 @@ export default function CardCarousel() {
             </AnimatePresence>
 
             {/* Mobile swipe arrows */}
-            <div className="md:hidden absolute top-1/2 left-2 -translate-y-1/2 select-none pointer-events-none animate-slide-left-right">
+            <div className="md:hidden absolute top-1/2 left-2 -translate-y-1/2 select-none pointer-events-none">
                 <img
                     src="/images/left.png"
                     alt="left arrow"
-                    className="h-6 w-6 opacity-50"
+                    className="h-6 w-6 opacity-50 sliding-left"
                 />
             </div>
-            <div className="md:hidden absolute top-1/2 right-2 -translate-y-1/2 select-none pointer-events-none animate-slide-right-left">
+            <div className="md:hidden absolute top-1/2 right-2 -translate-y-1/2 select-none pointer-events-none">
                 <img
                     src="/images/right.png"
                     alt="right arrow"
-                    className="h-6 w-6 opacity-50"
+                    className="h-6 w-6 opacity-50 sliding-right"
                 />
             </div>
 

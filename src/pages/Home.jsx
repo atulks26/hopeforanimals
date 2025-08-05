@@ -77,7 +77,7 @@ const Home = () => {
                     </div>
 
                     <div className=" md:max-w-[40%] flex flex-col justify-center md:items-end ml-4 mt-8 md:mt-0 order-1 md:order-2">
-                        <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
+                        <h3 className="text-[#5E4B56] font-audiowide font-bold w-full text-xl uppercase tracking-wide">
                             Who are we
                         </h3>
                         <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
@@ -127,7 +127,7 @@ const Home = () => {
                     </div>
 
                     <div className="md:max-w-[40%] flex flex-col justify-center md:items-end ml-4 mt-8 md:mt-0 order-1 md:order-1">
-                        <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
+                        <h3 className="text-[#5E4B56] font-audiowide font-bold w-full text-xl uppercase tracking-wide">
                             What we do
                         </h3>
                         <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
@@ -177,7 +177,7 @@ const Home = () => {
                     </div>
 
                     <div className="md:max-w-[40%] flex flex-col justify-center md:items-end ml-4 mt-8 md:mt-0 order-1 md:order-2 mb-4">
-                        <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
+                        <h3 className="text-[#5E4B56] font-audiowide font-bold w-full text-xl uppercase tracking-wide">
                             How it started
                         </h3>
                         <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
@@ -343,7 +343,7 @@ const Home = () => {
 
                         {/* TEXT SECTION */}
                         <div className="sm:max-w-lg md:max-w-[40%] flex flex-col justify-center md:items-start ml-4 mt-8 md:mt-0">
-                            <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
+                            <h3 className="text-[#5E4B56] font-audiowide font-bold w-full text-xl uppercase tracking-wide">
                                 Physical Adoption
                             </h3>
                             <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
@@ -361,7 +361,7 @@ const Home = () => {
                     <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-20 items-center">
                         {/* TEXT CONTENT */}
                         <div className="sm:max-w-lg md:max-w-[40%] flex flex-col justify-center md:items-end ml-4 mt-8 md:mt-0 md:order-1 order-2">
-                            <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
+                            <h3 className="text-[#5E4B56] font-audiowide font-bold w-full text-xl uppercase tracking-wide">
                                 Virtual Adoption
                             </h3>
                             <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">

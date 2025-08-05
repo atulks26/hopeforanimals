@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Schoolbell&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Modak&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 
 body {
     margin: 0;
@@ -108,30 +107,40 @@ iframe {
     background-color: transparent;
 }
 
-@keyframes slide-left-right {
-    0%,
-    100% {
+@keyframes slide-left {
+    0% {
         transform: translateX(0);
     }
-    50% {
-        transform: translateX(6px);
-    }
-}
 
-@keyframes slide-right-left {
-    0%,
-    100% {
-        transform: translateX(0);
-    }
     50% {
         transform: translateX(-6px);
     }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
-.animate-slide-left-right {
-    animation: slide-left-right 2s ease-in-out infinite;
+@keyframes slide-right {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(6px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
-.animate-slide-right-left {
-    animation: slide-right-left 2s ease-in-out infinite;
+.sliding-left {
+    /* position: relative; */
+    animation: slide-left 1s ease-in-out infinite;
+}
+
+.sliding-right {
+    /* position: relative; */
+    animation: slide-right 1s ease-in-out infinite;
 }
