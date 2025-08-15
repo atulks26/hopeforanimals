@@ -155,6 +155,7 @@ const Navbar = () => {
                 <nav className="hidden md:flex flex-wrap justify-end items-center gap-4 md:gap-6 text-base md:text-lg flex-grow overflow-hidden">
                     {[
                         { label: "About Us", to: "/#about-us-section" },
+                        { label: "News", to: "/news" },
                         {
                             label: "Sponsor a meal",
                             to: "/#sponsor-meal-section",
@@ -201,6 +202,13 @@ const Navbar = () => {
                     onClick={closeMenu}
                 >
                     About Us
+                </HashLink>
+                <HashLink
+                    to="/news"
+                    className="block w-full text-center px-6 py-3 hover:bg-orange-400 hover:text-white rounded"
+                    onClick={closeMenu}
+                >
+                    News
                 </HashLink>
                 <HashLink
                     smooth

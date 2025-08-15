@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/Scoller";
 import HashReset from "./components/HashReset";
 import Preloader from "./components/Preloader";
+import News from "./pages/News";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/" element={[<Home />]} />
                 <Route path="/gallery" element={[<Gallery />]} />
                 <Route path="/adoptions" element={[<Adoptions />]} />
+                <Route path="/news" element={[<News />]} />
             </Routes>
             <Footer />
         </Router>

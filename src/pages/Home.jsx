@@ -380,13 +380,13 @@ const Home = () => {
                             <div className="w-[42%] h-auto">
                                 <img
                                     src="images/adoptions/va-1.jpg"
-                                    className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-3 border-[#efefef]"
+                                    className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-2 border-[#efefef]"
                                 />
                             </div>
                             <div className="w-[42%] h-auto">
                                 <img
                                     src="images/adoptions/va-2.jpg"
-                                    className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-6 border-[#efefef]"
+                                    className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-6 border-[#efefef]"
                                 />
                             </div>
                         </div>
@@ -410,37 +410,33 @@ const Home = () => {
                 </div>
             </div>
 
-            <div
-                className="w-full h-full flex flex-col items-center"
-                id="sponsor-meal-section"
-            >
+            {/* pup updates */}
+            <div className="w-full h-full flex flex-col items-center">
                 <div className="text-5xl md:text-6xl font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 mb-8 py-2">
                     <p className="w-fit">
-                        <span className="text-[#5E4B56]">S</span>
-                        <span className="text-[#2F3E5C]">p</span>
-                        <span className="text-[#4A4A4A]">o</span>
-                        <span className="text-[#5E4B56]">ns</span>
-                        <span className="text-[#4A4A4A]">o</span>
-                        <span className="text-[#4A4A4A]">r </span>
-                        <span className="text-[#2F3E5C]">A </span>
-                        <span className="text-[#4A4A4A]">M</span>
-                        <span className="text-[#5E4B56]">e</span>
-                        <span className="text-[#4A4A4A]">a</span>
-                        <span className="text-[#2F3E5C]">l</span>
+                        <span className="text-[#5E4B56]">P</span>
+                        <span className="text-[#2F3E5C]">u</span>
+                        <span className="text-[#4A4A4A]">p </span>
+                        <span className="text-[#5E4B56]">U</span>
+                        <span className="text-[#4A4A4A]">p</span>
+                        <span className="text-[#4A4A4A]">da</span>
+                        <span className="text-[#2F3E5C]">t</span>
+                        <span className="text-[#4A4A4A]">e</span>
+                        <span className="text-[#5E4B56]">s</span>
                     </p>
                 </div>
 
-                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-center">
+                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-14 items-center">
                     <div className="w-full md:w-[45%] flex flex-row justify-center items-center gap-4 md:gap-4 mr-2">
                         <div className="w-[42%] h-auto">
                             <img
-                                src="images/meal/meal-1.png"
+                                src="images/news/news-1.jpg"
                                 className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-3 border-[#efefef]"
                             />
                         </div>
                         <div className="w-[42%] h-auto">
                             <img
-                                src="images/meal/meal-2.jpg"
+                                src="images/news/news-2.jpg"
                                 className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-6 border-[#efefef]"
                             />
                         </div>
@@ -448,51 +444,120 @@ const Home = () => {
 
                     <div className="sm:max-w-lg md:max-w-[40%] flex flex-col justify-center md:items-start ml-4 mt-8 md:mt-0">
                         <h2 className="text-3xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
-                            Sponsor a day's meal for everyone at the shelter.
+                            Stay updated on every rescue story.
                         </h2>
                         <p className="text-md md:text-lg w-full mb-4 text-[#4A4A4A]">
-                            By sponsoring a day's meal, you'll be providing
-                            essential nutrition to our furry friends. Plus,
-                            you'll have the opportunity to visit during feeding
-                            time and see the impact of your generosity
-                            firsthand! You can choose a date that suits you to
-                            sponsor a meal.
-                        </p>
-                    </div>
-                </div>
-
-                <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] mb-10 items-center">
-                    {/* TEXT CONTENT */}
-                    <div className="sm:max-w-lg w-[90%] md:max-w-[40%] flex flex-col justify-center md:items-end md:order-1 order-2">
-                        <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
-                            Option 1
-                        </h3>
-                        <p className="text-md md:text-lg w-full md:mb-4 text-[#4A4A4A]">
-                            ₹1500 for 2 meals
-                        </p>
-                    </div>
-
-                    <div className="sm:max-w-lg w-[90%] md:max-w-[40%] flex flex-col justify-center md:items-end md:order-1 order-2">
-                        <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
-                            Option 2
-                        </h3>
-                        <p className="text-md md:text-lg w-full md:mb-4 text-[#4A4A4A]">
-                            ₹2000 for 2 meals + Snacks
+                            Follow our real-time feed to see when an animal is
+                            rescued, taken for treatment, cared for at the
+                            shelter, and finally healed and released. Celebrate
+                            every milestone in their journey from rescue to
+                            recovery.
                         </p>
                     </div>
                 </div>
 
                 <Link
-                    to="/#footer-section"
+                    to="/news"
                     className="flex flex-col justify-center item-center mb-20 w-[80%] md:w-[50%] lg:w-[40%] xl:w-[30%]"
                 >
                     <button className="button-cute md:text-lg px-10 py-4 w-full font-semibold bg-orange-400 mb-1">
-                        Donate meals
+                        Check feed
                     </button>
-                    <p className="text-sm md:text-md text-[#4A4A4A]">
-                        *Contact us to schedule your sponsorship and visit
-                    </p>
                 </Link>
+            </div>
+
+            <div
+                className="w-full h-full flex flex-col items-center"
+                id="sponsor-meal-section"
+            >
+                <div className="w-[100vw] bg-transparent -mb-1">
+                    <img
+                        src="images/paper.png"
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+                <div className="w-full h-full flex flex-col items-center bg-[#FDFDFD]">
+                    <div className="text-5xl md:text-6xl font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 mb-8 py-2">
+                        <p className="w-fit">
+                            <span className="text-[#5E4B56]">S</span>
+                            <span className="text-[#2F3E5C]">p</span>
+                            <span className="text-[#4A4A4A]">o</span>
+                            <span className="text-[#5E4B56]">ns</span>
+                            <span className="text-[#4A4A4A]">o</span>
+                            <span className="text-[#4A4A4A]">r </span>
+                            <span className="text-[#2F3E5C]">A </span>
+                            <span className="text-[#4A4A4A]">M</span>
+                            <span className="text-[#5E4B56]">e</span>
+                            <span className="text-[#4A4A4A]">a</span>
+                            <span className="text-[#2F3E5C]">l</span>
+                        </p>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-center">
+                        <div className="sm:max-w-lg md:max-w-[40%] flex flex-col justify-center md:items-start ml-4 mt-8 md:mt-0">
+                            <h2 className="text-3xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
+                                Sponsor a day's meal for everyone at the
+                                shelter.
+                            </h2>
+                            <p className="text-md md:text-lg w-full mb-4 text-[#4A4A4A]">
+                                By sponsoring a day's meal, you'll be providing
+                                essential nutrition to our furry friends. Plus,
+                                you'll have the opportunity to visit during
+                                feeding time and see the impact of your
+                                generosity firsthand! You can choose a date that
+                                suits you to sponsor a meal.
+                            </p>
+                        </div>
+
+                        <div className="w-full md:w-[45%] flex flex-row justify-center items-center gap-4 md:gap-4 mr-2">
+                            <div className="w-[42%] h-auto">
+                                <img
+                                    src="images/meal/meal-1.png"
+                                    className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-2 border-[#efefef]"
+                                />
+                            </div>
+                            <div className="w-[42%] h-auto">
+                                <img
+                                    src="images/meal/meal-2.jpg"
+                                    className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-6 border-[#efefef]"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] mb-10 items-center">
+                        {/* TEXT CONTENT */}
+                        <div className="sm:max-w-lg w-[90%] md:max-w-[40%] flex flex-col justify-center md:items-end md:order-1 order-2">
+                            <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
+                                Option 1
+                            </h3>
+                            <p className="text-md md:text-lg w-full md:mb-4 text-[#4A4A4A]">
+                                ₹1500 for 2 meals
+                            </p>
+                        </div>
+
+                        <div className="sm:max-w-lg w-[90%] md:max-w-[45%] flex flex-col justify-center md:items-end md:order-1 order-2">
+                            <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
+                                Option 2
+                            </h3>
+                            <p className="text-md md:text-lg w-full md:mb-4 text-[#4A4A4A]">
+                                ₹2000 for 2 meals + Snacks
+                            </p>
+                        </div>
+                    </div>
+
+                    <Link
+                        to="/#footer-section"
+                        className="flex flex-col justify-center item-center mb-20 w-[80%] md:w-[50%] lg:w-[40%] xl:w-[30%]"
+                    >
+                        <button className="button-cute md:text-lg px-10 py-4 w-full font-semibold bg-orange-400 mb-1">
+                            Donate meals
+                        </button>
+                        <p className="text-sm md:text-md text-[#4A4A4A]">
+                            *Contact us to schedule your sponsorship and visit
+                        </p>
+                    </Link>
+                </div>
             </div>
         </section>
     );
