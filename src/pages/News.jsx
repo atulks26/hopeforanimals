@@ -18,7 +18,6 @@ export default function News() {
                 }
                 const data = await res.json();
                 setFeeds([...data]);
-                console.log(feeds);
             } catch (err) {
                 setError("Failed to load feeds. Please try again later.");
                 console.error(err);
@@ -48,13 +47,13 @@ export default function News() {
     return (
         <div className="pt-6 w-full mx-auto min-h-[100vh]">
             {/* Header */}
-            <div className="flex items-center justify-center gap-4 mb-12 my-4">
+            <div className="flex items-center justify-center gap-4 mb-12 my-4 mx-4">
                 <img
                     src="images/paw-print.png"
                     alt="paw1"
                     className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
-                <h1 className="text-4xl md:text-5xl font-semibold font-rampart text-gray-700">
+                <h1 className="text-4xl md:text-5xl font-semibold font-rampart text-gray-700 text-center">
                     Latest Pet News
                 </h1>
                 <img

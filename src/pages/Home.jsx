@@ -1,12 +1,39 @@
 import GalleryPreview from "../components/GalleryPreview";
 import { Link } from "react-router-dom";
 import Hero from "../components/Hero";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import CardCarousel from "../components/StoryCard";
 
+const GITHUB_JSON_URL =
+    "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-stats.json";
+
 const Home = () => {
     const location = useLocation();
+    const [stats, setStats] = useState({});
+
+    useEffect(() => {
+        async function fetchStats() {
+            try {
+                const res = await fetch(GITHUB_JSON_URL);
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+                const data = await res.json();
+                setStats(data);
+            } catch (err) {
+                console.error(err);
+            }
+        }
+        fetchStats();
+    }, []);
+
+    const formatCount = (num) => {
+        if (num >= 1000) {
+            return `${(num / 1000).toFixed(1)}K`;
+        }
+        return num;
+    };
 
     useEffect(() => {
         if (location.hash) {
@@ -253,25 +280,25 @@ const Home = () => {
                     {[
                         {
                             img: "paws.png",
-                            count: "850",
+                            count: formatCount(stats.rescue),
                             label: "RESCUES",
                             desc: "Providing a safe new beginning",
                         },
                         {
                             img: "adoption.png",
-                            count: "425",
+                            count: formatCount(stats.adoption),
                             label: "ADOPTIONS",
                             desc: "Furry friends who found homes",
                         },
                         {
                             img: "dog-in-front-of-a-man.png",
-                            count: "650",
+                            count: formatCount(stats.vet),
                             label: "VET VISITS",
                             desc: "Because every paw matters",
                         },
                         {
                             img: "dog-running.png",
-                            count: "490",
+                            count: formatCount(stats.release),
                             label: "RELEASES",
                             desc: "Harder, Better, Faster, Stronger",
                         },
@@ -311,7 +338,7 @@ const Home = () => {
                 </div>
 
                 <div className="w-full h-full bg-[#FDFDFD] flex flex-col items-center">
-                    <div className="text-5xl md:text-6xl font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 mb-8 py-2">
+                    <div className="text-5xl md:text-6xl font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 md:mb-8 py-2">
                         <p className="w-fit">
                             <span className="text-[#2F3E5C]">A</span>
                             <span className="text-[#4A4A4A]">d</span>
@@ -412,7 +439,7 @@ const Home = () => {
 
             {/* pup updates */}
             <div className="w-full h-full flex flex-col items-center">
-                <div className="text-5xl md:text-6xl font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 mb-8 py-2">
+                <div className="text-5xl md:text-6xl font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 md:mb-8 py-2">
                     <p className="w-fit">
                         <span className="text-[#5E4B56]">P</span>
                         <span className="text-[#2F3E5C]">u</span>
@@ -477,7 +504,7 @@ const Home = () => {
                     />
                 </div>
                 <div className="w-full h-full flex flex-col items-center bg-[#FDFDFD]">
-                    <div className="text-5xl md:text-6xl font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 mb-8 py-2">
+                    <div className="text-5xl md:text-6xl font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-8 md:mb-8 py-2">
                         <p className="w-fit">
                             <span className="text-[#5E4B56]">S</span>
                             <span className="text-[#2F3E5C]">p</span>
@@ -493,7 +520,7 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-center">
+                    <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-6 mb-10 items-center">
                         <div className="sm:max-w-lg md:max-w-[40%] flex flex-col justify-center md:items-start ml-4 mt-8 md:mt-0">
                             <h2 className="text-3xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
                                 Sponsor a day's meal for everyone at the
@@ -532,7 +559,7 @@ const Home = () => {
                                 Option 1
                             </h3>
                             <p className="text-md md:text-lg w-full md:mb-4 text-[#4A4A4A]">
-                                ₹1500 for 2 meals
+                                ₹{stats.meal1p} for {stats.meal1}
                             </p>
                         </div>
 
@@ -541,7 +568,7 @@ const Home = () => {
                                 Option 2
                             </h3>
                             <p className="text-md md:text-lg w-full md:mb-4 text-[#4A4A4A]">
-                                ₹2000 for 2 meals + Snacks
+                                ₹{stats.meal2p} for {stats.meal2}
                             </p>
                         </div>
                     </div>
