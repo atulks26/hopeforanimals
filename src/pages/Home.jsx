@@ -6,7 +6,7 @@ import { useLocation } from "react-router-dom";
 import CardCarousel from "../components/StoryCard";
 
 const GITHUB_JSON_URL =
-    "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-stats.json";
+    "https://raw.githubusercontent.com/atulksingh26/json-static-hosting/main/hfa-stats.json";
 
 const Home = () => {
     const location = useLocation();

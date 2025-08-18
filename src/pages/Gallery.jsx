@@ -7,7 +7,7 @@ export default function Gallery() {
     const [loading, setLoading] = useState(true);
 
     const GITHUB_JSON_URL =
-        "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-images.json";
+        "https://raw.githubusercontent.com/atulksingh26/json-static-hosting/main/hfa-images.json";
 
     useEffect(() => {
         async function fetchImages() {

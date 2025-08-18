@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 import { Link } from "react-router-dom";
 
 const GITHUB_JSON_URL =
-    "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-images.json";
+    "https://raw.githubusercontent.com/atulksingh26/json-static-hosting/main/hfa-images.json";
 
 const GalleryPreview = () => {
     const [images, setImages] = useState([]);
@@ -123,56 +123,6 @@ const GalleryPreview = () => {
                     ))}
                 </Marquee>
             </div>
-
-            {/* <div className="bg-black">
-                <Marquee
-                    speed={60}
-                    gradient={false}
-                    pauseOnHover={false}
-                    direction="right"
-                >
-                    {[...Array(repeatCount)].map((_, i) => (
-                        <img
-                            key={"top-" + i}
-                            src="images/film.png"
-                            alt="Film roll strip top"
-                            className="h-8 w-auto object-cover flex-shrink-0"
-                        />
-                    ))}
-                </Marquee>
-
-                <Marquee
-                    speed={60}
-                    gradient={false}
-                    pauseOnHover={false}
-                    direction="right"
-                >
-                    {images2.map((image, i) => (
-                        <img
-                            key={i}
-                            src={image.url}
-                            alt={`Gallery image ${i + 1}`}
-                            className="h-[16rem] mx-1 object-cover flex-shrink-0"
-                        />
-                    ))}
-                </Marquee>
-
-                <Marquee
-                    speed={60}
-                    gradient={false}
-                    pauseOnHover={false}
-                    direction="right"
-                >
-                    {[...Array(repeatCount)].map((_, i) => (
-                        <img
-                            key={"bottom-" + i}
-                            src="images/film.png"
-                            alt="Film roll strip bottom"
-                            className="h-8 w-auto object-cover flex-shrink-0"
-                        />
-                    ))}
-                </Marquee>
-            </div> */}
         </div>
     );
 };

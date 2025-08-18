@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const GITHUB_JSON_URL =
-    "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-adoptions.json";
+    "https://raw.githubusercontent.com/atulksingh26/json-static-hosting/main/hfa-adoptions.json";
 
 export default function Preloader() {
     const [images, setImages] = useState([]);

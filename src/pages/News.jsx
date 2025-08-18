@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 
 const GITHUB_JSON_URL =
-    "https://raw.githubusercontent.com/atulks26/json-static-hosting/main/hfa-feed.json";
+    "https://raw.githubusercontent.com/atulksingh26/json-static-hosting/main/hfa-feed.json";
 
 export default function News() {
     const [feeds, setFeeds] = useState([]);
