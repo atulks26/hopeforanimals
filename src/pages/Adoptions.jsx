@@ -43,6 +43,15 @@ export default function Adoptions() {
         };
     }, [selectedAdoption]);
 
+    function formatAge(age, unit) {
+        if (unit?.toLowerCase() === "months") {
+            return `${age} ${age > 1 ? "Months" : "Month"}`;
+        } else if (unit?.toLowerCase() === "years") {
+            return `${age} ${age > 1 ? "Years" : "Year"}`;
+        }
+        return `${age}`;
+    }
+
     if (error)
         return <div className="text-red-600 text-center mt-10">{error}</div>;
 
@@ -122,7 +131,10 @@ export default function Adoptions() {
                                         <p className="font-bold text-gray-500 mt-1">
                                             Age:
                                             <span className="font-schoolbell text-2xl ml-2 text-gray-800">
-                                                {adoption.age} {ageUnit}
+                                                {formatAge(
+                                                    adoption.age,
+                                                    adoption.unit
+                                                )}
                                             </span>
                                         </p>
                                         <p className="font-bold text-gray-500 mt-1">
@@ -191,10 +203,10 @@ export default function Adoptions() {
                                         Age:
                                     </strong>
                                     <span className="font-schoolbell text-2xl ml-2 text-gray-800">
-                                        {selectedAdoption.age}{" "}
-                                        {selectedAdoption.age > 1
-                                            ? "Years"
-                                            : "Year"}
+                                        {formatAge(
+                                            selectedAdoption.age,
+                                            selectedAdoption.unit
+                                        )}
                                     </span>
                                 </p>
                                 <p>
