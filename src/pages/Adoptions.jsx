@@ -74,7 +74,14 @@ export default function Adoptions() {
                             : "border-pink-400";
                     const genderEmoji =
                         adoption.gender.toLowerCase() === "male" ? "♂️" : "♀️";
-                    const ageUnit = adoption.age > 1 ? "Years" : "Year";
+
+                    let ageUnit = adoption.unit;
+
+                    if (adoption.unit?.toLowerCase() === "months") {
+                        ageUnit = adoption.age > 1 ? "Months" : "Month";
+                    } else if (adoption.unit?.toLowerCase() === "years") {
+                        ageUnit = adoption.age > 1 ? "Years" : "Year";
+                    }
 
                     return (
                         <div
