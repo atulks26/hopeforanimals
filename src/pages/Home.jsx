@@ -35,6 +35,28 @@ const Home = () => {
         return num;
     };
 
+    const formatAnimals = (animals) => {
+        if (!animals) return "";
+
+        const entries = Object.entries(animals).map(([name, count]) => {
+            let label = name;
+
+            if (count === 1) {
+                if (name.toLowerCase() === "calves") label = "calf";
+                else if (name.endsWith("s")) label = name.slice(0, -1);
+            }
+
+            return `${count} ${label}`;
+        });
+
+        if (entries.length === 0) return "";
+        if (entries.length === 1) return entries[0];
+
+        return `${entries.slice(0, -1).join(", ")} and ${
+            entries[entries.length - 1]
+        }`;
+    };
+
     useEffect(() => {
         if (location.hash) {
             const id = location.hash.replace("#", "");
@@ -166,9 +188,9 @@ const Home = () => {
                             offering them the medical care and compassion they
                             need to recover, and safely releasing them back to
                             their natural habitats — where they truly belong.
-                            Our shelter is currently home to over 90 dogs, 9
-                            cats, and a calf, all undergoing treatment and
-                            healing.
+                            Our shelter is currently home to{" "}
+                            {formatAnimals(stats.animals)}, all undergoing
+                            treatment and healing.
                         </p>
                     </div>
                 </div>

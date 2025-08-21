@@ -157,7 +157,7 @@ export default function Footer() {
 
             {/* Copyright */}
             <div className="border-t border-gray-500 mt-12 pt-6 w-full text-center text-sm text-gray-300">
-                © 2025 HopeForAnimals. All rights reserved.
+                © 2025 Hope For Animals NGO. All rights reserved.
             </div>
         </footer>
     );
