@@ -42,7 +42,7 @@ const Home = () => {
             let label = name;
 
             if (count === 1) {
-                if (name.toLowerCase() === "calves") label = "calf";
+                if (name.toLowerCase() === "calves") label = "Calf";
                 else if (name.endsWith("s")) label = name.slice(0, -1);
             }
 
