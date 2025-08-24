@@ -35,28 +35,6 @@ const Home = () => {
         return num;
     };
 
-    const formatAnimals = (animals) => {
-        if (!animals) return "";
-
-        const entries = Object.entries(animals).map(([name, count]) => {
-            let label = name;
-
-            if (count === 1) {
-                if (name.toLowerCase() === "calves") label = "Calf";
-                else if (name.endsWith("s")) label = name.slice(0, -1);
-            }
-
-            return `${count} ${label}`;
-        });
-
-        if (entries.length === 0) return "";
-        if (entries.length === 1) return entries[0];
-
-        return `${entries.slice(0, -1).join(", ")} and ${
-            entries[entries.length - 1]
-        }`;
-    };
-
     useEffect(() => {
         if (location.hash) {
             const id = location.hash.replace("#", "");
@@ -188,9 +166,8 @@ const Home = () => {
                             offering them the medical care and compassion they
                             need to recover, and safely releasing them back to
                             their natural habitats — where they truly belong.
-                            Our shelter is currently home to{" "}
-                            {formatAnimals(stats.animals)}, all undergoing
-                            treatment and healing.
+                            Our shelter is currently home to various animals
+                            including dogs, cats, calves, birds, etc.
                         </p>
                     </div>
                 </div>
@@ -230,15 +207,13 @@ const Home = () => {
                             How it started
                         </h3>
                         <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
-                            A lifelong passion turned into a mission.
+                            Turning care for animals into action.
                         </h2>
                         <p className="text-sm md:text-md w-full mb-4 text-[#4A4A4A]">
-                            Manish Rawat, Founder and Managing Trustee of Hope
-                            For Animals, has been helping animals since
-                            childhood. In 2019, his dedication grew as he
-                            volunteered with an NGO, working closely with
-                            animals in need. By 2022, the vision for his own
-                            shelter took shape, and in 2023, Hope For Animals
+                            Since 2019, Manish Rawat, Founder and Managing
+                            Trustee of Hope For Animals, and his dedicated team
+                            have been helping animals. By 2022, their vision for
+                            a shelter took shape, and in 2023, Hope For Animals
                             was officially registered as an NGO committed to
                             rescuing and caring for vulnerable animals.
                         </p>
