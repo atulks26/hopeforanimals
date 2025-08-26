@@ -46,7 +46,6 @@ export default function News() {
 
     return (
         <div className="pt-6 w-full mx-auto min-h-[100vh]">
-            {/* Header */}
             <div className="flex items-center justify-center gap-4 mb-12 my-4 mx-4">
                 <img
                     src="images/paw-print.png"
@@ -63,7 +62,6 @@ export default function News() {
                 />
             </div>
 
-            {/* Feeds grid */}
             <div className="flex flex-wrap gap-8 mx-6 justify-center mb-8">
                 {feeds.map((feedItem, index) => {
                     const latestUpdate =
@@ -99,7 +97,6 @@ export default function News() {
                 })}
             </div>
 
-            {/* Modal */}
             {selectedFeed && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4">
                     <div

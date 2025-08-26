@@ -3,13 +3,11 @@ import React from "react";
 const Hero = () => {
     return (
         <div className="w-screen overflow-hidden">
-            {/* Desktop banner */}
             <img
                 src="images/desktop-cut.png"
                 alt="Banner desktop"
                 className="hidden md:block w-full h-auto object-cover"
             />
-            {/* Mobile banner */}
             <img
                 src="images/mobile-cut.png"
                 alt="Banner mobile"

@@ -35,28 +35,6 @@ const Home = () => {
         return num;
     };
 
-    const formatAnimals = (animals) => {
-        if (!animals) return "";
-
-        const entries = Object.entries(animals).map(([name, count]) => {
-            let label = name;
-
-            if (count === 1) {
-                if (name.toLowerCase() === "calves") label = "Calf";
-                else if (name.endsWith("s")) label = name.slice(0, -1);
-            }
-
-            return `${count} ${label}`;
-        });
-
-        if (entries.length === 0) return "";
-        if (entries.length === 1) return entries[0];
-
-        return `${entries.slice(0, -1).join(", ")} and ${
-            entries[entries.length - 1]
-        }`;
-    };
-
     useEffect(() => {
         if (location.hash) {
             const id = location.hash.replace("#", "");
@@ -100,7 +78,6 @@ const Home = () => {
                 <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] md:my-10 mb-10 items-center sm:px-10">
                     <div className="w-full md:w-1/2 flex order-2 md:order-1 xl:justify-start justify-center">
                         <div className="flex px-6">
-                            {/* Left Image: smaller, tilted left */}
                             <div className="w-[40%] h-full flex flex-col">
                                 <div className="w-full h-1/2">
                                     <img
@@ -115,7 +92,7 @@ const Home = () => {
                                     />
                                 </div>
                             </div>
-                            {/* Right Image: larger, tilted right */}
+
                             <div className="w-[60%] h-full">
                                 <img
                                     src="images/whoarewe-1.jpg"
@@ -148,7 +125,6 @@ const Home = () => {
                 <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-cente sm:px-10r">
                     <div className="w-full md:w-1/2 flex order-2 md:order-2 xl:justify-start justify-center">
                         <div className="flex flex-col px-2 gap-4">
-                            {/* Top Image: smaller, flat */}
                             <div className="w-full max-h-[240px]  rounded-md">
                                 <img
                                     src="images/whatwedo.jpg"
@@ -156,7 +132,7 @@ const Home = () => {
                                     alt=""
                                 />
                             </div>
-                            {/* Bottom Images: side by side, rotated */}
+
                             <div className="flex gap-4">
                                 <div className="aspect-[4/3] w-1/3 rounded-md">
                                     <img
@@ -188,9 +164,8 @@ const Home = () => {
                             offering them the medical care and compassion they
                             need to recover, and safely releasing them back to
                             their natural habitats — where they truly belong.
-                            Our shelter is currently home to{" "}
-                            {formatAnimals(stats.animals)}, all undergoing
-                            treatment and healing.
+                            Our shelter is currently home to various animals
+                            including dogs, cats, calves, birds, etc.
                         </p>
                     </div>
                 </div>
@@ -230,15 +205,13 @@ const Home = () => {
                             How it started
                         </h3>
                         <h2 className="text-2xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
-                            A lifelong passion turned into a mission.
+                            Turning care for animals into action.
                         </h2>
                         <p className="text-sm md:text-md w-full mb-4 text-[#4A4A4A]">
-                            Manish Rawat, Founder and Managing Trustee of Hope
-                            For Animals, has been helping animals since
-                            childhood. In 2019, his dedication grew as he
-                            volunteered with an NGO, working closely with
-                            animals in need. By 2022, the vision for his own
-                            shelter took shape, and in 2023, Hope For Animals
+                            Since 2019, Manish Rawat, Founder and Managing
+                            Trustee of Hope For Animals, and his dedicated team
+                            have been helping animals. By 2022, their vision for
+                            a shelter took shape, and in 2023, Hope For Animals
                             was officially registered as an NGO committed to
                             rescuing and caring for vulnerable animals.
                         </p>
@@ -390,7 +363,6 @@ const Home = () => {
                             </div>
                         </div>
 
-                        {/* TEXT SECTION */}
                         <div className="sm:max-w-lg md:max-w-[40%] flex flex-col justify-center md:items-start ml-4 mt-8 md:mt-0">
                             <h3 className="text-[#5E4B56] font-audiowide font-bold w-full text-xl uppercase tracking-wide">
                                 Physical Adoption
@@ -408,7 +380,6 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-20 items-center">
-                        {/* TEXT CONTENT */}
                         <div className="sm:max-w-lg md:max-w-[40%] flex flex-col justify-center md:items-end ml-4 mt-8 md:mt-0 md:order-1 order-2">
                             <h3 className="text-[#5E4B56] font-audiowide font-bold w-full text-xl uppercase tracking-wide">
                                 Virtual Adoption
@@ -459,7 +430,6 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* pup updates */}
             <div className="w-full h-full flex flex-col items-center">
                 <div className="text-5xl md:text-6xl font-lucky w-full max-w-[90%] xl:max-w-[70%] mt-4 md:mb-8 py-2">
                     <p className="w-fit">
@@ -575,7 +545,6 @@ const Home = () => {
                     </div>
 
                     <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] mb-10 items-center">
-                        {/* TEXT CONTENT */}
                         <div className="sm:max-w-lg w-[90%] md:max-w-[40%] flex flex-col justify-center md:items-end md:order-1 order-2">
                             <h3 className="text-[#5E4B56] font-bold w-full text-lg uppercase tracking-wide">
                                 Option 1

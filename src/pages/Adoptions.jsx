@@ -57,7 +57,6 @@ export default function Adoptions() {
 
     return (
         <div className="pt-6 w-full mx-auto min-h-[100vh]">
-            {/* Header section */}
             <div className="flex items-center justify-center gap-4 mb-8">
                 <img
                     src="images/paw-print.png"
@@ -74,7 +73,6 @@ export default function Adoptions() {
                 />
             </div>
 
-            {/* Grid for adoption cards */}
             <div className="flex flex-wrap gap-8 mx-6 justify-center mb-8">
                 {adoptions.map((adoption, index) => {
                     const borderColor =
@@ -97,14 +95,12 @@ export default function Adoptions() {
                             onClick={() => setSelectedAdoption(adoption)}
                             className={`relative cursor-pointer w-96 bg-white ${borderColor} border-4 rounded-2xl flex flex-col overflow-hidden transition-transform duration-300 hover:scale-[1.03] shadow-lg`}
                         >
-                            {/* Watermark */}
                             <img
                                 src="images/watermark.png"
                                 className="absolute inset-0 w-full h-full object-contain opacity-5 -z-0"
                                 alt="watermark"
                             />
 
-                            {/* Gender icon - consistent top-right corner */}
                             {adoption.gender && (
                                 <div className="absolute top-2 right-2 text-2xl bg-white bg-opacity-70 rounded-full px-2">
                                     {genderEmoji}
@@ -113,7 +109,6 @@ export default function Adoptions() {
 
                             <div className="p-4 z-10 flex flex-col flex-grow">
                                 <div className="flex items-center gap-4 mb-4">
-                                    {/* Pet image */}
                                     <div
                                         className={`w-24 h-24 rounded-full overflow-hidden border-2 ${borderColor} flex-shrink-0`}
                                     >
@@ -124,7 +119,6 @@ export default function Adoptions() {
                                         />
                                     </div>
 
-                                    {/* Name, Age, and Note */}
                                     <div className="font-outfit text-sm">
                                         {adoption.name && (
                                             <p className="font-bold text-gray-500">
@@ -153,7 +147,6 @@ export default function Adoptions() {
                                     </div>
                                 </div>
 
-                                {/* About section */}
                                 <div className="flex-grow">
                                     <p className="font-outfit font-bold text-gray-500 text-sm">
                                         About:
@@ -168,7 +161,6 @@ export default function Adoptions() {
                 })}
             </div>
 
-            {/* Modal for detailed pet info */}
             {selectedAdoption && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4 overflow-auto">
                     <div
@@ -187,7 +179,6 @@ export default function Adoptions() {
                             </button>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                            {/* Pet Image */}
                             <div className="sm:w-[35%] flex justify-center items-start">
                                 <img
                                     src={selectedAdoption.url}
@@ -196,7 +187,6 @@ export default function Adoptions() {
                                 />
                             </div>
 
-                            {/* Pet Info */}
                             <div className="sm:w-[65%] flex flex-col gap-2 sm:gap-4 text-sm sm:text-base">
                                 {selectedAdoption.name && (
                                     <p>

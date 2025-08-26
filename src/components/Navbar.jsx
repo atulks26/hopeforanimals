@@ -19,12 +19,9 @@ const Navbar = () => {
 
     return (
         <div className="w-full fixed top-0 left-0 z-50 bg-white border-b-2">
-            {/* Top bar */}
             <div className="w-full bg-[#2F3E5C] overflow-x-auto">
                 <div className="flex flex-nowrap justify-between items-center gap-4 w-full max-w-[1440px] px-2 mx-auto text-sm text-white">
-                    {/* Contact info */}
                     <div className="flex flex-nowrap items-center gap-4 sm:gap-6 min-w-0 overflow-hidden">
-                        {/* Phone */}
                         <div className="flex items-center shrink-0 whitespace-nowrap">
                             <img
                                 src="images/phone.png"
@@ -32,7 +29,7 @@ const Navbar = () => {
                             />
                             <p className="whitespace-nowrap">+91 7818037628</p>
                         </div>
-                        {/* Email */}
+
                         <div className="flex items-center shrink-0 whitespace-nowrap min-w-0 max-[520px]:hidden">
                             <img
                                 src="images/mail.png"
@@ -42,7 +39,7 @@ const Navbar = () => {
                                 hopeforanimalsrescue@gmail.com
                             </p>
                         </div>
-                        {/* Location */}
+
                         <div className="hidden md:flex items-center shrink-0 whitespace-nowrap">
                             <img
                                 src="images/location.png"
@@ -63,9 +60,7 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    {/* Social + Donate */}
                     <div className="flex gap-2 items-center ml-auto shrink-0">
-                        {/* Social icons - hidden below lg */}
                         <div className="hidden lg:flex gap-2 items-center">
                             <a
                                 href="https://www.instagram.com/hopeforanimalsresq/"
@@ -114,7 +109,6 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Main nav */}
             <div className="w-full flex items-center justify-between px-4 py-2 max-w-[1440px] mx-auto">
                 <div
                     className="h-14 w-24 flex items-center cursor-pointer"
@@ -127,7 +121,6 @@ const Navbar = () => {
                     />
                 </div>
 
-                {/* Hamburger */}
                 <button
                     onClick={() => setMenuOpen(!menuOpen)}
                     className="md:hidden relative z-60 flex flex-col justify-center items-center w-8 h-8 cursor-pointer"
@@ -151,7 +144,6 @@ const Navbar = () => {
                     />
                 </button>
 
-                {/* Desktop menu */}
                 <nav className="hidden md:flex flex-wrap justify-end items-center gap-4 md:gap-6 text-base md:text-lg flex-grow overflow-hidden">
                     {[
                         { label: "About Us", to: "/#about-us-section" },
@@ -175,7 +167,6 @@ const Navbar = () => {
                 </nav>
             </div>
 
-            {/* Mobile menu overlay */}
             <div
                 className={`fixed inset-0 bg-black bg-opacity-40 transition-opacity duration-300 ease-in-out ${
                     menuOpen
@@ -185,7 +176,6 @@ const Navbar = () => {
                 onClick={closeMenu}
             />
 
-            {/* Mobile menu */}
             <nav
                 className={`fixed top-[calc(6rem+48px)] right-0 left-0 bg-white shadow-md transition-transform duration-300 ease-in-out z-50
                 ${

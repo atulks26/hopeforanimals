@@ -5,7 +5,6 @@ export default function Footer() {
             className="bg-[#2F3E5C] flex flex-col items-center text-white w-full px-6 py-12"
         >
             <div className="w-full max-w-7xl flex flex-col md:flex-row md:flex-wrap justify-between gap-12">
-                {/* Donations */}
                 <div className="w-full md:w-[45%] lg:w-[30%]">
                     <h2 className="text-xl font-semibold mb-4 text-[#F8E9AE]">
                         Donations
@@ -33,7 +32,6 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Bank Details */}
                 <div className="w-full md:w-[45%] lg:w-[30%]">
                     <h2 className="text-xl font-semibold mb-4 text-[#F8E9AE]">
                         Bank Details
@@ -51,7 +49,6 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Contact */}
                 <div className="w-full md:w-[45%] lg:w-[30%]">
                     <h2 className="text-xl font-semibold mb-4 text-[#F8E9AE]">
                         Contact
@@ -75,7 +72,6 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Social */}
                 <div className="w-full md:w-[45%] lg:w-[30%]">
                     <h2 className="text-xl font-semibold mb-4 text-[#F8E9AE]">
                         Social
@@ -123,8 +119,6 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Location */}
-                {/* Location */}
                 <div className="w-full lg:w-[58%]">
                     <h2 className="text-xl font-semibold mb-4 text-[#F8E9AE]">
                         Location
@@ -144,7 +138,6 @@ export default function Footer() {
                             }}
                         ></iframe>
 
-                        {/* Fallback message */}
                         <div className="hidden absolute top-0 left-0 w-full h-full bg-[#f8e9ae] text-black flex-col justify-center items-center text-center px-4">
                             <p className="font-semibold mb-2">
                                 Failed to load map.
@@ -155,7 +148,6 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Copyright */}
             <div className="border-t border-gray-500 mt-12 pt-6 w-full text-center text-sm text-gray-300">
                 © 2025 Hope For Animals NGO. All rights reserved.
             </div>
