@@ -210,10 +210,16 @@ const Home = () => {
                         <p className="text-sm md:text-md w-full mb-4 text-[#4A4A4A]">
                             Since 2019, Manish Rawat, Founder and Managing
                             Trustee of Hope For Animals, and his dedicated team
-                            have been helping animals. By 2022, their vision for
-                            a shelter took shape, and in 2023, Hope For Animals
-                            was officially registered as an NGO committed to
+                            have been helping animals. In 2022, their vision for
+                            a shelter took shape, and Hope For Animals was
+                            officially registered as an NGO committed to
                             rescuing and caring for vulnerable animals.
+                            <br />
+                            <br />
+                            Today, the shelter continues to grow, with a
+                            dedicated animal clinic also under construction in
+                            the shelter to provide quick and timely medical
+                            care.
                         </p>
                     </div>
                 </div>
