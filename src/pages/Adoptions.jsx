@@ -96,6 +96,7 @@ export default function Adoptions() {
                             className={`relative cursor-pointer w-96 bg-white ${borderColor} border-4 rounded-2xl flex flex-col overflow-hidden transition-transform duration-300 hover:scale-[1.03] shadow-lg`}
                         >
                             <img
+                                loading="lazy"
                                 src="images/watermark.webp"
                                 className="absolute inset-0 w-full h-full object-contain opacity-5 -z-0"
                                 alt="Hope For Animals watermark"
@@ -113,6 +114,7 @@ export default function Adoptions() {
                                         className={`w-24 h-24 rounded-full overflow-hidden border-2 ${borderColor} flex-shrink-0`}
                                     >
                                         <img
+                                            loading="lazy"
                                             src={adoption.url}
                                             alt={adoption.name || "pet"}
                                             className="h-full w-full object-cover"

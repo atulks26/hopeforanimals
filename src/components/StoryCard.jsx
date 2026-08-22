@@ -167,6 +167,7 @@ export default function CardCarousel() {
                                                             }}
                                                         >
                                                             <img
+                                                                loading="lazy"
                                                                 src={
                                                                     card
                                                                         .imageSrcs[
@@ -205,6 +206,7 @@ export default function CardCarousel() {
                                                             }}
                                                         >
                                                             <img
+                                                                loading="lazy"
                                                                 src={
                                                                     card
                                                                         .imageSrcs[
@@ -245,6 +247,7 @@ export default function CardCarousel() {
                                                         }}
                                                     >
                                                         <img
+                                                            loading="lazy"
                                                             src={
                                                                 card.imageSrcs[
                                                                     i
@@ -265,6 +268,7 @@ export default function CardCarousel() {
                                             <div className="flex justify-center gap-4">
                                                 <div className="h-full w-[35%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] -rotate-6 overflow-hidden">
                                                     <img
+                                                        loading="lazy"
                                                         src={card.imageSrcs[0]}
                                                         alt={card.alt}
                                                         className="h-full w-full object-cover"
@@ -272,6 +276,7 @@ export default function CardCarousel() {
                                                 </div>
                                                 <div className="h-full w-[35%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] rotate-6 overflow-hidden">
                                                     <img
+                                                        loading="lazy"
                                                         src={card.imageSrcs[1]}
                                                         alt={card.alt}
                                                         className="h-full w-full object-cover"
@@ -281,6 +286,7 @@ export default function CardCarousel() {
                                             <div className="flex justify-center gap-4">
                                                 <div className="h-full w-[25%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] -rotate-6 overflow-hidden">
                                                     <img
+                                                        loading="lazy"
                                                         src={card.imageSrcs[2]}
                                                         alt={card.alt}
                                                         className="h-full w-full object-cover"
@@ -288,6 +294,7 @@ export default function CardCarousel() {
                                                 </div>
                                                 <div className="h-full w-[25%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] rotate-6 overflow-hidden">
                                                     <img
+                                                        loading="lazy"
                                                         src={card.imageSrcs[3]}
                                                         alt={card.alt}
                                                         className="h-full w-full object-cover"
@@ -295,6 +302,7 @@ export default function CardCarousel() {
                                                 </div>
                                                 <div className="h-full w-[25%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] -rotate-6 overflow-hidden">
                                                     <img
+                                                        loading="lazy"
                                                         src={card.imageSrcs[4]}
                                                         alt={card.alt}
                                                         className="h-full w-full object-cover"
@@ -328,6 +336,7 @@ export default function CardCarousel() {
                                                         }}
                                                     >
                                                         <img
+                                                            loading="lazy"
                                                             src={src}
                                                             alt={card.alt}
                                                             className="object-cover w-full h-full"
@@ -360,6 +369,7 @@ export default function CardCarousel() {
                                                 rel="noopener noreferrer"
                                             >
                                                 <img
+                                                    loading="lazy"
                                                     src="/images/instagram.webp"
                                                     alt="Instagram icon"
                                                     className="w-7 sm:w-6 sm:h-6"

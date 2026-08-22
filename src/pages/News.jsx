@@ -74,6 +74,7 @@ export default function News() {
                         >
                             {feedItem.url && (
                                 <img
+                                    loading="lazy"
                                     src={feedItem.url}
                                     alt={`Rescue ${feedItem.id}`}
                                     className="w-full h-56 object-cover"

@@ -11,6 +11,7 @@ export default function Footer() {
                     </h2>
                     <div className="flex flex-col items-start gap-4">
                         <img
+                            loading="lazy"
                             src="/images/qr.webp"
                             alt="Hope For Animals UPI QR Code"
                             className="h-[12rem] w-[12rem] border-2 border-white"
@@ -84,6 +85,7 @@ export default function Footer() {
                             rel="noreferrer"
                         >
                             <img
+                                loading="lazy"
                                 src="images/instagram.webp"
                                 className="w-6 h-6 object-contain invert"
                                 alt="Instagram logo"
@@ -97,6 +99,7 @@ export default function Footer() {
                             rel="noreferrer"
                         >
                             <img
+                                loading="lazy"
                                 src="images/facebook.webp"
                                 className="w-6 h-6 object-contain invert"
                                 alt="Facebook logo"
@@ -110,6 +113,7 @@ export default function Footer() {
                             rel="noreferrer"
                         >
                             <img
+                                loading="lazy"
                                 src="images/youtube.webp"
                                 className="w-6 h-6 object-contain invert"
                                 alt="YouTube logo"
