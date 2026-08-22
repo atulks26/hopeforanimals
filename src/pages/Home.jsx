@@ -60,7 +60,7 @@ const Home = () => {
     return (
         <section className="w-full flex flex-col justify-center items-center">
             <Seo
-                title="Hope For Animals — Animal Rescue & Adoption"
+                title="Hope For Animals — Animal Rescue & Adoption in Dehradun"
                 description="Hope For Animals rescues injured and stray animals, providing medical care, treatment, shelter, and forever homes."
             />
             <Hero />
