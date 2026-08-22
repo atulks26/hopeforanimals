@@ -8,12 +8,18 @@ const Hero = () => {
                 sizes="100vw"
                 src="images/desktop-cut.webp"
                 alt="Banner desktop"
-                className="hidden md:block w-full h-auto object-cover"
+                width={1920}
+                height={720}
+                fetchPriority="high"
+                className="hidden md:block w-full h-auto"
             />
             <img
                 src="images/mobile-cut.webp"
                 alt="Banner mobile"
-                className="block md:hidden w-full h-auto object-cover"
+                width={480}
+                height={720}
+                fetchPriority="high"
+                className="block md:hidden w-full h-auto"
             />
         </div>
     );

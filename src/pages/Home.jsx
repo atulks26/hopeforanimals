@@ -85,6 +85,8 @@ const Home = () => {
                                         sizes="(min-width: 1280px) 14vw, (min-width: 768px) 18vw, 36vw"
                                         loading="lazy"
                                         src="images/whoarewe-3.webp"
+                                        width={1920}
+                                        height={2560}
                                         className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
                                         alt="Dogs eating food in the shelter"
                                     />
@@ -94,6 +96,8 @@ const Home = () => {
                                         sizes="(min-width: 1280px) 14vw, (min-width: 768px) 18vw, 36vw"
                                         loading="lazy"
                                         src="images/whoarewe-2.webp"
+                                        width={1920}
+                                        height={2560}
                                         className="w-full h-full object-cover -rotate-12 border-[0.6rem] shadow-2xl border-white"
                                         alt="Woman petting a dog"
                                     />
@@ -105,6 +109,8 @@ const Home = () => {
                                     sizes="(min-width: 1280px) 21vw, (min-width: 768px) 27vw, 54vw"
                                     loading="lazy"
                                     src="images/whoarewe-1.webp"
+                                    width={1920}
+                                    height={2560}
                                     className="w-full h-full object-cover rotate-6 border-[0.6rem] shadow-2xl border-white"
                                     alt="Man posing with shelter dogs"
                                 />
@@ -140,6 +146,8 @@ const Home = () => {
                                     sizes="(min-width: 1280px) 35vw, (min-width: 768px) 45vw, 90vw"
                                     loading="lazy"
                                     src="images/whatwedo.webp"
+                                    width={1396}
+                                    height={873}
                                     className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
                                     alt="Man feeding baby cows"
                                 />
@@ -151,6 +159,8 @@ const Home = () => {
                                         sizes="(min-width: 1280px) 12vw, (min-width: 768px) 15vw, 30vw"
                                         loading="lazy"
                                         src="images/whatwedo-1.webp"
+                                        width={1440}
+                                        height={1800}
                                         className="w-full h-full object-cover -rotate-12 border-[0.6rem] shadow-2xl border-white"
                                         alt="Dog smiling"
                                     />
@@ -160,6 +170,8 @@ const Home = () => {
                                         sizes="(min-width: 1280px) 23vw, (min-width: 768px) 30vw, 60vw"
                                         loading="lazy"
                                         src="images/whatwedo-2.webp"
+                                        width={768}
+                                        height={1024}
                                         className="w-full h-full object-cover rotate-6 border-[0.6rem] shadow-2xl border-white"
                                         alt="Dog smiling in a shelter"
                                     />
@@ -197,6 +209,8 @@ const Home = () => {
                                         sizes="(min-width: 1280px) 21vw, (min-width: 768px) 27vw, 54vw"
                                         loading="lazy"
                                         src="images/howitstarted-1.webp"
+                                        width={1920}
+                                        height={2560}
                                         className="w-full h-full object-cover -rotate-6 border-[0.6rem] shadow-2xl border-white"
                                         alt="Dogs in a shelter"
                                     />
@@ -209,6 +223,8 @@ const Home = () => {
                                         sizes="(min-width: 1280px) 14vw, (min-width: 768px) 18vw, 36vw"
                                         loading="lazy"
                                         src="images/howitstarted-3.webp"
+                                        width={1440}
+                                        height={1712}
                                         className="w-full h-full object-cover rotate-12 border-[0.6rem] shadow-2xl border-white"
                                         alt="Man holding two dogs"
                                     />
@@ -218,6 +234,8 @@ const Home = () => {
                                         sizes="(min-width: 1280px) 14vw, (min-width: 768px) 18vw, 36vw"
                                         loading="lazy"
                                         src="images/howitstarted.webp"
+                                        width={1920}
+                                        height={2560}
                                         className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
                                         alt="Man holding a dog"
                                     />
@@ -257,6 +275,8 @@ const Home = () => {
                         sizes="100vw"
                         loading="lazy"
                         src="images/paper.webp"
+                        width={1773}
+                        height={76}
                         className="w-full h-full object-cover"
                         alt="div border top"
                     />
@@ -289,6 +309,8 @@ const Home = () => {
                         sizes="100vw"
                         loading="lazy"
                         src="images/paper.webp"
+                        width={1773}
+                        height={76}
                         className="w-full h-full object-cover rotate-180"
                         alt="div border bottom"
                     />
@@ -369,6 +391,8 @@ const Home = () => {
                         sizes="100vw"
                         loading="lazy"
                         src="images/paper.webp"
+                        width={1773}
+                        height={76}
                         className="w-full h-full object-cover"
                         alt="div border top"
                     />
@@ -396,6 +420,8 @@ const Home = () => {
                                     sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                     loading="lazy"
                                     src="images/adoptions/a-1.webp"
+                                    width={1920}
+                                    height={2560}
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-3 border-[#efefef]"
                                     alt="Two women adopting a brown puppy"
                                 />
@@ -405,6 +431,8 @@ const Home = () => {
                                     sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                     loading="lazy"
                                     src="images/adoptions/a-2.webp"
+                                    width={1920}
+                                    height={2560}
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-6 border-[#efefef]"
                                     alt="Two women adopting a gray kitten"
                                 />
@@ -450,6 +478,8 @@ const Home = () => {
                                     sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                     loading="lazy"
                                     src="images/adoptions/va-1.webp"
+                                    width={768}
+                                    height={1024}
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-2 border-[#efefef]"
                                     alt="Specially abled brown dog"
                                 />
@@ -459,6 +489,8 @@ const Home = () => {
                                     sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                     loading="lazy"
                                     src="images/adoptions/va-2.webp"
+                                    width={768}
+                                    height={1024}
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-6 border-[#efefef]"
                                     alt="Specially abled black dog"
                                 />
@@ -481,6 +513,8 @@ const Home = () => {
                         sizes="100vw"
                         loading="lazy"
                         src="images/paper.webp"
+                        width={1773}
+                        height={76}
                         className="w-full h-full object-cover rotate-180"
                         alt="div border bottom"
                     />
@@ -509,6 +543,8 @@ const Home = () => {
                                 sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                 loading="lazy"
                                 src="images/news/news-1.webp"
+                                width={1440}
+                                height={1800}
                                 className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-3 border-[#efefef]"
                                 alt="Dog with bandaged legs"
                             />
@@ -518,6 +554,8 @@ const Home = () => {
                                 sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                 loading="lazy"
                                 src="images/news/news-2.webp"
+                                width={1836}
+                                height={2619}
                                 className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-6 border-[#efefef]"
                                 alt="Man holding a kitten with bandaged paws"
                             />
@@ -557,6 +595,8 @@ const Home = () => {
                         sizes="100vw"
                         loading="lazy"
                         src="images/paper.webp"
+                        width={1773}
+                        height={76}
                         className="w-full h-full object-cover"
                         alt="div border top"
                     />
@@ -600,6 +640,8 @@ const Home = () => {
                                     sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                     loading="lazy"
                                     src="images/meal/meal-1.webp"
+                                    width={1220}
+                                    height={1769}
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-2 border-[#efefef]"
                                     alt="Two dogs eating food"
                                 />
@@ -609,6 +651,8 @@ const Home = () => {
                                     sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                     loading="lazy"
                                     src="images/meal/meal-2.webp"
+                                    width={1220}
+                                    height={1596}
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-6 border-[#efefef]"
                                     alt="Dogs waiting for food"
                                 />
