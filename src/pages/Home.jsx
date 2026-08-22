@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import CardCarousel from "../components/StoryCard";
 import Img from "../components/Img";
+import Seo from "../components/Seo";
 
 const GITHUB_JSON_URL =
     "https://raw.githubusercontent.com/atulksingh26/json-static-hosting/main/hfa-stats.json";
@@ -58,6 +59,10 @@ const Home = () => {
 
     return (
         <section className="w-full flex flex-col justify-center items-center">
+            <Seo
+                title="Hope For Animals — Animal Rescue & Adoption"
+                description="Hope For Animals rescues injured and stray animals, providing medical care, treatment, shelter, and forever homes."
+            />
             <Hero />
 
             <section

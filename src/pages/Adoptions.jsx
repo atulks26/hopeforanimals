@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import Seo from "../components/Seo";
 
 const GITHUB_JSON_URL =
     "https://raw.githubusercontent.com/atulksingh26/json-static-hosting/main/hfa-adoptions.json";
@@ -57,6 +58,10 @@ export default function Adoptions() {
 
     return (
         <div className="pt-6 w-full mx-auto min-h-[100vh]">
+            <Seo
+                title="Adopt a Pet | Hope For Animals"
+                description="Meet the dogs and cats looking for a loving home. Adopt in person, or virtually sponsor a paralysed dog for ₹2500 a month."
+            />
             <div className="flex items-center justify-center gap-4 mb-8">
                 <img
                     src="images/paw-print.webp"

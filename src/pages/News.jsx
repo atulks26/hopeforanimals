@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import Seo from "../components/Seo";
 
 const GITHUB_JSON_URL =
     "https://raw.githubusercontent.com/atulksingh26/json-static-hosting/main/hfa-feed.json";
@@ -46,6 +47,10 @@ export default function News() {
 
     return (
         <div className="pt-6 w-full mx-auto min-h-[100vh]">
+            <Seo
+                title="Rescue Updates | Hope For Animals"
+                description="Follow the recovery stories of animals rescued and treated by Hope For Animals."
+            />
             <div className="flex items-center justify-center gap-4 mb-12 my-4 mx-4">
                 <img
                     src="images/paw-print.webp"

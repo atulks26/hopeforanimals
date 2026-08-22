@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Seo from "../components/Seo";
 
 const GITHUB_JSON_URL =
     "https://raw.githubusercontent.com/atulksingh26/json-static-hosting/main/hfa-images.json";
@@ -76,6 +77,10 @@ export default function Gallery() {
 
     return (
         <div className="p-6 md:max-w-[94%] mx-auto min-h-[100vh] ">
+            <Seo
+                title="Photo Gallery | Hope For Animals"
+                description="Photos from our rescue work — the animals we care for and treat, and the ones who have found loving homes."
+            />
             <div className="flex items-center justify-center gap-4 mb-6">
                 <img
                     src="images/paw-print.webp"
