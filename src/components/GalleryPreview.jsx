@@ -17,7 +17,10 @@ const GalleryPreview = () => {
                 if (!res.ok)
                     throw new Error(`HTTP error! status: ${res.status}`);
                 const data = await res.json();
-                setImages(data);
+
+                setImages(
+                    Array.isArray(data) ? data.slice(-10).reverse() : data.marquee
+                );
             } catch (err) {
                 setError(err);
             } finally {
@@ -35,17 +38,6 @@ const GalleryPreview = () => {
         );
 
     const repeatCount = 40;
-
-    let images1 = [];
-    let images2 = [];
-
-    for (let i = 0; i < images.length; i++) {
-        if (i % 2) {
-            images1.push(images[i]);
-        } else {
-            images2.push(images[i]);
-        }
-    }
 
     return (
         <div className="w-full mx-auto my-10 overflow-hidden flex flex-col items-center">
@@ -99,9 +91,10 @@ const GalleryPreview = () => {
                 >
                     {images.map((image, i) => (
                         <img
-                            key={i}
+                            key={image.url || i}
                             src={image.url}
                             alt={`Gallery image ${i + 1}`}
+                            decoding="async"
                             className="h-[12rem] sm:h-[16rem] md:h-[28rem] mx-1 object-cover flex-shrink-0"
                         />
                     ))}

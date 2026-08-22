@@ -1,20 +1,53 @@
 import React, { useEffect, useState } from "react";
 
+const GITHUB_JSON_URL =
+    "https://raw.githubusercontent.com/atulksingh26/json-static-hosting/main/hfa-images.json";
+
+const FALLBACK_RATIO = "4 / 5";
+
+function GalleryTile({ img, index, onSelect }) {
+    const [loaded, setLoaded] = useState(false);
+
+    const ratio =
+        img.width && img.height ? `${img.width} / ${img.height}` : FALLBACK_RATIO;
+
+    return (
+        <div
+            className={`break-inside-avoid overflow-hidden rounded-lg shadow-md cursor-pointer bg-gray-200 ${
+                loaded ? "" : "animate-pulse"
+            }`}
+            style={{ aspectRatio: ratio }}
+            onClick={() => onSelect(img.url)}
+        >
+            <img
+                src={img.url}
+                alt={`Gallery ${index + 1}`}
+                loading="lazy"
+                decoding="async"
+                onLoad={() => setLoaded(true)}
+                onError={() => setLoaded(true)}
+                className={`w-full h-full object-cover rounded-lg border-4 border-white transition-[opacity,transform] duration-300 ease-out hover:scale-105 ${
+                    loaded ? "opacity-100" : "opacity-0"
+                }`}
+            />
+        </div>
+    );
+}
+
 export default function Gallery() {
     const [images, setImages] = useState([]);
     const [error, setError] = useState("");
     const [selectedImage, setSelectedImage] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    const GITHUB_JSON_URL =
-        "https://raw.githubusercontent.com/atulksingh26/json-static-hosting/main/hfa-images.json";
-
     useEffect(() => {
         async function fetchImages() {
             try {
                 const res = await fetch(GITHUB_JSON_URL);
                 const data = await res.json();
-                setImages(data.reverse());
+
+                const list = Array.isArray(data) ? data : data.gallery;
+                setImages([...list].reverse());
             } catch (err) {
                 setError("Failed to load gallery.");
                 console.error(err);
@@ -41,17 +74,6 @@ export default function Gallery() {
         };
     }, [selectedImage]);
 
-    if (error)
-        return <div className="text-red-600 text-center mt-10">{error}</div>;
-
-    if (loading) {
-        return (
-            <div className="flex justify-center items-center min-h-[100vh]">
-                <div className="w-16 h-16 border-4 border-t-4 border-gray-300 border-t-cyan-600 rounded-full animate-spin"></div>
-            </div>
-        );
-    }
-
     return (
         <div className="p-6 md:max-w-[94%] mx-auto min-h-[100vh] ">
             <div className="flex items-center justify-center gap-4 mb-6">
@@ -70,20 +92,24 @@ export default function Gallery() {
                 />
             </div>
 
+            {error && (
+                <div className="text-red-600 text-center mt-10">{error}</div>
+            )}
+
+            {loading && (
+                <div className="flex justify-center items-center py-24">
+                    <div className="w-16 h-16 border-4 border-t-4 border-gray-300 border-t-cyan-600 rounded-full animate-spin"></div>
+                </div>
+            )}
+
             <div className="space-y-2 gap-2 columns-2 md:columns-4 lg:columns-6 xl:columns-8 md:gap-4 md:space-y-4">
                 {images.map((img, index) => (
-                    <div
-                        key={index}
-                        className="break-inside-avoid overflow-hidden rounded-lg shadow-md cursor-pointer"
-                        onClick={() => setSelectedImage(img.url)}
-                    >
-                        <img
-                            src={img.url}
-                            alt={`Image ${index}`}
-                            className="w-full h-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105 border-4 border-white"
-                            loading="lazy"
-                        />
-                    </div>
+                    <GalleryTile
+                        key={img.url || index}
+                        img={img}
+                        index={index}
+                        onSelect={setSelectedImage}
+                    />
                 ))}
             </div>
 

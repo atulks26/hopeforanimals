@@ -148,7 +148,7 @@ const Navbar = () => {
                         { label: "News", to: "/news" },
                         {
                             label: "Sponsor a meal",
-                            to: "/#sponsor-meal-section",
+                            to: "/#donate-meals",
                         },
                         { label: "Gallery", to: "/gallery" },
                         { label: "Adoptions", to: "/adoptions" },

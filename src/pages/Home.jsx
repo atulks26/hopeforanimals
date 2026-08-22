@@ -578,7 +578,7 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-6 mb-10 items-center">
+                    <div id="donate-meals" className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-6 mb-10 items-center">
                         <div className="sm:max-w-lg md:max-w-[40%] flex flex-col justify-center md:items-start ml-4 mt-8 md:mt-0">
                             <h2 className="text-3xl md:text-4xl w-full font-bold mb-5 leading-snug text-[#2F3E5C]">
                                 Sponsor a day's meal for everyone at the
