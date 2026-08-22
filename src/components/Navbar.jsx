@@ -26,6 +26,7 @@ const Navbar = () => {
                             <img
                                 src="images/phone.webp"
                                 className="h-4 mr-1 shrink-0"
+                                alt="Phone icon"
                             />
                             <p className="whitespace-nowrap">+91 7818037628</p>
                         </div>
@@ -34,27 +35,24 @@ const Navbar = () => {
                             <img
                                 src="images/mail.webp"
                                 className="h-4 mr-1 shrink-0"
+                                alt="Email icon"
+
                             />
                             <p className="whitespace-nowrap">
                                 hopeforanimalsrescue@gmail.com
                             </p>
                         </div>
 
-                        <div className="hidden md:flex items-center shrink-0 whitespace-nowrap">
+                        <div className="hidden sm:flex items-center shrink-0 whitespace-nowrap">
                             <img
                                 src="images/location.webp"
                                 className="h-4 mr-1 shrink-0"
+                                alt="Location icon"
                             />
-                            <p className="whitespace-nowrap">
+                            <p className="hidden md:flex whitespace-nowrap">
                                 Dehradun, Uttarakhand, India
                             </p>
-                        </div>
-                        <div className="hidden sm:flex md:hidden items-center shrink-0 whitespace-nowrap">
-                            <img
-                                src="images/location.webp"
-                                className="h-4 mr-1 shrink-0"
-                            />
-                            <p className="whitespace-nowrap">
+                            <p className="hidden sm:flex md:hidden whitespace-nowrap">
                                 Dehradun, UK, India
                             </p>
                         </div>
@@ -69,7 +67,7 @@ const Navbar = () => {
                             >
                                 <img
                                     src="/images/instagram.webp"
-                                    alt="instagram"
+                                    alt="Instagram icon"
                                     className="w-4 h-4 invert"
                                 />
                             </a>
@@ -80,7 +78,7 @@ const Navbar = () => {
                             >
                                 <img
                                     src="/images/facebook.webp"
-                                    alt="facebook"
+                                    alt="Facebook icon"
                                     className="w-5 h-5 invert"
                                 />
                             </a>
@@ -91,7 +89,7 @@ const Navbar = () => {
                             >
                                 <img
                                     src="/images/youtube.webp"
-                                    alt="youtube"
+                                    alt="YouTube icon"
                                     className="w-5 h-5 invert"
                                 />
                             </a>
@@ -116,7 +114,7 @@ const Navbar = () => {
                 >
                     <img
                         src="images/logo2.webp"
-                        alt="Logo"
+                        alt="Hope For Animals Logo Cropped"
                         className="w-full h-full object-contain"
                     />
                 </div>

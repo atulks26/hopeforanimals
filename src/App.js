@@ -16,7 +16,7 @@ function App() {
             <div className="fixed inset-0 -z-10 w-screen h-screen">
                 <img
                     src="images/bg.webp"
-                    alt="background"
+                    alt="Website background"
                     className="w-full h-full object-cover"
                 />
             </div>

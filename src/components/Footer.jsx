@@ -12,7 +12,7 @@ export default function Footer() {
                     <div className="flex flex-col items-start gap-4">
                         <img
                             src="/images/qr.webp"
-                            alt="QR Code"
+                            alt="Hope For Animals UPI QR Code"
                             className="h-[12rem] w-[12rem] border-2 border-white"
                         />
                         <div>
@@ -86,7 +86,7 @@ export default function Footer() {
                             <img
                                 src="images/instagram.webp"
                                 className="w-6 h-6 object-contain invert"
-                                alt="Instagram"
+                                alt="Instagram logo"
                             />
                             <span>Instagram</span>
                         </a>
@@ -99,7 +99,7 @@ export default function Footer() {
                             <img
                                 src="images/facebook.webp"
                                 className="w-6 h-6 object-contain invert"
-                                alt="Facebook"
+                                alt="Facebook logo"
                             />
                             <span>Facebook</span>
                         </a>
@@ -112,7 +112,7 @@ export default function Footer() {
                             <img
                                 src="images/youtube.webp"
                                 className="w-6 h-6 object-contain invert"
-                                alt="YouTube"
+                                alt="YouTube logo"
                             />
                             <span>YouTube</span>
                         </a>

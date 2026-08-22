@@ -57,7 +57,7 @@ export default function Gallery() {
             <div className="flex items-center justify-center gap-4 mb-6">
                 <img
                     src="images/paw-print.webp"
-                    alt="paw1"
+                    alt="Paw icon"
                     className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
                 <p className="text-4xl text-center md:text-5xl font-semibold font-rampart text-gray-700">
@@ -65,7 +65,7 @@ export default function Gallery() {
                 </p>
                 <img
                     src="images/paw-print.webp"
-                    alt="paw2"
+                    alt="Paw icon"
                     className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
             </div>

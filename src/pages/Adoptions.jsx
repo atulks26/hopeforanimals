@@ -60,7 +60,7 @@ export default function Adoptions() {
             <div className="flex items-center justify-center gap-4 mb-8">
                 <img
                     src="images/paw-print.webp"
-                    alt="paw1"
+                    alt="Paw icon"
                     className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
                 <h1 className="text-4xl md:text-5xl font-semibold font-rampart text-gray-700">
@@ -68,7 +68,7 @@ export default function Adoptions() {
                 </h1>
                 <img
                     src="images/paw-print.webp"
-                    alt="paw2"
+                    alt="Paw icon"
                     className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
             </div>
@@ -98,7 +98,7 @@ export default function Adoptions() {
                             <img
                                 src="images/watermark.webp"
                                 className="absolute inset-0 w-full h-full object-contain opacity-5 -z-0"
-                                alt="watermark"
+                                alt="Hope For Animals watermark"
                             />
 
                             {adoption.gender && (

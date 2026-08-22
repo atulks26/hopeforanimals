@@ -83,12 +83,14 @@ const Home = () => {
                                     <img
                                         src="images/whoarewe-3.webp"
                                         className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
+                                        alt="Dogs eating food in the shelter"
                                     />
                                 </div>
                                 <div className="w-full h-1/2">
                                     <img
                                         src="images/whoarewe-2.webp"
                                         className="w-full h-full object-cover -rotate-12 border-[0.6rem] shadow-2xl border-white"
+                                        alt="Woman petting a dog"
                                     />
                                 </div>
                             </div>
@@ -97,6 +99,7 @@ const Home = () => {
                                 <img
                                     src="images/whoarewe-1.webp"
                                     className="w-full h-full object-cover rotate-6 border-[0.6rem] shadow-2xl border-white"
+                                    alt="Man posing with shelter dogs"
                                 />
                             </div>
                         </div>
@@ -129,7 +132,7 @@ const Home = () => {
                                 <img
                                     src="images/whatwedo.webp"
                                     className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
-                                    alt=""
+                                    alt="Man feeding baby cows"
                                 />
                             </div>
 
@@ -138,13 +141,14 @@ const Home = () => {
                                     <img
                                         src="images/whatwedo-1.webp"
                                         className="w-full h-full object-cover -rotate-12 border-[0.6rem] shadow-2xl border-white"
-                                        alt=""
+                                        alt="Dog smiling"
                                     />
                                 </div>
                                 <div className="aspect-[4/3] w-2/3 rounded-md">
                                     <img
                                         src="images/whatwedo-2.webp"
                                         className="w-full h-full object-cover rotate-6 border-[0.6rem] shadow-2xl border-white"
+                                        alt="Dog smiling in a shelter"
                                     />
                                 </div>
                             </div>
@@ -179,6 +183,7 @@ const Home = () => {
                                     <img
                                         src="images/howitstarted-1.webp"
                                         className="w-full h-full object-cover -rotate-6 border-[0.6rem] shadow-2xl border-white"
+                                        alt="Dogs in a shelter"
                                     />
                                 </div>
                             </div>
@@ -188,12 +193,14 @@ const Home = () => {
                                     <img
                                         src="images/howitstarted-3.webp"
                                         className="w-full h-full object-cover rotate-12 border-[0.6rem] shadow-2xl border-white"
+                                        alt="Man holding two dogs"
                                     />
                                 </div>
                                 <div className="w-full h-1/2">
                                     <img
                                         src="images/howitstarted.webp"
                                         className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
+                                        alt="Man holding a dog"
                                     />
                                 </div>
                             </div>
@@ -230,6 +237,7 @@ const Home = () => {
                     <img
                         src="images/paper.webp"
                         className="w-full h-full object-cover"
+                        alt="div border top"
                     />
                 </div>
                 <div className="w-full flex justify-center items-center bg-[#FDFDFD]">
@@ -259,6 +267,7 @@ const Home = () => {
                     <img
                         src="images/paper.webp"
                         className="w-full h-full object-cover rotate-180"
+                        alt="div border bottom"
                     />
                 </div>
             </div>
@@ -335,6 +344,7 @@ const Home = () => {
                     <img
                         src="images/paper.webp"
                         className="w-full h-full object-cover"
+                        alt="div border top"
                     />
                 </div>
 
@@ -359,12 +369,14 @@ const Home = () => {
                                 <img
                                     src="images/adoptions/a-1.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-3 border-[#efefef]"
+                                    alt="Two women adopting a brown puppy"
                                 />
                             </div>
                             <div className="w-[42%] h-auto">
                                 <img
                                     src="images/adoptions/a-2.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-6 border-[#efefef]"
+                                    alt="Two women adopting a gray kitten"
                                 />
                             </div>
                         </div>
@@ -407,12 +419,14 @@ const Home = () => {
                                 <img
                                     src="images/adoptions/va-1.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-2 border-[#efefef]"
+                                    alt="Specially abled brown dog"
                                 />
                             </div>
                             <div className="w-[42%] h-auto">
                                 <img
                                     src="images/adoptions/va-2.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-6 border-[#efefef]"
+                                    alt="Specially abled black dog"
                                 />
                             </div>
                         </div>
@@ -432,6 +446,7 @@ const Home = () => {
                     <img
                         src="images/paper.webp"
                         className="w-full h-full object-cover rotate-180"
+                        alt="div border bottom"
                     />
                 </div>
             </div>
@@ -457,12 +472,14 @@ const Home = () => {
                             <img
                                 src="images/news/news-1.webp"
                                 className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-3 border-[#efefef]"
+                                alt="Dog with bandaged legs"
                             />
                         </div>
                         <div className="w-[42%] h-auto">
                             <img
                                 src="images/news/news-2.webp"
                                 className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-6 border-[#efefef]"
+                                alt="Man holding a kitten with bandaged paws"
                             />
                         </div>
                     </div>
@@ -499,6 +516,7 @@ const Home = () => {
                     <img
                         src="images/paper.webp"
                         className="w-full h-full object-cover"
+                        alt="div border top"
                     />
                 </div>
                 <div className="w-full h-full flex flex-col items-center bg-[#FDFDFD]">
@@ -539,12 +557,14 @@ const Home = () => {
                                 <img
                                     src="images/meal/meal-1.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-2 border-[#efefef]"
+                                    alt="Two dogs eating food"
                                 />
                             </div>
                             <div className="w-[42%] h-auto">
                                 <img
                                     src="images/meal/meal-2.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-6 border-[#efefef]"
+                                    alt="Dogs waiting for food"
                                 />
                             </div>
                         </div>

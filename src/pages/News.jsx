@@ -49,7 +49,7 @@ export default function News() {
             <div className="flex items-center justify-center gap-4 mb-12 my-4 mx-4">
                 <img
                     src="images/paw-print.webp"
-                    alt="paw1"
+                    alt="Paw icon"
                     className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
                 <h1 className="text-4xl md:text-5xl font-semibold font-rampart text-gray-700 text-center">
@@ -57,7 +57,7 @@ export default function News() {
                 </h1>
                 <img
                     src="images/paw-print.webp"
-                    alt="paw2"
+                    alt="Paw icon"
                     className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
             </div>

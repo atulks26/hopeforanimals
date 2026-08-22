@@ -5,6 +5,7 @@ const cards = [
     {
         id: "adoption",
         numberOfImages: 5,
+        alt: "People adopting animals",
         imageSrcs: [
             "images/adoption-camps/1.webp",
             "images/adoption-camps/2.webp",
@@ -20,6 +21,7 @@ const cards = [
     {
         id: "tree",
         numberOfImages: 4,
+        alt: "Volunteers planting trees",
         imageSrcs: [
             "images/tree-plantation/1.webp",
             "images/tree-plantation/2.webp",
@@ -34,6 +36,7 @@ const cards = [
     {
         id: "gupt",
         numberOfImages: 5,
+        alt: "Animal recovering from injury",
         imageSrcs: [
             "images/gupt-kashi/1.webp",
             "images/gupt-kashi/2.webp",
@@ -49,6 +52,7 @@ const cards = [
     {
         id: "water",
         numberOfImages: 4,
+        alt: "Volunteers installing water bowls",
         imageSrcs: [
             "images/water-bowl/1.webp",
             "images/water-bowl/2.webp",
@@ -121,7 +125,6 @@ export default function CardCarousel() {
                     <div className="w-full flex justify-center items-center">
                         <div className="w-[90%] lg:w-[70%] h-full flex items-center">
                             <div className="w-full h-full flex flex-col">
-                                {/* Title based on id or you can add title in cards */}
                                 <p className="font-audiowide text-2xl md:text-3xl font-semibold mb-10 text-[#2F3E5C] uppercase">
                                     {card.id === "adoption"
                                         ? "Adoption Camps"
@@ -136,7 +139,6 @@ export default function CardCarousel() {
 
                                 {/* Images Section */}
                                 {card.numberOfImages === 4 ? (
-                                    // 4 images, 2 rows, top row bigger
                                     <>
                                         {/* Mobile */}
                                         <div className="h-[50%] md:hidden flex flex-col items-center justify-center">
@@ -171,7 +173,7 @@ export default function CardCarousel() {
                                                                         i
                                                                     ]
                                                                 }
-                                                                alt={`img-${i}`}
+                                                                alt={card.alt}
                                                                 className="object-cover w-full h-full"
                                                             />
                                                         </div>
@@ -184,7 +186,6 @@ export default function CardCarousel() {
                                                         "#efefef",
                                                         "#efefef",
                                                     ];
-                                                    // Notice the rotate values switched for bottom row compared to example you gave
                                                     const rotate =
                                                         i === 2
                                                             ? "6deg"
@@ -210,7 +211,7 @@ export default function CardCarousel() {
                                                                         i
                                                                     ]
                                                                 }
-                                                                alt={`img-${i}`}
+                                                                alt={card.alt}
                                                                 className="object-cover w-full h-full"
                                                             />
                                                         </div>
@@ -249,7 +250,7 @@ export default function CardCarousel() {
                                                                     i
                                                                 ]
                                                             }
-                                                            alt={`img-${i}`}
+                                                            alt={card.alt}
                                                             className="object-cover w-full h-full"
                                                         />
                                                     </div>
@@ -258,7 +259,6 @@ export default function CardCarousel() {
                                         </div>
                                     </>
                                 ) : card.numberOfImages === 5 ? (
-                                    // 5 images layout exactly like your example
                                     <>
                                         {/* Mobile / small screen */}
                                         <div className="h-[50%] md:hidden flex flex-col items-center justify-center gap-4">
@@ -266,14 +266,14 @@ export default function CardCarousel() {
                                                 <div className="h-full w-[35%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] -rotate-6 overflow-hidden">
                                                     <img
                                                         src={card.imageSrcs[0]}
-                                                        alt="img-0"
+                                                        alt={card.alt}
                                                         className="h-full w-full object-cover"
                                                     />
                                                 </div>
                                                 <div className="h-full w-[35%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] rotate-6 overflow-hidden">
                                                     <img
                                                         src={card.imageSrcs[1]}
-                                                        alt="img-1"
+                                                        alt={card.alt}
                                                         className="h-full w-full object-cover"
                                                     />
                                                 </div>
@@ -282,21 +282,21 @@ export default function CardCarousel() {
                                                 <div className="h-full w-[25%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] -rotate-6 overflow-hidden">
                                                     <img
                                                         src={card.imageSrcs[2]}
-                                                        alt="img-2"
+                                                        alt={card.alt}
                                                         className="h-full w-full object-cover"
                                                     />
                                                 </div>
                                                 <div className="h-full w-[25%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] rotate-6 overflow-hidden">
                                                     <img
                                                         src={card.imageSrcs[3]}
-                                                        alt="img-3"
+                                                        alt={card.alt}
                                                         className="h-full w-full object-cover"
                                                     />
                                                 </div>
                                                 <div className="h-full w-[25%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] -rotate-6 overflow-hidden">
                                                     <img
                                                         src={card.imageSrcs[4]}
-                                                        alt="img-4"
+                                                        alt={card.alt}
                                                         className="h-full w-full object-cover"
                                                     />
                                                 </div>
@@ -329,7 +329,7 @@ export default function CardCarousel() {
                                                     >
                                                         <img
                                                             src={src}
-                                                            alt={`img-${i}`}
+                                                            alt={card.alt}
                                                             className="object-cover w-full h-full"
                                                         />
                                                     </div>
@@ -338,7 +338,6 @@ export default function CardCarousel() {
                                         </div>
                                     </>
                                 ) : (
-                                    // fallback if other number of images (you can add more cases)
                                     <div>No images to display</div>
                                 )}
 
@@ -362,7 +361,7 @@ export default function CardCarousel() {
                                             >
                                                 <img
                                                     src="/images/instagram.webp"
-                                                    alt="instagram"
+                                                    alt="Instagram icon"
                                                     className="w-7 sm:w-6 sm:h-6"
                                                 />
                                             </a>
