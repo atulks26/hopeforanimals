@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import CardCarousel from "../components/StoryCard";
+import Img from "../components/Img";
 
 const GITHUB_JSON_URL =
     "https://raw.githubusercontent.com/atulksingh26/json-static-hosting/main/hfa-stats.json";
@@ -80,7 +81,8 @@ const Home = () => {
                         <div className="flex px-6">
                             <div className="w-[40%] h-full flex flex-col">
                                 <div className="w-full h-1/2">
-                                    <img
+                                    <Img
+                                        sizes="(min-width: 1280px) 14vw, (min-width: 768px) 18vw, 36vw"
                                         loading="lazy"
                                         src="images/whoarewe-3.webp"
                                         className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
@@ -88,7 +90,8 @@ const Home = () => {
                                     />
                                 </div>
                                 <div className="w-full h-1/2">
-                                    <img
+                                    <Img
+                                        sizes="(min-width: 1280px) 14vw, (min-width: 768px) 18vw, 36vw"
                                         loading="lazy"
                                         src="images/whoarewe-2.webp"
                                         className="w-full h-full object-cover -rotate-12 border-[0.6rem] shadow-2xl border-white"
@@ -98,7 +101,8 @@ const Home = () => {
                             </div>
 
                             <div className="w-[60%] h-full">
-                                <img
+                                <Img
+                                    sizes="(min-width: 1280px) 21vw, (min-width: 768px) 27vw, 54vw"
                                     loading="lazy"
                                     src="images/whoarewe-1.webp"
                                     className="w-full h-full object-cover rotate-6 border-[0.6rem] shadow-2xl border-white"
@@ -132,7 +136,8 @@ const Home = () => {
                     <div className="w-full md:w-1/2 flex order-2 md:order-2 xl:justify-start justify-center">
                         <div className="flex flex-col px-2 gap-4">
                             <div className="w-full max-h-[240px]  rounded-md">
-                                <img
+                                <Img
+                                    sizes="(min-width: 1280px) 35vw, (min-width: 768px) 45vw, 90vw"
                                     loading="lazy"
                                     src="images/whatwedo.webp"
                                     className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
@@ -142,7 +147,8 @@ const Home = () => {
 
                             <div className="flex gap-4">
                                 <div className="aspect-[4/3] w-1/3 rounded-md">
-                                    <img
+                                    <Img
+                                        sizes="(min-width: 1280px) 12vw, (min-width: 768px) 15vw, 30vw"
                                         loading="lazy"
                                         src="images/whatwedo-1.webp"
                                         className="w-full h-full object-cover -rotate-12 border-[0.6rem] shadow-2xl border-white"
@@ -150,7 +156,8 @@ const Home = () => {
                                     />
                                 </div>
                                 <div className="aspect-[4/3] w-2/3 rounded-md">
-                                    <img
+                                    <Img
+                                        sizes="(min-width: 1280px) 23vw, (min-width: 768px) 30vw, 60vw"
                                         loading="lazy"
                                         src="images/whatwedo-2.webp"
                                         className="w-full h-full object-cover rotate-6 border-[0.6rem] shadow-2xl border-white"
@@ -186,7 +193,8 @@ const Home = () => {
                         <div className="flex px-2">
                             <div className="w-[60%] h-full flex justify-center items-center">
                                 <div className="w-full h-1/2">
-                                    <img
+                                    <Img
+                                        sizes="(min-width: 1280px) 21vw, (min-width: 768px) 27vw, 54vw"
                                         loading="lazy"
                                         src="images/howitstarted-1.webp"
                                         className="w-full h-full object-cover -rotate-6 border-[0.6rem] shadow-2xl border-white"
@@ -197,7 +205,8 @@ const Home = () => {
 
                             <div className="w-[40%] h-full flex flex-col">
                                 <div className="w-full h-1/2">
-                                    <img
+                                    <Img
+                                        sizes="(min-width: 1280px) 14vw, (min-width: 768px) 18vw, 36vw"
                                         loading="lazy"
                                         src="images/howitstarted-3.webp"
                                         className="w-full h-full object-cover rotate-12 border-[0.6rem] shadow-2xl border-white"
@@ -205,7 +214,8 @@ const Home = () => {
                                     />
                                 </div>
                                 <div className="w-full h-1/2">
-                                    <img
+                                    <Img
+                                        sizes="(min-width: 1280px) 14vw, (min-width: 768px) 18vw, 36vw"
                                         loading="lazy"
                                         src="images/howitstarted.webp"
                                         className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
@@ -243,7 +253,8 @@ const Home = () => {
 
             <div className="w-full flex flex-col items-center mb-10">
                 <div className="w-[100vw] bg-transparent -mb-1">
-                    <img
+                    <Img
+                        sizes="100vw"
                         loading="lazy"
                         src="images/paper.webp"
                         className="w-full h-full object-cover"
@@ -274,7 +285,8 @@ const Home = () => {
                 </div>
 
                 <div className="w-[100vw] bg-transparent">
-                    <img
+                    <Img
+                        sizes="100vw"
                         loading="lazy"
                         src="images/paper.webp"
                         className="w-full h-full object-cover rotate-180"
@@ -353,7 +365,8 @@ const Home = () => {
 
             <div className="w-full flex flex-col items-center mb-10">
                 <div className="w-[100vw] bg-transparent -mb-1">
-                    <img
+                    <Img
+                        sizes="100vw"
                         loading="lazy"
                         src="images/paper.webp"
                         className="w-full h-full object-cover"
@@ -379,7 +392,8 @@ const Home = () => {
                     <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-10 items-center">
                         <div className="w-full md:w-[45%] flex flex-row justify-center items-center gap-4 md:gap-4 mr-2">
                             <div className="w-[42%] h-auto">
-                                <img
+                                <Img
+                                    sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                     loading="lazy"
                                     src="images/adoptions/a-1.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-3 border-[#efefef]"
@@ -387,7 +401,8 @@ const Home = () => {
                                 />
                             </div>
                             <div className="w-[42%] h-auto">
-                                <img
+                                <Img
+                                    sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                     loading="lazy"
                                     src="images/adoptions/a-2.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-6 border-[#efefef]"
@@ -431,7 +446,8 @@ const Home = () => {
 
                         <div className="w-full md:w-[45%] flex flex-row justify-center items-center gap-4 md:gap-4 ml-2 md:order-2 order-1">
                             <div className="w-[42%] h-auto">
-                                <img
+                                <Img
+                                    sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                     loading="lazy"
                                     src="images/adoptions/va-1.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-2 border-[#efefef]"
@@ -439,7 +455,8 @@ const Home = () => {
                                 />
                             </div>
                             <div className="w-[42%] h-auto">
-                                <img
+                                <Img
+                                    sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                     loading="lazy"
                                     src="images/adoptions/va-2.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-6 border-[#efefef]"
@@ -460,7 +477,8 @@ const Home = () => {
                 </div>
 
                 <div className="w-[100vw] bg-transparent -mt-1">
-                    <img
+                    <Img
+                        sizes="100vw"
                         loading="lazy"
                         src="images/paper.webp"
                         className="w-full h-full object-cover rotate-180"
@@ -487,7 +505,8 @@ const Home = () => {
                 <div className="flex flex-col md:flex-row md:justify-center w-full max-w-[90%] gap-4 xl:max-w-[70%] my-10 mb-14 items-center">
                     <div className="w-full md:w-[45%] flex flex-row justify-center items-center gap-4 md:gap-4 mr-2">
                         <div className="w-[42%] h-auto">
-                            <img
+                            <Img
+                                sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                 loading="lazy"
                                 src="images/news/news-1.webp"
                                 className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-3 border-[#efefef]"
@@ -495,7 +514,8 @@ const Home = () => {
                             />
                         </div>
                         <div className="w-[42%] h-auto">
-                            <img
+                            <Img
+                                sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                 loading="lazy"
                                 src="images/news/news-2.webp"
                                 className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-6 border-[#efefef]"
@@ -533,7 +553,8 @@ const Home = () => {
                 id="sponsor-meal-section"
             >
                 <div className="w-[100vw] bg-transparent -mb-1">
-                    <img
+                    <Img
+                        sizes="100vw"
                         loading="lazy"
                         src="images/paper.webp"
                         className="w-full h-full object-cover"
@@ -575,7 +596,8 @@ const Home = () => {
 
                         <div className="w-full md:w-[45%] flex flex-row justify-center items-center gap-4 md:gap-4 mr-2">
                             <div className="w-[42%] h-auto">
-                                <img
+                                <Img
+                                    sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                     loading="lazy"
                                     src="images/meal/meal-1.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-2 border-[#efefef]"
@@ -583,7 +605,8 @@ const Home = () => {
                                 />
                             </div>
                             <div className="w-[42%] h-auto">
-                                <img
+                                <Img
+                                    sizes="(min-width: 1280px) 13vw, (min-width: 768px) 17vw, 38vw"
                                     loading="lazy"
                                     src="images/meal/meal-2.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-6 border-[#efefef]"

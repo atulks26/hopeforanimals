@@ -1,9 +1,11 @@
 import React from "react";
+import Img from "./Img";
 
 const Hero = () => {
     return (
         <div className="w-screen overflow-hidden">
-            <img
+            <Img
+                sizes="100vw"
                 src="images/desktop-cut.webp"
                 alt="Banner desktop"
                 className="hidden md:block w-full h-auto object-cover"

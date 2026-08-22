@@ -8,13 +8,15 @@ import ScrollToTop from "./components/Scoller";
 import HashReset from "./components/HashReset";
 import Preloader from "./components/Preloader";
 import News from "./pages/News";
+import Img from "./components/Img";
 
 function App() {
     return (
         <Router className="relative">
             <Preloader />
             <div className="fixed inset-0 -z-10 w-screen h-screen">
-                <img
+                <Img
+                    sizes="100vw"
                     src="images/bg.webp"
                     alt="Website background"
                     className="w-full h-full object-cover"

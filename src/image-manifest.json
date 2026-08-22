@@ -1,0 +1,363 @@
+{
+  "images/adoption-camps/1.webp": {
+    "widths": [
+      320,
+      480,
+      640
+    ],
+    "base": 960
+  },
+  "images/adoption-camps/2.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1200
+  },
+  "images/adoption-camps/3.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1200
+  },
+  "images/adoption-camps/4.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1200
+  },
+  "images/adoption-camps/5.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960,
+      1440
+    ],
+    "base": 1920
+  },
+  "images/adoptions/a-1.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960,
+      1440
+    ],
+    "base": 1920
+  },
+  "images/adoptions/a-2.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960,
+      1440
+    ],
+    "base": 1920
+  },
+  "images/adoptions/va-1.webp": {
+    "widths": [
+      320,
+      480,
+      640
+    ],
+    "base": 768
+  },
+  "images/adoptions/va-2.webp": {
+    "widths": [
+      320,
+      480,
+      640
+    ],
+    "base": 768
+  },
+  "images/bg.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960,
+      1440
+    ],
+    "base": 1920
+  },
+  "images/desktop-cut.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960,
+      1440
+    ],
+    "base": 1920
+  },
+  "images/gupt-kashi/1.webp": {
+    "widths": [
+      320,
+      480,
+      640
+    ],
+    "base": 720
+  },
+  "images/gupt-kashi/2.webp": {
+    "widths": [
+      320,
+      480
+    ],
+    "base": 607
+  },
+  "images/gupt-kashi/3.webp": {
+    "widths": [
+      320,
+      480,
+      640
+    ],
+    "base": 720
+  },
+  "images/gupt-kashi/4.webp": {
+    "widths": [
+      320,
+      480,
+      640
+    ],
+    "base": 720
+  },
+  "images/gupt-kashi/5.webp": {
+    "widths": [
+      320,
+      480,
+      640
+    ],
+    "base": 720
+  },
+  "images/howitstarted-1.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960,
+      1440
+    ],
+    "base": 1920
+  },
+  "images/howitstarted-3.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1440
+  },
+  "images/howitstarted.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960,
+      1440
+    ],
+    "base": 1920
+  },
+  "images/map-fallback.webp": {
+    "widths": [
+      320,
+      480,
+      640
+    ],
+    "base": 733
+  },
+  "images/meal/meal-1.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1220
+  },
+  "images/meal/meal-2.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1220
+  },
+  "images/news/news-1.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1440
+  },
+  "images/news/news-2.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960,
+      1440
+    ],
+    "base": 1836
+  },
+  "images/paper.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960,
+      1440
+    ],
+    "base": 1773
+  },
+  "images/tree-plantation/1.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1440
+  },
+  "images/tree-plantation/2.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1440
+  },
+  "images/tree-plantation/3.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1440
+  },
+  "images/tree-plantation/4.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1440
+  },
+  "images/tree-plantation/5.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1440
+  },
+  "images/water-bowl/1.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1440
+  },
+  "images/water-bowl/2.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1440
+  },
+  "images/water-bowl/3.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1280
+  },
+  "images/water-bowl/4.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1440
+  },
+  "images/whatwedo-1.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1440
+  },
+  "images/whatwedo-2.webp": {
+    "widths": [
+      320,
+      480,
+      640
+    ],
+    "base": 768
+  },
+  "images/whatwedo.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960
+    ],
+    "base": 1396
+  },
+  "images/whoarewe-1.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960,
+      1440
+    ],
+    "base": 1920
+  },
+  "images/whoarewe-2.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960,
+      1440
+    ],
+    "base": 1920
+  },
+  "images/whoarewe-3.webp": {
+    "widths": [
+      320,
+      480,
+      640,
+      960,
+      1440
+    ],
+    "base": 1920
+  }
+}

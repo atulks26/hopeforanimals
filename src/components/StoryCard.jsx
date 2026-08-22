@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Img from "./Img";
 
 const cards = [
     {
@@ -166,7 +167,8 @@ export default function CardCarousel() {
                                                                 width,
                                                             }}
                                                         >
-                                                            <img
+                                                            <Img
+                                                                sizes="32vw"
                                                                 loading="lazy"
                                                                 src={
                                                                     card
@@ -205,7 +207,8 @@ export default function CardCarousel() {
                                                                 width,
                                                             }}
                                                         >
-                                                            <img
+                                                            <Img
+                                                                sizes="23vw"
                                                                 loading="lazy"
                                                                 src={
                                                                     card
@@ -246,7 +249,8 @@ export default function CardCarousel() {
                                                             width: "18%",
                                                         }}
                                                     >
-                                                        <img
+                                                        <Img
+                                                            sizes="(min-width: 1024px) 13vw, 17vw"
                                                             loading="lazy"
                                                             src={
                                                                 card.imageSrcs[
@@ -267,7 +271,8 @@ export default function CardCarousel() {
                                         <div className="h-[50%] md:hidden flex flex-col items-center justify-center gap-4">
                                             <div className="flex justify-center gap-4">
                                                 <div className="h-full w-[35%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] -rotate-6 overflow-hidden">
-                                                    <img
+                                                    <Img
+                                                        sizes="32vw"
                                                         loading="lazy"
                                                         src={card.imageSrcs[0]}
                                                         alt={card.alt}
@@ -275,7 +280,8 @@ export default function CardCarousel() {
                                                     />
                                                 </div>
                                                 <div className="h-full w-[35%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] rotate-6 overflow-hidden">
-                                                    <img
+                                                    <Img
+                                                        sizes="32vw"
                                                         loading="lazy"
                                                         src={card.imageSrcs[1]}
                                                         alt={card.alt}
@@ -285,7 +291,8 @@ export default function CardCarousel() {
                                             </div>
                                             <div className="flex justify-center gap-4">
                                                 <div className="h-full w-[25%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] -rotate-6 overflow-hidden">
-                                                    <img
+                                                    <Img
+                                                        sizes="23vw"
                                                         loading="lazy"
                                                         src={card.imageSrcs[2]}
                                                         alt={card.alt}
@@ -293,7 +300,8 @@ export default function CardCarousel() {
                                                     />
                                                 </div>
                                                 <div className="h-full w-[25%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] rotate-6 overflow-hidden">
-                                                    <img
+                                                    <Img
+                                                        sizes="23vw"
                                                         loading="lazy"
                                                         src={card.imageSrcs[3]}
                                                         alt={card.alt}
@@ -301,7 +309,8 @@ export default function CardCarousel() {
                                                     />
                                                 </div>
                                                 <div className="h-full w-[25%] flex aspect-[2/3] border-[0.6rem] shadow-xl border-[#efefef] -rotate-6 overflow-hidden">
-                                                    <img
+                                                    <Img
+                                                        sizes="23vw"
                                                         loading="lazy"
                                                         src={card.imageSrcs[4]}
                                                         alt={card.alt}
@@ -335,7 +344,8 @@ export default function CardCarousel() {
                                                                 borderColors[i],
                                                         }}
                                                     >
-                                                        <img
+                                                        <Img
+                                                            sizes="(min-width: 1024px) 13vw, 17vw"
                                                             loading="lazy"
                                                             src={src}
                                                             alt={card.alt}
