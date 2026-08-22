@@ -186,14 +186,14 @@ const Navbar = () => {
                 <HashLink
                     smooth
                     to="/#about-us-section"
-                    className="block w-full text-center px-6 py-3 hover:bg-orange-400 hover:text-white rounded"
+                    className="block w-full text-center px-6 py-3 rounded transition-colors duration-150 active:bg-[#B0D0E8]"
                     onClick={closeMenu}
                 >
                     About Us
                 </HashLink>
                 <HashLink
                     to="/news"
-                    className="block w-full text-center px-6 py-3 hover:bg-orange-400 hover:text-white rounded"
+                    className="block w-full text-center px-6 py-3 rounded transition-colors duration-150 active:bg-[#B0D0E8]"
                     onClick={closeMenu}
                 >
                     News
@@ -201,21 +201,21 @@ const Navbar = () => {
                 <HashLink
                     smooth
                     to="/#sponsor-meal-section"
-                    className="block w-full text-center px-6 py-3 hover:bg-orange-400 hover:text-white rounded"
+                    className="block w-full text-center px-6 py-3 rounded transition-colors duration-150 active:bg-[#B0D0E8]"
                     onClick={closeMenu}
                 >
                     Sponsor a meal
                 </HashLink>
                 <HashLink
                     to="/gallery"
-                    className="block w-full text-center px-6 py-3 hover:bg-orange-400 hover:text-white rounded"
+                    className="block w-full text-center px-6 py-3 rounded transition-colors duration-150 active:bg-[#B0D0E8]"
                     onClick={closeMenu}
                 >
                     Gallery
                 </HashLink>
                 <HashLink
                     to="/adoptions"
-                    className="block w-full text-center px-6 py-3 hover:bg-orange-400 hover:text-white rounded"
+                    className="block w-full text-center px-6 py-3 rounded transition-colors duration-150 active:bg-[#B0D0E8]"
                     onClick={closeMenu}
                 >
                     Adoptions
