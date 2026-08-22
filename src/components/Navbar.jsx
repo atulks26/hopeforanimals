@@ -24,7 +24,7 @@ const Navbar = () => {
                     <div className="flex flex-nowrap items-center gap-4 sm:gap-6 min-w-0 overflow-hidden">
                         <div className="flex items-center shrink-0 whitespace-nowrap">
                             <img
-                                src="images/phone.png"
+                                src="images/phone.webp"
                                 className="h-4 mr-1 shrink-0"
                             />
                             <p className="whitespace-nowrap">+91 7818037628</p>
@@ -32,7 +32,7 @@ const Navbar = () => {
 
                         <div className="flex items-center shrink-0 whitespace-nowrap min-w-0 max-[520px]:hidden">
                             <img
-                                src="images/mail.png"
+                                src="images/mail.webp"
                                 className="h-4 mr-1 shrink-0"
                             />
                             <p className="whitespace-nowrap">
@@ -42,7 +42,7 @@ const Navbar = () => {
 
                         <div className="hidden md:flex items-center shrink-0 whitespace-nowrap">
                             <img
-                                src="images/location.png"
+                                src="images/location.webp"
                                 className="h-4 mr-1 shrink-0"
                             />
                             <p className="whitespace-nowrap">
@@ -51,7 +51,7 @@ const Navbar = () => {
                         </div>
                         <div className="hidden sm:flex md:hidden items-center shrink-0 whitespace-nowrap">
                             <img
-                                src="images/location.png"
+                                src="images/location.webp"
                                 className="h-4 mr-1 shrink-0"
                             />
                             <p className="whitespace-nowrap">
@@ -68,7 +68,7 @@ const Navbar = () => {
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src="/images/instagram.png"
+                                    src="/images/instagram.webp"
                                     alt="instagram"
                                     className="w-4 h-4 invert"
                                 />
@@ -79,7 +79,7 @@ const Navbar = () => {
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src="/images/facebook.png"
+                                    src="/images/facebook.webp"
                                     alt="facebook"
                                     className="w-5 h-5 invert"
                                 />
@@ -90,7 +90,7 @@ const Navbar = () => {
                                 rel="noopener noreferrer"
                             >
                                 <img
-                                    src="/images/youtube.png"
+                                    src="/images/youtube.webp"
                                     alt="youtube"
                                     className="w-5 h-5 invert"
                                 />
@@ -115,7 +115,7 @@ const Navbar = () => {
                     onClick={handleHome}
                 >
                     <img
-                        src="images/logo2.jpeg"
+                        src="images/logo2.webp"
                         alt="Logo"
                         className="w-full h-full object-contain"
                     />

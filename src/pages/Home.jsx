@@ -81,13 +81,13 @@ const Home = () => {
                             <div className="w-[40%] h-full flex flex-col">
                                 <div className="w-full h-1/2">
                                     <img
-                                        src="images/whoarewe-3.jpg"
+                                        src="images/whoarewe-3.webp"
                                         className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
                                     />
                                 </div>
                                 <div className="w-full h-1/2">
                                     <img
-                                        src="images/whoarewe-2.jpg"
+                                        src="images/whoarewe-2.webp"
                                         className="w-full h-full object-cover -rotate-12 border-[0.6rem] shadow-2xl border-white"
                                     />
                                 </div>
@@ -95,7 +95,7 @@ const Home = () => {
 
                             <div className="w-[60%] h-full">
                                 <img
-                                    src="images/whoarewe-1.jpg"
+                                    src="images/whoarewe-1.webp"
                                     className="w-full h-full object-cover rotate-6 border-[0.6rem] shadow-2xl border-white"
                                 />
                             </div>
@@ -127,7 +127,7 @@ const Home = () => {
                         <div className="flex flex-col px-2 gap-4">
                             <div className="w-full max-h-[240px]  rounded-md">
                                 <img
-                                    src="images/whatwedo.jpg"
+                                    src="images/whatwedo.webp"
                                     className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
                                     alt=""
                                 />
@@ -136,14 +136,14 @@ const Home = () => {
                             <div className="flex gap-4">
                                 <div className="aspect-[4/3] w-1/3 rounded-md">
                                     <img
-                                        src="images/whatwedo-1.jpg"
+                                        src="images/whatwedo-1.webp"
                                         className="w-full h-full object-cover -rotate-12 border-[0.6rem] shadow-2xl border-white"
                                         alt=""
                                     />
                                 </div>
                                 <div className="aspect-[4/3] w-2/3 rounded-md">
                                     <img
-                                        src="images/whatwedo-2.jpg"
+                                        src="images/whatwedo-2.webp"
                                         className="w-full h-full object-cover rotate-6 border-[0.6rem] shadow-2xl border-white"
                                     />
                                 </div>
@@ -177,7 +177,7 @@ const Home = () => {
                             <div className="w-[60%] h-full flex justify-center items-center">
                                 <div className="w-full h-1/2">
                                     <img
-                                        src="images/howitstarted-1.jpg"
+                                        src="images/howitstarted-1.webp"
                                         className="w-full h-full object-cover -rotate-6 border-[0.6rem] shadow-2xl border-white"
                                     />
                                 </div>
@@ -186,13 +186,13 @@ const Home = () => {
                             <div className="w-[40%] h-full flex flex-col">
                                 <div className="w-full h-1/2">
                                     <img
-                                        src="images/howitstarted-3.jpg"
+                                        src="images/howitstarted-3.webp"
                                         className="w-full h-full object-cover rotate-12 border-[0.6rem] shadow-2xl border-white"
                                     />
                                 </div>
                                 <div className="w-full h-1/2">
                                     <img
-                                        src="images/howitstarted.jpg"
+                                        src="images/howitstarted.webp"
                                         className="w-full h-full object-cover border-[0.6rem] shadow-2xl border-white"
                                     />
                                 </div>
@@ -228,7 +228,7 @@ const Home = () => {
             <div className="w-full flex flex-col items-center mb-10">
                 <div className="w-[100vw] bg-transparent -mb-1">
                     <img
-                        src="images/paper.png"
+                        src="images/paper.webp"
                         className="w-full h-full object-cover"
                     />
                 </div>
@@ -257,7 +257,7 @@ const Home = () => {
 
                 <div className="w-[100vw] bg-transparent">
                     <img
-                        src="images/paper.png"
+                        src="images/paper.webp"
                         className="w-full h-full object-cover rotate-180"
                     />
                 </div>
@@ -280,25 +280,25 @@ const Home = () => {
                 <div className="w-full flex flex-wrap justify-center gap-6 px-4">
                     {[
                         {
-                            img: "paws.png",
+                            img: "paws.webp",
                             count: formatCount(stats.rescue),
                             label: "RESCUES",
                             desc: "Providing a safe new beginning",
                         },
                         {
-                            img: "adoption.png",
+                            img: "adoption.webp",
                             count: formatCount(stats.adoption),
                             label: "ADOPTIONS",
                             desc: "Furry friends who found homes",
                         },
                         {
-                            img: "dog-in-front-of-a-man.png",
+                            img: "dog-in-front-of-a-man.webp",
                             count: formatCount(stats.vet),
                             label: "VET VISITS",
                             desc: "Because every paw matters",
                         },
                         {
-                            img: "dog-running.png",
+                            img: "dog-running.webp",
                             count: formatCount(stats.release),
                             label: "RELEASES",
                             desc: "Harder, Better, Faster, Stronger",
@@ -333,7 +333,7 @@ const Home = () => {
             <div className="w-full flex flex-col items-center mb-10">
                 <div className="w-[100vw] bg-transparent -mb-1">
                     <img
-                        src="images/paper.png"
+                        src="images/paper.webp"
                         className="w-full h-full object-cover"
                     />
                 </div>
@@ -357,13 +357,13 @@ const Home = () => {
                         <div className="w-full md:w-[45%] flex flex-row justify-center items-center gap-4 md:gap-4 mr-2">
                             <div className="w-[42%] h-auto">
                                 <img
-                                    src="images/adoptions/a-1.jpg"
+                                    src="images/adoptions/a-1.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-3 border-[#efefef]"
                                 />
                             </div>
                             <div className="w-[42%] h-auto">
                                 <img
-                                    src="images/adoptions/a-2.jpg"
+                                    src="images/adoptions/a-2.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-6 border-[#efefef]"
                                 />
                             </div>
@@ -405,13 +405,13 @@ const Home = () => {
                         <div className="w-full md:w-[45%] flex flex-row justify-center items-center gap-4 md:gap-4 ml-2 md:order-2 order-1">
                             <div className="w-[42%] h-auto">
                                 <img
-                                    src="images/adoptions/va-1.jpg"
+                                    src="images/adoptions/va-1.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-2 border-[#efefef]"
                                 />
                             </div>
                             <div className="w-[42%] h-auto">
                                 <img
-                                    src="images/adoptions/va-2.jpg"
+                                    src="images/adoptions/va-2.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-6 border-[#efefef]"
                                 />
                             </div>
@@ -430,7 +430,7 @@ const Home = () => {
 
                 <div className="w-[100vw] bg-transparent -mt-1">
                     <img
-                        src="images/paper.png"
+                        src="images/paper.webp"
                         className="w-full h-full object-cover rotate-180"
                     />
                 </div>
@@ -455,13 +455,13 @@ const Home = () => {
                     <div className="w-full md:w-[45%] flex flex-row justify-center items-center gap-4 md:gap-4 mr-2">
                         <div className="w-[42%] h-auto">
                             <img
-                                src="images/news/news-1.jpg"
+                                src="images/news/news-1.webp"
                                 className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-3 border-[#efefef]"
                             />
                         </div>
                         <div className="w-[42%] h-auto">
                             <img
-                                src="images/news/news-2.jpg"
+                                src="images/news/news-2.webp"
                                 className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-6 border-[#efefef]"
                             />
                         </div>
@@ -497,7 +497,7 @@ const Home = () => {
             >
                 <div className="w-[100vw] bg-transparent -mb-1">
                     <img
-                        src="images/paper.png"
+                        src="images/paper.webp"
                         className="w-full h-full object-cover"
                     />
                 </div>
@@ -537,13 +537,13 @@ const Home = () => {
                         <div className="w-full md:w-[45%] flex flex-row justify-center items-center gap-4 md:gap-4 mr-2">
                             <div className="w-[42%] h-auto">
                                 <img
-                                    src="images/meal/meal-1.png"
+                                    src="images/meal/meal-1.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl -rotate-2 border-[#efefef]"
                                 />
                             </div>
                             <div className="w-[42%] h-auto">
                                 <img
-                                    src="images/meal/meal-2.jpg"
+                                    src="images/meal/meal-2.webp"
                                     className="w-full h-auto object-cover border-[0.6rem] shadow-2xl rotate-6 border-[#efefef]"
                                 />
                             </div>

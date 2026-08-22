@@ -15,7 +15,7 @@ function App() {
             <Preloader />
             <div className="fixed inset-0 -z-10 w-screen h-screen">
                 <img
-                    src="images/bg.png"
+                    src="images/bg.webp"
                     alt="background"
                     className="w-full h-full object-cover"
                 />

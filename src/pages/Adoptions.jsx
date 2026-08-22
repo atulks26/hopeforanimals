@@ -59,7 +59,7 @@ export default function Adoptions() {
         <div className="pt-6 w-full mx-auto min-h-[100vh]">
             <div className="flex items-center justify-center gap-4 mb-8">
                 <img
-                    src="images/paw-print.png"
+                    src="images/paw-print.webp"
                     alt="paw1"
                     className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
@@ -67,7 +67,7 @@ export default function Adoptions() {
                     Adoptions
                 </h1>
                 <img
-                    src="images/paw-print.png"
+                    src="images/paw-print.webp"
                     alt="paw2"
                     className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
@@ -96,7 +96,7 @@ export default function Adoptions() {
                             className={`relative cursor-pointer w-96 bg-white ${borderColor} border-4 rounded-2xl flex flex-col overflow-hidden transition-transform duration-300 hover:scale-[1.03] shadow-lg`}
                         >
                             <img
-                                src="images/watermark.png"
+                                src="images/watermark.webp"
                                 className="absolute inset-0 w-full h-full object-contain opacity-5 -z-0"
                                 alt="watermark"
                             />

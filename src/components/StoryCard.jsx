@@ -6,11 +6,11 @@ const cards = [
         id: "adoption",
         numberOfImages: 5,
         imageSrcs: [
-            "images/adoption-camps/1.jpg",
-            "images/adoption-camps/2.jpg",
-            "images/adoption-camps/3.jpg",
-            "images/adoption-camps/4.jpg",
-            "images/adoption-camps/5.jpg",
+            "images/adoption-camps/1.webp",
+            "images/adoption-camps/2.webp",
+            "images/adoption-camps/3.webp",
+            "images/adoption-camps/4.webp",
+            "images/adoption-camps/5.webp",
         ],
         desc1: "Launched in December 2023, adoption camps are hosted regularly to encourage adoptions, raise awareness, collect donations and most importantly, help animals and humans find their forever friends. These adoption camps have helped hundreds of animals find loving homes.",
         desc2: "",
@@ -21,10 +21,10 @@ const cards = [
         id: "tree",
         numberOfImages: 4,
         imageSrcs: [
-            "images/tree-plantation/1.jpg",
-            "images/tree-plantation/2.jpg",
-            "images/tree-plantation/3.jpg",
-            "images/tree-plantation/4.jpg",
+            "images/tree-plantation/1.webp",
+            "images/tree-plantation/2.webp",
+            "images/tree-plantation/3.webp",
+            "images/tree-plantation/4.webp",
         ],
         desc1: "Volunteers helped in planting over 100 saplings during a dedicated plantation drive organized to promote environmental sustainability. The event not only contributed to increasing the green cover but also encouraged community participation in preserving nature for future generations. These drives are conducted every year.",
         desc2: "",
@@ -35,11 +35,11 @@ const cards = [
         id: "gupt",
         numberOfImages: 5,
         imageSrcs: [
-            "images/gupt-kashi/1.jpg",
-            "images/gupt-kashi/2.jpg",
-            "images/gupt-kashi/3.jpg",
-            "images/gupt-kashi/4.jpg",
-            "images/gupt-kashi/5.jpg",
+            "images/gupt-kashi/1.webp",
+            "images/gupt-kashi/2.webp",
+            "images/gupt-kashi/3.webp",
+            "images/gupt-kashi/4.webp",
+            "images/gupt-kashi/5.webp",
         ],
         desc1: "What began as a rescue mission to Guptkashi, Uttarakhand took an unexpected turn when we stopped mid-journey to treat a cow with a severe maggot wound. After finally locating the missing dog late the next day, we rushed her to safety—only to discover she had a maggot-infested TVT tumor. With timely treatment, care, and her incredible will to fight, she made a full recovery.",
         desc2: "This journey reminded us that compassion and persistence can change lives against all odds.",
@@ -50,10 +50,10 @@ const cards = [
         id: "water",
         numberOfImages: 4,
         imageSrcs: [
-            "images/water-bowl/1.jpg",
-            "images/water-bowl/2.jpg",
-            "images/water-bowl/3.jpg",
-            "images/water-bowl/4.jpg",
+            "images/water-bowl/1.webp",
+            "images/water-bowl/2.webp",
+            "images/water-bowl/3.webp",
+            "images/water-bowl/4.webp",
         ],
         desc1: "Our volunteers painted custom bowls and placed them throughout the town, ensuring that no animal goes thirsty in our community. Multiple bowls were painted, installed and filled. These drives are conducted every year.",
         desc2: "",
@@ -361,7 +361,7 @@ export default function CardCarousel() {
                                                 rel="noopener noreferrer"
                                             >
                                                 <img
-                                                    src="/images/instagram.png"
+                                                    src="/images/instagram.webp"
                                                     alt="instagram"
                                                     className="w-7 sm:w-6 sm:h-6"
                                                 />
@@ -378,14 +378,14 @@ export default function CardCarousel() {
             {/* Mobile swipe arrows */}
             <div className="md:hidden absolute top-1/2 left-2 -translate-y-1/2 select-none pointer-events-none">
                 <img
-                    src="/images/left.png"
+                    src="/images/left.webp"
                     alt="left arrow"
                     className="h-6 w-6 opacity-50 sliding-left"
                 />
             </div>
             <div className="md:hidden absolute top-1/2 right-2 -translate-y-1/2 select-none pointer-events-none">
                 <img
-                    src="/images/right.png"
+                    src="/images/right.webp"
                     alt="right arrow"
                     className="h-6 w-6 opacity-50 sliding-right"
                 />
@@ -397,7 +397,7 @@ export default function CardCarousel() {
                 className="hidden md:flex absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-25 text-white w-8 h-[60%] hover:opacity-90 opacity-60 active:opacity-60 rounded items-center justify-center"
             >
                 <img
-                    src="/images/left.png"
+                    src="/images/left.webp"
                     alt="left arrow"
                     className="max-h-6 w-auto object-contain"
                 />
@@ -408,7 +408,7 @@ export default function CardCarousel() {
                 className="hidden md:flex absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-25 text-white w-8 h-[60%] hover:opacity-90 opacity-60 active:opacity-60 rounded items-center justify-center"
             >
                 <img
-                    src="/images/right.png"
+                    src="/images/right.webp"
                     alt="right arrow"
                     className="max-h-6 w-auto object-contain"
                 />

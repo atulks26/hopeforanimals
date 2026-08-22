@@ -84,7 +84,7 @@ const GalleryPreview = () => {
                     {[...Array(repeatCount)].map((_, i) => (
                         <img
                             key={"top-" + i}
-                            src="images/film.png"
+                            src="images/film.webp"
                             alt="Film roll strip top"
                             className="h-4 w-auto object-cover flex-shrink-0"
                         />
@@ -116,7 +116,7 @@ const GalleryPreview = () => {
                     {[...Array(repeatCount)].map((_, i) => (
                         <img
                             key={"bottom-" + i}
-                            src="images/film.png"
+                            src="images/film.webp"
                             alt="Film roll strip bottom"
                             className="h-4 w-auto object-cover flex-shrink-0"
                         />

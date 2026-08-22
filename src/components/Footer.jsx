@@ -11,7 +11,7 @@ export default function Footer() {
                     </h2>
                     <div className="flex flex-col items-start gap-4">
                         <img
-                            src="/images/qr.png"
+                            src="/images/qr.webp"
                             alt="QR Code"
                             className="h-[12rem] w-[12rem] border-2 border-white"
                         />
@@ -84,7 +84,7 @@ export default function Footer() {
                             rel="noreferrer"
                         >
                             <img
-                                src="images/instagram.png"
+                                src="images/instagram.webp"
                                 className="w-6 h-6 object-contain invert"
                                 alt="Instagram"
                             />
@@ -97,7 +97,7 @@ export default function Footer() {
                             rel="noreferrer"
                         >
                             <img
-                                src="images/facebook.png"
+                                src="images/facebook.webp"
                                 className="w-6 h-6 object-contain invert"
                                 alt="Facebook"
                             />
@@ -110,7 +110,7 @@ export default function Footer() {
                             rel="noreferrer"
                         >
                             <img
-                                src="images/youtube.png"
+                                src="images/youtube.webp"
                                 className="w-6 h-6 object-contain invert"
                                 alt="YouTube"
                             />
