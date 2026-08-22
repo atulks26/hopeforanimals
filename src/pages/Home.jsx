@@ -300,7 +300,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="bg-[#FDFDFD] w-full min-h-[66vh] h-full -m-1">
+                <div className="bg-[#FDFDFD] w-full min-h-[min(66vh,32rem)] h-full -m-1">
                     <CardCarousel />
                 </div>
 
